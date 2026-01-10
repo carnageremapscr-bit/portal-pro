@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Design - Fast Launch, Free Setup, £30/mo | Portal Pro</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { background: #0b0f1a; color: #e8ecf3; }
+    .page-hero { padding: 80px 0 40px; text-align: center; }
+    .page-hero h1 { font-size: 2.8rem; margin-bottom: 12px; }
+    .page-hero p { color: #a9b1c6; max-width: 780px; margin: 0 auto; }
+    .cta-row { display: flex; gap: 12px; justify-content: center; margin-top: 20px; }
+    .section { padding: 60px 0; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .card { background: #0f1422; border: 1px solid #1e2536; border-radius: 12px; padding: 20px; }
+    .card h3 { margin: 0 0 8px 0; }
+    .pill { display: inline-block; padding: 6px 12px; border-radius: 999px; background: rgba(220, 38, 38, 0.12); color: #f87171; font-weight: 600; font-size: 13px; }
+    .feature-list { list-style: none; padding: 0; margin: 12px 0 0 0; }
+    .feature-list li { margin-bottom: 8px; color: #a9b1c6; }
+    .price-card { background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid rgba(91,140,255,0.25); }
+    .price { font-size: 42px; font-weight: 800; margin: 12px 0 4px; }
+    .sub { color: #a9b1c6; }
+    .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 10px; border: 1px solid #1e2536; color: #e8ecf3; text-decoration: none; font-weight: 600; }
+    .btn-primary { background: linear-gradient(135deg, #5b8cff, #7c4dff); border: none; }
+    .btn-outline { background: rgba(255,255,255,0.04); }
+    .stack { display: grid; gap: 18px; }
+    header.navbar { background: rgba(10,14,22,0.8); position: sticky; top: 0; backdrop-filter: blur(8px); }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <a href="index.html" class="logo"><span class="logo-icon">⚡</span>Portal <span class="highlight">Pro</span></a>
+      <div class="btn-row">
+        <a class="btn btn-outline" href="index.html">Back to home</a>
+        <a class="btn btn-primary" href="portal-demo.html"><i class="fas fa-server"></i> See Portal Demo</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <span class="pill">Free setup · Launch in days</span>
+      <h1>Custom Websites for Any Business</h1>
+      <p>We design, host, and support your site for £30/month. No build fee. Forms, payments, bookings, analytics, and SEO included. Just tell us your business type and we’ll launch it fast.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#pricing"><i class="fas fa-rocket"></i> Start for £30/mo</a>
+        <a class="btn btn-outline" href="#use-cases"><i class="fas fa-list"></i> View industries</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="use-cases" class="section">
+    <div class="container">
+      <h2 style="text-align:center; margin-bottom:18px;">Built for every industry</h2>
+      <p style="text-align:center; color:#a9b1c6; margin-bottom:24px;">Pick a starting point and we’ll tailor copy, images, and calls-to-action for your audience.</p>
+      <div class="cards">
+        <div class="card"><h3>Services</h3><p class="sub">Electricians, plumbers, cleaners, HVAC, landscaping</p><ul class="feature-list"><li>Quote + booking forms</li><li>Google Maps & reviews</li><li>Job galleries</li></ul></div>
+        <div class="card"><h3>Ecommerce</h3><p class="sub">Retail, D2C, local shops</p><ul class="feature-list"><li>Stripe/Shopify checkout</li><li>Catalog setup</li><li>Abandoned-cart emails</li></ul></div>
+        <div class="card"><h3>Professional</h3><p class="sub">Consultants, legal, finance, agencies</p><ul class="feature-list"><li>Lead funnels & calendars</li><li>Case studies & authority pages</li><li>Analytics & pixels configured</li></ul></div>
+        <div class="card"><h3>Hospitality</h3><p class="sub">Restaurants, gyms, wellness</p><ul class="feature-list"><li>Menus, timetables, booking</li><li>Gift cards & vouchers</li><li>Promo banners & popups</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="section">
+    <div class="container">
+      <h2 style="text-align:center; margin-bottom:18px;">Simple pricing</h2>
+      <p style="text-align:center; color:#a9b1c6; margin-bottom:24px;">No build fee. Hosting, SSL, support, and updates included.</p>
+      <div class="cards">
+        <div class="card price-card">
+          <div class="pill" style="background:rgba(91,140,255,0.15); color:#5b8cff;">Most popular</div>
+          <h3>Website Subscription</h3>
+          <div class="price">£30<span style="font-size:18px; font-weight:600;">/mo</span></div>
+          <p class="sub">Free setup · Launch in days</p>
+          <ul class="feature-list">
+            <li>Custom design for your brand</li>
+            <li>Hosting, SSL, backups, monitoring</li>
+            <li>Forms, calendars, payments configured</li>
+            <li>Copywriting + on-page SEO</li>
+            <li>Analytics, pixels, lead alerts</li>
+          </ul>
+          <div class="btn-row" style="margin-top:14px;">
+            <a class="btn btn-primary" href="index.html#contact"><i class="fas fa-rocket"></i> Start for £30/mo</a>
+            <a class="btn btn-outline" href="index.html#pricing"><i class="fas fa-list"></i> Compare plans</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Optional add-ons</h3>
+          <p class="sub">Pick only what you need</p>
+          <ul class="feature-list">
+            <li>Blog & content hub</li>
+            <li>Landing pages & funnels</li>
+            <li>CRM & email automations</li>
+            <li>Ad tracking & multi-geo</li>
+            <li>Multilingual support</li>
+          </ul>
+          <a class="btn btn-outline" href="index.html#contact" style="margin-top:12px;">Talk to us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="stack">
+        <h2 style="margin:0;">What we handle for you</h2>
+        <p class="sub">Design, build, hosting, security, updates, and support — all included in the £30/mo subscription.</p>
+        <div class="cards">
+          <div class="card"><h3>Build & Launch</h3><ul class="feature-list"><li>Sitemap, copy, and assets handled</li><li>Mobile-first responsive layout</li><li>Speed and SEO best practices</li></ul></div>
+          <div class="card"><h3>Operate</h3><ul class="feature-list"><li>Hosting + SSL + backups</li><li>Monitoring & uptime alerts</li><li>Security hardening</li></ul></div>
+          <div class="card"><h3>Convert</h3><ul class="feature-list"><li>Forms, booking, payments wired</li><li>Lead routing to email/WhatsApp</li><li>Analytics and pixels configured</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Portal Pro. All rights reserved. | Website design subscription £30/mo · Setup free</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
