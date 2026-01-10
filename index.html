@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Pro - ECU File Service Portal & Web Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-icon">⚡</span>
+                Portal <span class="highlight">Pro</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#demos">Demos</a></li>
+                <li><a href="widget-demo.html">Widget Demo</a></li>
+                <li><a href="portal-demo.html">Portal Demo</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="https://web-production-df12d.up.railway.app/" target="_blank">ECU Portal</a></li>
+                <li><a href="#contact" class="btn btn-primary">Contact Us</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Professional Solutions for <span class="gradient-text">Automotive Businesses</span></h1>
+                <p class="hero-subtitle">Vehicle lookup portals, ECU file services, and stunning web design - everything you need to grow your automotive business online.</p>
+                <p style="color: var(--muted); margin-top: 6px;">Powered by Carnage Remaps</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary btn-lg">
+                        <i class="fas fa-rocket"></i> Explore Services
+                    </a>
+                    <a href="https://web-production-df12d.up.railway.app/" class="btn btn-outline btn-lg" target="_blank">
+                        <i class="fas fa-server"></i> Open ECU Portal
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Vehicles Processed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">Uptime</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card card-1">
+                    <i class="fas fa-car"></i>
+                    <span>Vehicle Lookup</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-microchip"></i>
+                    <span>ECU Files</span>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-code"></i>
+                    <span>Web Design</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Services</span>
+                <h2>Pick a Service</h2>
+                <p>Choose from our range of professional solutions designed specifically for automotive businesses</p>
+            </div>
+            <div class="services-grid">
+                <!-- Vehicle Lookup Widget -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Vehicle Search Widget</h3>
+                    <ul class="service-features">
+                        <li><i class="fas fa-globe"></i> Embeds on your website</li>
+                        <li><i class="fas fa-chart-line"></i> Users can find their vehicle to see gains</li>
+                        <li><i class="fas fa-envelope"></i> Get a quote form that comes to your email</li>
+                        <li><i class="fas fa-database"></i> Comprehensive vehicle database</li>
+                    </ul>
+                    <a href="widget-demo.html" class="btn btn-primary">
+                        Try Demo <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Web Design -->
+                <div class="service-card featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Design & Marketing</h3>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Full website design using premium templates</li>
+                        <li><i class="fas fa-trophy"></i> Appear at the top of Google</li>
+                        <li><i class="fas fa-chart-bar"></i> Fully track performance & ROI</li>
+                        <li><i class="fas fa-mobile-alt"></i> Mobile responsive design</li>
+                    </ul>
+                    <a href="#pricing" class="btn btn-primary">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- ECU File Portal -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>ECU File Portal Software</h3>
+                    <ul class="service-features">
+                        <li><i class="fas fa-inbox"></i> Receive files from your clients</li>
+                        <li><i class="fas fa-pound-sign"></i> Automate invoicing and payment</li>
+                        <li><i class="fas fa-headset"></i> Organise support requests</li>
+                        <li><i class="fas fa-shield-alt"></i> Secure file handling</li>
+                    </ul>
+                    <a href="https://web-production-df12d.up.railway.app/" target="_blank" class="btn btn-primary">
+                        Go to Portal <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why Choose Us</span>
+                <h2>Powerful Features</h2>
+                <p>Everything you need to run a successful automotive business online</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                    <h4>Lightning Fast</h4>
+                    <p>Optimized for speed with instant vehicle lookups and quick file processing</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                    <h4>Secure & Reliable</h4>
+                    <p>Bank-level security for your files and customer data with 99.9% uptime</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h4>Custom Branding</h4>
+                    <p>White-label solutions that match your business identity perfectly</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-sync"></i></div>
+                    <h4>Auto Updates</h4>
+                    <p>Always up-to-date with the latest vehicle data and features</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                    <h4>24/7 Support</h4>
+                    <p>Dedicated support team ready to help you whenever you need</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-chart-pie"></i></div>
+                    <h4>Analytics Dashboard</h4>
+                    <p>Track your business performance with detailed insights and reports</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Pricing Plans</span>
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Choose the plan that fits your business needs</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Widget Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Vehicle Search Widget</h3>
+                        <div class="price">
+                            <span class="currency">£</span>
+                            <span class="amount">9.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <div class="price-subtext">Simple monthly subscription</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Website embed widget</li>
+                        <li><i class="fas fa-check"></i> Vehicle gains lookup</li>
+                        <li><i class="fas fa-check"></i> Email quote capture</li>
+                        <li><i class="fas fa-check"></i> Fair-use lookups</li>
+                        <li class="disabled"><i class="fas fa-times"></i> ECU File Portal</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-block">Start at £9.99/mo</a>
+                </div>
+
+                <!-- Portal Plan -->
+                <div class="pricing-card featured">
+                    <div class="featured-badge">Best Value</div>
+                    <div class="pricing-header">
+                        <h3>Portal Pro</h3>
+                        <div class="price">
+                            <span class="currency">£</span>
+                            <span class="amount">30</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <div class="price-subtext">£400 one‑time setup fee</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> ECU file service portal</li>
+                        <li><i class="fas fa-check"></i> Invoice & payments automation</li>
+                        <li><i class="fas fa-check"></i> Client support ticketing</li>
+                        <li><i class="fas fa-check"></i> Admin dashboard and analytics</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-block">Launch for £30/mo</a>
+                </div>
+
+                <!-- Bundle Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Portal + Widget Bundle</h3>
+                        <div class="price">
+                            <span class="currency">£</span>
+                            <span class="amount">34.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <div class="price-subtext">£400 setup · save 15%</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Portal Pro</li>
+                        <li><i class="fas fa-check"></i> Vehicle Search Widget included</li>
+                        <li><i class="fas fa-check"></i> Branded landing page</li>
+                        <li><i class="fas fa-check"></i> WhatsApp lead capture</li>
+                        <li><i class="fas fa-check"></i> Priority onboarding</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-block">Bundle & save</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demos Section -->
+    <section id="demos" class="demos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">See It In Action</span>
+                <h2>Demo Videos</h2>
+                <p>Watch how our solutions can transform your business</p>
+            </div>
+            <div class="demos-grid">
+                <div class="demo-card">
+                    <div class="demo-thumbnail">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&h=340&fit=crop" alt="Vehicle Lookup Demo">
+                    </div>
+                    <h4>Vehicle Lookup Widget</h4>
+                    <p>See how customers can instantly find their vehicle and view potential gains</p>
+                </div>
+                <div class="demo-card">
+                    <div class="demo-thumbnail">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=340&fit=crop" alt="ECU Portal Demo">
+                    </div>
+                    <h4>ECU File Portal</h4>
+                    <p>Discover how to manage client files, invoices, and support tickets</p>
+                </div>
+                <div class="demo-card">
+                    <div class="demo-thumbnail">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=340&fit=crop" alt="Website Design Demo">
+                    </div>
+                    <h4>Website Design Process</h4>
+                    <p>Learn how we create stunning automotive websites that convert</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimonials</span>
+                <h2>What Our Clients Say</h2>
+                <p>Don't just take our word for it - hear from our satisfied customers</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The vehicle lookup widget has transformed how we handle enquiries. Our conversion rate has increased by 40% since implementing it!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <strong>James Davidson</strong>
+                            <span>Davidson Tuning, Manchester</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Professional service from start to finish. The ECU portal saves me hours every week with automated invoicing. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <strong>Sarah Mitchell</strong>
+                            <span>Performance Plus, Birmingham</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Our new website looks incredible and we're now on the first page of Google. The ROI has been fantastic - best investment we've made."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MP</div>
+                        <div class="author-info">
+                            <strong>Mike Peters</strong>
+                            <span>Apex Remaps, London</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Grow Your Business?</h2>
+                <p>Join hundreds of automotive businesses already using Portal Pro</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-white btn-lg">
+                        <i class="fas fa-comments"></i> Get In Touch
+                    </a>
+                    <a href="https://wa.me/447546371963" class="btn btn-whatsapp btn-lg" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2>Let's Talk About Your Project</h2>
+                    <p>Ready to take your automotive business to the next level? Contact us today for a free consultation.</p>
+                    
+                    <div class="contact-methods">
+                        <a href="https://wa.me/447546371963" class="contact-method whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <span>+44 7546 371963</span>
+                            </div>
+                        </a>
+                        <a href="mailto:hello@portalpro.com" class="contact-method email">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <span>hello@portalpro.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+447546371963" class="contact-method phone">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <span>+44 7546 371963</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Smith">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service...</option>
+                            <option value="vehicle-widget">Vehicle Search Widget</option>
+                            <option value="web-design">Web Design & Marketing</option>
+                            <option value="ecu-portal">ECU File Portal</option>
+                            <option value="full-package">Full Package</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Tell us about your business and what you're looking for..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block btn-lg">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">⚡</span>
+                        Portal <span class="highlight">Pro</span>
+                    </a>
+                    <p>Vehicle lookup portals, ECU file services, and conversion‑focused web design.</p>
+                    <p class="powered-by">Powered by Carnage Remaps</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Vehicle Search Widget</a></li>
+                        <li><a href="#services">Web Design</a></li>
+                        <li><a href="#services">ECU File Portal</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Portal Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/447546371963" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

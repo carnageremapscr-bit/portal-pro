@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Demo - Portal Pro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0a0f1a 0%, #1a1f2e 100%);
+      color: #e8ecf3;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .portal-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: #0f1422;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    }
+
+    .portal-header {
+      background: linear-gradient(135deg, #121825 0%, #1e2536 100%);
+      padding: 20px 30px;
+      border-bottom: 1px solid #1e2536;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .portal-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #e8ecf3;
+    }
+
+    .portal-user {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #a9b1c6;
+      font-size: 14px;
+    }
+
+    .portal-body {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      min-height: 600px;
+    }
+
+    .portal-sidebar {
+      background: #121825;
+      border-right: 1px solid #1e2536;
+      padding: 20px 0;
+    }
+
+    .nav-item {
+      padding: 12px 20px;
+      color: #a9b1c6;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-item:hover {
+      background: rgba(91, 140, 255, 0.1);
+      color: #5b8cff;
+    }
+
+    .nav-item.active {
+      background: rgba(91, 140, 255, 0.15);
+      color: #5b8cff;
+      border-left-color: #5b8cff;
+    }
+
+    .portal-content {
+      padding: 30px;
+      overflow-y: auto;
+      max-height: 800px;
+    }
+
+    .content-section {
+      display: none;
+    }
+
+    .content-section.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .dashboard-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #e8ecf3;
+    }
+
+    .dashboard-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+
+    .stat-block {
+      background: linear-gradient(135deg, rgba(91, 140, 255, 0.1), rgba(124, 77, 255, 0.1));
+      border: 1px solid #1e2536;
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .stat-icon {
+      font-size: 24px;
+      color: #5b8cff;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: #a9b1c6;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .stat-value {
+      font-size: 24px;
+      font-weight: 700;
+      color: #e8ecf3;
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #e8ecf3;
+      margin-bottom: 16px;
+    }
+
+    .table-container {
+      background: #121825;
+      border: 1px solid #1e2536;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .table-header {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      background: rgba(91, 140, 255, 0.1);
+      padding: 12px 16px;
+      font-weight: 600;
+      color: #5b8cff;
+      font-size: 12px;
+      text-transform: uppercase;
+      gap: 12px;
+    }
+
+    .table-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      padding: 12px 16px;
+      border-top: 1px solid #1e2536;
+      align-items: center;
+      gap: 12px;
+      transition: background 0.2s ease;
+    }
+
+    .table-row:hover {
+      background: rgba(91, 140, 255, 0.05);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .badge-completed {
+      background: rgba(52, 211, 153, 0.15);
+      color: #34d399;
+    }
+
+    .badge-processing {
+      background: rgba(91, 140, 255, 0.15);
+      color: #5b8cff;
+    }
+
+    .badge-pending {
+      background: rgba(251, 191, 36, 0.15);
+      color: #fbbf24;
+    }
+
+    .chart-container {
+      margin-bottom: 30px;
+    }
+
+    .chart-bars {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      height: 200px;
+      background: #121825;
+      border: 1px solid #1e2536;
+      border-radius: 12px;
+      padding: 20px;
+      gap: 10px;
+    }
+
+    .bar {
+      flex: 1;
+      background: linear-gradient(180deg, #5b8cff, #7c4dff);
+      border-radius: 8px 8px 0 0;
+      min-height: 40px;
+    }
+
+    .bar:nth-child(1) { height: 60%; }
+    .bar:nth-child(2) { height: 80%; }
+    .bar:nth-child(3) { height: 50%; }
+    .bar:nth-child(4) { height: 75%; }
+    .bar:nth-child(5) { height: 90%; }
+    .bar:nth-child(6) { height: 65%; }
+    .bar:nth-child(7) { height: 85%; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 992px) {
+      .portal-body {
+        grid-template-columns: 1fr;
+      }
+
+      .portal-sidebar {
+        border-bottom: 1px solid #1e2536;
+        border-right: none;
+        display: flex;
+        overflow-x: auto;
+      }
+
+      .nav-item {
+        white-space: nowrap;
+        padding: 12px 16px;
+      }
+
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .table-header,
+      .table-row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    button {
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="portal-container">
+    <div class="portal-header">
+      <div class="portal-title">Portal Pro Admin</div>
+      <div class="portal-user">
+        <i class="fas fa-user-circle" style="font-size: 24px;"></i>
+        <div>Admin User</div>
+      </div>
+    </div>
+
+    <div class="portal-body">
+      <div class="portal-sidebar">
+        <div class="nav-item active" data-section="dashboard">
+          <i class="fas fa-tachometer-alt"></i> Dashboard
+        </div>
+        <div class="nav-item" data-section="files">
+          <i class="fas fa-file-upload"></i> Files
+        </div>
+        <div class="nav-item" data-section="clients">
+          <i class="fas fa-users"></i> Clients
+        </div>
+        <div class="nav-item" data-section="invoices">
+          <i class="fas fa-file-invoice"></i> Invoices
+        </div>
+        <div class="nav-item" data-section="support">
+          <i class="fas fa-ticket-alt"></i> Support
+        </div>
+        <div class="nav-item" data-section="settings">
+          <i class="fas fa-cog"></i> Settings
+        </div>
+      </div>
+
+      <div class="portal-content">
+        <!-- Dashboard Section -->
+        <div id="dashboard" class="content-section active">
+          <h2 class="dashboard-title">Dashboard</h2>
+
+          <div class="dashboard-stats">
+            <div class="stat-block">
+              <div class="stat-icon"><i class="fas fa-file-upload"></i></div>
+              <div class="stat-label">Total Files</div>
+              <div class="stat-value">128</div>
+              <div style="color: #a9b1c6; font-size: 11px; margin-top: 4px;">+5 this week</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-icon"><i class="fas fa-pound-sign"></i></div>
+              <div class="stat-label">Revenue</div>
+              <div class="stat-value">£8,450</div>
+              <div style="color: #a9b1c6; font-size: 11px; margin-top: 4px;">+12% vs last month</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+              <div class="stat-label">Completed</div>
+              <div class="stat-value">22</div>
+              <div style="color: #a9b1c6; font-size: 11px; margin-top: 4px;">98% Success rate</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-icon"><i class="fas fa-users"></i></div>
+              <div class="stat-label">Active Clients</div>
+              <div class="stat-value">18</div>
+              <div style="color: #a9b1c6; font-size: 11px; margin-top: 4px;">Paying members</div>
+            </div>
+          </div>
+
+          <!-- Chart -->
+          <div class="chart-container">
+            <h3 class="section-title">Revenue Trend (Last 7 Days)</h3>
+            <div class="chart-bars">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </div>
+
+          <!-- Two Column Grid -->
+          <div class="grid-2">
+            <!-- Recent Files -->
+            <div>
+              <h3 class="section-title">Recent Files</h3>
+              <div class="table-container">
+                <div class="table-header">
+                  <div>File</div>
+                  <div>Client</div>
+                  <div>Status</div>
+                  <div>Date</div>
+                  <div>Action</div>
+                </div>
+                <div class="table-row">
+                  <div style="color: #e8ecf3; font-weight: 500;">BMW_M4_ECU.bin</div>
+                  <div style="color: #a9b1c6;">John Smith</div>
+                  <div><span class="badge badge-completed">Completed</span></div>
+                  <div style="color: #a9b1c6; font-size: 12px;">2 hours ago</div>
+                  <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">Download</button></div>
+                </div>
+                <div class="table-row">
+                  <div style="color: #e8ecf3; font-weight: 500;">Audi_A4_Stage2.hex</div>
+                  <div style="color: #a9b1c6;">Emma Davis</div>
+                  <div><span class="badge badge-processing">Processing</span></div>
+                  <div style="color: #a9b1c6; font-size: 12px;">15 mins ago</div>
+                  <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">View</button></div>
+                </div>
+                <div class="table-row">
+                  <div style="color: #e8ecf3; font-weight: 500;">Mercedes_C63_Remap.bin</div>
+                  <div style="color: #a9b1c6;">Michael Brown</div>
+                  <div><span class="badge badge-pending">Pending Review</span></div>
+                  <div style="color: #a9b1c6; font-size: 12px;">1 day ago</div>
+                  <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">Review</button></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Top Clients -->
+            <div>
+              <h3 class="section-title">Top Clients</h3>
+              <div class="table-container">
+                <div class="table-header">
+                  <div>Client</div>
+                  <div>Files</div>
+                  <div>Revenue</div>
+                  <div>Status</div>
+                  <div></div>
+                </div>
+                <div class="table-row">
+                  <div style="color: #e8ecf3; font-weight: 500;">Smith Remaps</div>
+                  <div style="color: #a9b1c6;">12</div>
+                  <div style="color: #34d399; font-weight: 600;">£1,200</div>
+                  <div><span class="badge badge-completed">Active</span></div>
+                  <div></div>
+                </div>
+                <div class="table-row">
+                  <div style="color: #e8ecf3; font-weight: 500;">London Tuning</div>
+                  <div style="color: #a9b1c6;">8</div>
+                  <div style="color: #34d399; font-weight: 600;">£800</div>
+                  <div><span class="badge badge-completed">Active</span></div>
+                  <div></div>
+                </div>
+                <div class="table-row">
+                  <div style="color: #e8ecf3; font-weight: 500;">Manchester ECU</div>
+                  <div style="color: #a9b1c6;">5</div>
+                  <div style="color: #34d399; font-weight: 600;">£500</div>
+                  <div><span class="badge badge-processing">Pending</span></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Files Section -->
+        <div id="files" class="content-section">
+          <h2 class="dashboard-title">File Management</h2>
+          <div class="dashboard-stats">
+            <div class="stat-block">
+              <div class="stat-icon"><i class="fas fa-file-upload"></i></div>
+              <div class="stat-label">Total Files</div>
+              <div class="stat-value">128</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-icon"><i class="fas fa-hourglass-end"></i></div>
+              <div class="stat-label">Pending</div>
+              <div class="stat-value">5</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+              <div class="stat-label">Completed</div>
+              <div class="stat-value">118</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-icon"><i class="fas fa-exclamation-circle"></i></div>
+              <div class="stat-label">Issues</div>
+              <div class="stat-value">5</div>
+            </div>
+          </div>
+          <h3 class="section-title">All Files</h3>
+          <div class="table-container">
+            <div class="table-header">
+              <div>File</div>
+              <div>Client</div>
+              <div>Status</div>
+              <div>Date</div>
+              <div>Action</div>
+            </div>
+            <div class="table-row">
+              <div style="color: #e8ecf3; font-weight: 500;">Porsche_911_Turbo.bin</div>
+              <div style="color: #a9b1c6;">Alex Turner</div>
+              <div><span class="badge badge-completed">Completed</span></div>
+              <div style="color: #a9b1c6; font-size: 12px;">3 days ago</div>
+              <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">Download</button></div>
+            </div>
+            <div class="table-row">
+              <div style="color: #e8ecf3; font-weight: 500;">Tesla_Model_S.hex</div>
+              <div style="color: #a9b1c6;">Sarah Wilson</div>
+              <div><span class="badge badge-processing">Processing</span></div>
+              <div style="color: #a9b1c6; font-size: 12px;">1 hour ago</div>
+              <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">View</button></div>
+            </div>
+            <div class="table-row">
+              <div style="color: #e8ecf3; font-weight: 500;">Audi_RS6_Stage3.bin</div>
+              <div style="color: #a9b1c6;">Tom Hardy</div>
+              <div><span class="badge badge-pending">Pending Review</span></div>
+              <div style="color: #a9b1c6; font-size: 12px;">30 mins ago</div>
+              <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">Review</button></div>
+            </div>
+            <div class="table-row">
+              <div style="color: #e8ecf3; font-weight: 500;">BMW_M3_ECU_v2.bin</div>
+              <div style="color: #a9b1c6;">David Miller</div>
+              <div><span class="badge badge-completed">Completed</span></div>
+              <div style="color: #a9b1c6; font-size: 12px;">5 days ago</div>
+              <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">Download</button></div>
+            </div>
+            <div class="table-row">
+              <div style="color: #e8ecf3; font-weight: 500;">Volkswagen_Golf_R.hex</div>
+              <div style="color: #a9b1c6;">Jessica Lee</div>
+              <div><span class="badge badge-completed">Completed</span></div>
+              <div style="color: #a9b1c6; font-size: 12px;">1 week ago</div>
+              <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">Download</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Clients Section -->
+        <div id="clients" class="content-section">
+          <h2 class="dashboard-title">Client Management</h2>
+          <div class="dashboard-stats">
+            <div class="stat-block">
+              <div class="stat-icon"><i class="fas fa-users"></i></div>
+              <div class="stat-label">Total Clients</div>
+              <div class="stat-value">24</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-icon"><i class="fas fa-user-check"></i></div>
+              <div class="stat-label">Active</div>
+              <div class="stat-value">18</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-icon"><i class="fas fa-user-clock"></i></div>
+              <div class="stat-label">Inactive</div>
+              <div class="stat-value">6</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-icon"><i class="fas fa-star"></i></div>
+              <div class="stat-label">Premium</div>
+              <div class="stat-value">8</div>
+            </div>
+          </div>
+          <h3 class="section-title">All Clients</h3>
+          <div class="table-container">
+            <div class="table-header">
+              <div>Name</div>
+              <div>Files</div>
+              <div>Status</div>
+              <div>Joined</div>
+              <div>Action</div>
+            </div>
+            <div class="table-row">
+              <div style="color: #e8ecf3; font-weight: 500;">John Smith</div>
+              <div style="color: #a9b1c6;">12</div>
+              <div><span class="badge badge-completed">Active</span></div>
+              <div style="color: #a9b1c6; font-size: 12px;">Jan 2025</div>
+              <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">Edit</button></div>
+            </div>
+            <div class="table-row">
+              <div style="color: #e8ecf3; font-weight: 500;">Emma Davis</div>
+              <div style="color: #a9b1c6;">8</div>
+              <div><span class="badge badge-completed">Active</span></div>
+              <div style="color: #a9b1c6; font-size: 12px;">Feb 2025</div>
+              <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">Edit</button></div>
+            </div>
+            <div class="table-row">
+              <div style="color: #e8ecf3; font-weight: 500;">Michael Brown</div>
+              <div style="color: #a9b1c6;">15</div>
+              <div><span class="badge badge-completed">Active</span></div>
+              <div style="color: #a9b1c6; font-size: 12px;">Mar 2025</div>
+              <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">Edit</button></div>
+            </div>
+            <div class="table-row">
+              <div style="color: #e8ecf3; font-weight: 500;">Sarah Wilson</div>
+              <div style="color: #a9b1c6;">7</div>
+              <div><span class="badge badge-processing">Pending</span></div>
+              <div style="color: #a9b1c6; font-size: 12px;">Dec 2024</div>
+              <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">Edit</button></div>
+            </div>
+            <div class="table-row">
+              <div style="color: #e8ecf3; font-weight: 500;">Alex Turner</div>
+              <div style="color: #a9b1c6;">20</div>
+              <div><span class="badge badge-completed">Active</span></div>
+              <div style="color: #a9b1c6; font-size: 12px;">Nov 2024</div>
+              <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">Edit</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Invoices Section -->
+        <div id="invoices" class="content-section">
+          <h2 class="dashboard-title">Invoice Management</h2>
+          <div class="dashboard-stats">
+            <div class="stat-block">
+              <div class="stat-icon"><i class="fas fa-file-invoice"></i></div>
+              <div class="stat-label">Total Invoices</div>
+              <div class="stat-value">156</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-icon"><i class="fas fa-check"></i></div>
+              <div class="stat-label">Paid</div>
+              <div class="stat-value">142</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-icon"><i class="fas fa-clock"></i></div>
+              <div class="stat-label">Pending</div>
+              <div class="stat-value">14</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-icon"><i class="fas fa-pound-sign"></i></div>
+              <div class="stat-label">Total Due</div>
+              <div class="stat-value">£4,280</div>
+            </div>
+          </div>
+          <h3 class="section-title">Recent Invoices</h3>
+          <div class="table-container">
+            <div class="table-header">
+              <div>Invoice</div>
+              <div>Client</div>
+              <div>Amount</div>
+              <div>Status</div>
+              <div>Action</div>
+            </div>
+            <div class="table-row">
+              <div style="color: #e8ecf3; font-weight: 500;">INV-2025-001</div>
+              <div style="color: #a9b1c6;">John Smith</div>
+              <div style="color: #34d399; font-weight: 600;">£600</div>
+              <div><span class="badge badge-completed">Paid</span></div>
+              <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">View</button></div>
+            </div>
+            <div class="table-row">
+              <div style="color: #e8ecf3; font-weight: 500;">INV-2025-002</div>
+              <div style="color: #a9b1c6;">Emma Davis</div>
+              <div style="color: #34d399; font-weight: 600;">£400</div>
+              <div><span class="badge badge-pending">Pending</span></div>
+              <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">Resend</button></div>
+            </div>
+            <div class="table-row">
+              <div style="color: #e8ecf3; font-weight: 500;">INV-2025-003</div>
+              <div style="color: #a9b1c6;">Michael Brown</div>
+              <div style="color: #34d399; font-weight: 600;">£750</div>
+              <div><span class="badge badge-completed">Paid</span></div>
+              <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">View</button></div>
+            </div>
+            <div class="table-row">
+              <div style="color: #e8ecf3; font-weight: 500;">INV-2025-004</div>
+              <div style="color: #a9b1c6;">Sarah Wilson</div>
+              <div style="color: #34d399; font-weight: 600;">£300</div>
+              <div><span class="badge badge-pending">Pending</span></div>
+              <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">Resend</button></div>
+            </div>
+            <div class="table-row">
+              <div style="color: #e8ecf3; font-weight: 500;">INV-2025-005</div>
+              <div style="color: #a9b1c6;">Alex Turner</div>
+              <div style="color: #34d399; font-weight: 600;">£800</div>
+              <div><span class="badge badge-completed">Paid</span></div>
+              <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Support Section -->
+        <div id="support" class="content-section">
+          <h2 class="dashboard-title">Support Tickets</h2>
+          <div class="dashboard-stats">
+            <div class="stat-block">
+              <div class="stat-icon"><i class="fas fa-ticket-alt"></i></div>
+              <div class="stat-label">Total Tickets</div>
+              <div class="stat-value">42</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-icon"><i class="fas fa-exclamation-triangle"></i></div>
+              <div class="stat-label">Open</div>
+              <div class="stat-value">8</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-icon"><i class="fas fa-check-double"></i></div>
+              <div class="stat-label">Resolved</div>
+              <div class="stat-value">34</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-icon"><i class="fas fa-clock"></i></div>
+              <div class="stat-label">Avg Response</div>
+              <div class="stat-value">2.3h</div>
+            </div>
+          </div>
+          <h3 class="section-title">Active Tickets</h3>
+          <div class="table-container">
+            <div class="table-header">
+              <div>Ticket</div>
+              <div>Client</div>
+              <div>Issue</div>
+              <div>Priority</div>
+              <div>Action</div>
+            </div>
+            <div class="table-row">
+              <div style="color: #e8ecf3; font-weight: 500;">TK-001</div>
+              <div style="color: #a9b1c6;">John Smith</div>
+              <div style="color: #a9b1c6;">File upload error</div>
+              <div><span class="badge badge-pending" style="background: rgba(251,191,36,0.15); color: #fbbf24;">High</span></div>
+              <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">Reply</button></div>
+            </div>
+            <div class="table-row">
+              <div style="color: #e8ecf3; font-weight: 500;">TK-002</div>
+              <div style="color: #a9b1c6;">Sarah Wilson</div>
+              <div style="color: #a9b1c6;">Invoice question</div>
+              <div><span class="badge badge-processing" style="background: rgba(91,140,255,0.15); color: #5b8cff;">Medium</span></div>
+              <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">Reply</button></div>
+            </div>
+            <div class="table-row">
+              <div style="color: #e8ecf3; font-weight: 500;">TK-003</div>
+              <div style="color: #a9b1c6;">Tom Hardy</div>
+              <div style="color: #a9b1c6;">General inquiry</div>
+              <div><span class="badge badge-completed" style="background: rgba(52,211,153,0.15); color: #34d399;">Low</span></div>
+              <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">Close</button></div>
+            </div>
+            <div class="table-row">
+              <div style="color: #e8ecf3; font-weight: 500;">TK-004</div>
+              <div style="color: #a9b1c6;">Emma Davis</div>
+              <div style="color: #a9b1c6;">Technical support</div>
+              <div><span class="badge badge-pending" style="background: rgba(251,191,36,0.15); color: #fbbf24;">High</span></div>
+              <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">Reply</button></div>
+            </div>
+            <div class="table-row">
+              <div style="color: #e8ecf3; font-weight: 500;">TK-005</div>
+              <div style="color: #a9b1c6;">Michael Brown</div>
+              <div style="color: #a9b1c6;">Payment issue</div>
+              <div><span class="badge badge-processing" style="background: rgba(91,140,255,0.15); color: #5b8cff;">Medium</span></div>
+              <div><button style="background: transparent; color: #5b8cff; border: none; cursor: pointer; font-weight: 500;">Reply</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Settings Section -->
+        <div id="settings" class="content-section">
+          <h2 class="dashboard-title">Settings</h2>
+          <div style="background: #121825; border: 1px solid #1e2536; border-radius: 12px; padding: 20px;">
+            <h3 class="section-title">Account Settings</h3>
+            <div style="margin-bottom: 16px;">
+              <label style="color: #a9b1c6; font-size: 13px;">Business Name</label>
+              <input type="text" value="Carnage Remaps" style="width: 100%; padding: 8px 12px; margin-top: 4px; background: rgba(255,255,255,0.04); border: 1px solid #1e2536; border-radius: 8px; color: #e8ecf3;" />
+            </div>
+            <div style="margin-bottom: 16px;">
+              <label style="color: #a9b1c6; font-size: 13px;">Email</label>
+              <input type="email" value="carnageremaps@gmail.com" style="width: 100%; padding: 8px 12px; margin-top: 4px; background: rgba(255,255,255,0.04); border: 1px solid #1e2536; border-radius: 8px; color: #e8ecf3;" />
+            </div>
+            <div style="margin-bottom: 16px;">
+              <label style="color: #a9b1c6; font-size: 13px;">WhatsApp Number</label>
+              <input type="tel" value="+44 7546 371963" style="width: 100%; padding: 8px 12px; margin-top: 4px; background: rgba(255,255,255,0.04); border: 1px solid #1e2536; border-radius: 8px; color: #e8ecf3;" />
+            </div>
+            <div style="margin-bottom: 20px;">
+              <label style="color: #a9b1c6; font-size: 13px;">Monthly Subscription Rate</label>
+              <input type="text" value="£30/month" style="width: 100%; padding: 8px 12px; margin-top: 4px; background: rgba(255,255,255,0.04); border: 1px solid #1e2536; border-radius: 8px; color: #e8ecf3;" />
+            </div>
+            <h3 class="section-title" style="margin-top: 24px;">Notification Preferences</h3>
+            <div style="margin-bottom: 12px;">
+              <label style="color: #a9b1c6; font-size: 13px;"><input type="checkbox" checked style="margin-right: 8px;" /> Email notifications for new files</label>
+            </div>
+            <div style="margin-bottom: 12px;">
+              <label style="color: #a9b1c6; font-size: 13px;"><input type="checkbox" checked style="margin-right: 8px;" /> Invoice payment reminders</label>
+            </div>
+            <div style="margin-bottom: 20px;">
+              <label style="color: #a9b1c6; font-size: 13px;"><input type="checkbox" style="margin-right: 8px;" /> Weekly summary report</label>
+            </div>
+            <button style="background: linear-gradient(135deg, #5b8cff, #7c4dff); color: white; border: none; padding: 10px 16px; border-radius: 8px; cursor: pointer; font-weight: 600;">Save Changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.nav-item').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const sectionId = btn.dataset.section;
+        
+        // Update active nav item
+        document.querySelectorAll('.nav-item').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        // Show/hide content sections
+        document.querySelectorAll('.content-section').forEach(sec => {
+          sec.classList.remove('active');
+        });
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
