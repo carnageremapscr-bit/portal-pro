@@ -245,16 +245,32 @@ input::placeholder, textarea::placeholder { color: #7a879d; }
   .contact-wrapper { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 768px) {
-  .nav-links { position: fixed; top: 64px; right: 0; width: 100%; max-width: 420px; height: calc(100vh - 64px); background: rgba(10,14,22,0.92); backdrop-filter: blur(8px); border-left: 1px solid var(--border); padding: 16px; flex-direction: column; align-items: stretch; gap: 8px; transform: translateX(100%); transition: transform 0.25s ease; }
-  .nav-links.open { transform: translateX(0); }
-  .mobile-toggle { display: inline-block; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-}
-
 @media (max-width: 520px) {
   .services-grid, .features-grid, .pricing-grid, .demos-grid, .testimonials-grid, .dashboard-features, .footer-grid { grid-template-columns: 1fr; }
   .hero h1 { font-size: 2.2rem; }
   .hero-buttons { flex-direction: column; }
   .stat { min-width: unset; flex: 1; }
+  .container { padding: 0 16px; }
+  .section-header h2 { font-size: 1.8rem; }
+  .btn { padding: 12px 16px; font-size: 15px; min-height: 48px; }
+  .btn-lg { padding: 14px 20px; font-size: 16px; }
+  .hero-subtitle { font-size: 1rem; }
+  .cta-row { flex-direction: column; width: 100%; }
+  .cta-row .btn { width: 100%; justify-content: center; }
+  .contact-methods { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .contact-method { padding: 20px !important; }
+  .whatsapp-float { width: 56px; height: 56px; right: 16px; bottom: 16px; }
+  .feature-card img { margin-bottom: 12px !important; }
+  .cards { grid-template-columns: 1fr !important; }
+  .hero-stats { flex-direction: column; gap: 12px; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { position: fixed; top: 64px; right: 0; width: 100%; max-width: 420px; height: calc(100vh - 64px); background: rgba(10,14,22,0.92); backdrop-filter: blur(8px); border-left: 1px solid var(--border); padding: 16px; flex-direction: column; align-items: stretch; gap: 8px; transform: translateX(100%); transition: transform 0.25s ease; }
+  .nav-links.open { transform: translateX(0); }
+  .mobile-toggle { display: inline-block; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .hero h1 { font-size: 2.4rem; }
+  .btn { min-height: 44px; }
+  .contact-methods { grid-template-columns: 1fr !important; }
 }
