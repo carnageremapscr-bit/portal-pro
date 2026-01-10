@@ -1,4 +1,52 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Pro - Fast Sites & Demos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-icon">⚡</span>
+                Portal <span class="highlight">Pro</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="website-design.html">Website Design</a></li>
+                <li><a href="widget-demo.html">Widget Demo</a></li>
+                <li><a href="portal-demo.html">Portal Demo</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact" class="btn btn-primary">Contact Us</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Launch fast: websites, portal, and widget demos</h1>
+                <p class="hero-subtitle">Choose the path you need. Website design is on its own page. Portal and widget each have a dedicated demo.</p>
+                <div class="hero-buttons">
+                    <a href="website-design.html" class="btn btn-primary btn-lg"><i class="fas fa-paint-brush"></i> Website Design (£30/mo, free setup)</a>
+                    <a href="portal-demo.html" class="btn btn-outline btn-lg"><i class="fas fa-server"></i> View Portal Demo</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <!-- Overview Section -->
     <section id="overview" class="services">
         <div class="container">
@@ -94,68 +142,21 @@
                 <p>Choose the plan that fits your business needs</p>
             </div>
             <div class="pricing-grid">
-                <!-- Widget Plan -->
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h3>Vehicle Search Widget</h3>
-                        <div class="price">
-                            <span class="currency">£</span>
-                            <span class="amount">9.99</span>
-                            <span class="period">/month</span>
-                        </div>
-                        <div class="price-subtext">Simple monthly subscription</div>
+                        <h3>Pricing lives on each page</h3>
+                        <p class="price-subtext">Visit the dedicated pages for full details.</p>
                     </div>
                     <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Website embed widget</li>
-                        <li><i class="fas fa-check"></i> Vehicle gains lookup</li>
-                        <li><i class="fas fa-check"></i> Email quote capture</li>
-                        <li><i class="fas fa-check"></i> Fair-use lookups</li>
-                        <li class="disabled"><i class="fas fa-times"></i> ECU File Portal</li>
+                        <li><i class="fas fa-paint-brush"></i> Website Design: £30/mo, free setup</li>
+                        <li><i class="fas fa-server"></i> Portal demo: see portal-demo.html</li>
+                        <li><i class="fas fa-search"></i> Widget demo: see widget-demo.html</li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline btn-block">Start at £9.99/mo</a>
-                </div>
-
-                <!-- Portal Plan -->
-                <div class="pricing-card featured">
-                    <div class="featured-badge">Best Value</div>
-                    <div class="pricing-header">
-                        <h3>Portal Pro</h3>
-                        <div class="price">
-                            <span class="currency">£</span>
-                            <span class="amount">30</span>
-                            <span class="period">/month</span>
-                        </div>
-                        <div class="price-subtext">£400 one‑time setup fee</div>
+                    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                        <a href="website-design.html" class="btn btn-primary">Website pricing</a>
+                        <a href="portal-demo.html" class="btn btn-outline">Portal demo</a>
+                        <a href="widget-demo.html" class="btn btn-outline">Widget demo</a>
                     </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> ECU file service portal</li>
-                        <li><i class="fas fa-check"></i> Invoice & payments automation</li>
-                        <li><i class="fas fa-check"></i> Client support ticketing</li>
-                        <li><i class="fas fa-check"></i> Admin dashboard and analytics</li>
-                        <li><i class="fas fa-check"></i> Priority support</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary btn-block">Launch for £30/mo</a>
-                </div>
-
-                <!-- Bundle Plan -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Portal + Widget Bundle</h3>
-                        <div class="price">
-                            <span class="currency">£</span>
-                            <span class="amount">34.99</span>
-                            <span class="period">/month</span>
-                        </div>
-                        <div class="price-subtext">£400 setup · save 15%</div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Everything in Portal Pro</li>
-                        <li><i class="fas fa-check"></i> Vehicle Search Widget included</li>
-                        <li><i class="fas fa-check"></i> Branded landing page</li>
-                        <li><i class="fas fa-check"></i> WhatsApp lead capture</li>
-                        <li><i class="fas fa-check"></i> Priority onboarding</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline btn-block">Bundle & save</a>
                 </div>
             </div>
         </div>
