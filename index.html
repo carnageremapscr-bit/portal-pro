@@ -1,124 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Pro - ECU File Service Portal & Web Solutions</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">
-                <span class="logo-icon">⚡</span>
-                Portal <span class="highlight">Pro</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#websites">Website Design</a></li>
-                <li><a href="widget-demo.html">Widget Demo</a></li>
-                <li><a href="portal-demo.html">Portal Demo</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="portal-demo.html">Portal Demo</a></li>
-                <li><a href="#contact" class="btn btn-primary">Contact Us</a></li>
-            </ul>
-            <button class="mobile-toggle" id="mobileToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-bg"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h1>Launch Fast: Websites, Portals, and Widgets</h1>
-                <p class="hero-subtitle">We build and host revenue-ready sites for any industry, plus the Portal Pro demo for file handling and vehicle lookups. Free setup, simple monthly plans.</p>
-                <p style="color: var(--muted); margin-top: 6px;">Powered by Carnage Remaps</p>
-                <div class="hero-buttons">
-                    <a href="website-design.html" class="btn btn-primary btn-lg">
-                        <i class="fas fa-paint-brush"></i> Website Design (£30/mo, free setup)
-                    </a>
-                    <a href="portal-demo.html" class="btn btn-outline btn-lg">
-                        <i class="fas fa-server"></i> View Portal Demo
-                    </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">Happy Clients</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">50K+</span>
-                        <span class="stat-label">Vehicles Processed</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">99.9%</span>
-                        <span class="stat-label">Uptime</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="floating-card card-1">
-                    <i class="fas fa-car"></i>
-                    <span>Vehicle Lookup</span>
-                </div>
-                <div class="floating-card card-2">
-                    <i class="fas fa-microchip"></i>
-                    <span>ECU Files</span>
-                </div>
-                <div class="floating-card card-3">
-                    <i class="fas fa-code"></i>
-                    <span>Web Design</span>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <!-- Overview Section -->
+    <section id="overview" class="services">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Our Services</span>
-                <h2>Pick a Service</h2>
-                <p>Choose from our range of professional solutions designed to get any business online fast</p>
+                <span class="section-tag">Choose Your Path</span>
+                <h2>Two products, two pages</h2>
+                <p>Pick the experience you need; each has its own dedicated page with full details.</p>
             </div>
             <div class="services-grid">
-                <!-- Vehicle Lookup Widget -->
+                <div class="service-card featured">
+                    <div class="featured-badge">Free setup</div>
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Website Design Subscription</h3>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> £30/month · hosting/support included</li>
+                        <li><i class="fas fa-check"></i> Built for any industry</li>
+                        <li><i class="fas fa-check"></i> Forms, bookings, payments wired</li>
+                    </ul>
+                    <a href="website-design.html" class="btn btn-primary">View Website Design Page</a>
+                </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-search"></i>
+                        <i class="fas fa-server"></i>
                     </div>
-                    <h3>Vehicle Search Widget</h3>
-                    <ul class="service-features">
-                        <li><i class="fas fa-globe"></i> Embeds on your website</li>
-                        <li><i class="fas fa-chart-line"></i> Users can find their vehicle to see gains</li>
-                        <li><i class="fas fa-envelope"></i> Get a quote form that comes to your email</li>
-                        <li><i class="fas fa-database"></i> Comprehensive vehicle database</li>
-                    </ul>
-                    <a href="widget-demo.html" class="btn btn-primary">
-                        Try Demo <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
 
-                <!-- Web Design -->
-                <div class="service-card featured">
-                    <div class="featured-badge">Most Popular</div>
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Web Design & Marketing</h3>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Full website design using premium templates</li>
-                        <li><i class="fas fa-trophy"></i> Appear at the top of Google</li>
                         <li><i class="fas fa-chart-bar"></i> Fully track performance & ROI</li>
                         <li><i class="fas fa-mobile-alt"></i> Mobile responsive design</li>
                     </ul>
@@ -147,44 +54,32 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
+    <!-- Light CTA Section -->
+    <section class="features">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Why Choose Us</span>
-                <h2>Powerful Features</h2>
-                <p>Everything you need to run a successful automotive business online</p>
+                <span class="section-tag">Quick links</span>
+                <h2>Everything else lives on its own page</h2>
+                <p>Simplified homepage. Dive deeper where it matters.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
-                    <h4>Lightning Fast</h4>
-                    <p>Optimized for speed with instant vehicle lookups and quick file processing</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-lock"></i></div>
-                    <h4>Secure & Reliable</h4>
-                    <p>Bank-level security for your files and customer data with 99.9% uptime</p>
-                </div>
-                <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-paint-brush"></i></div>
-                    <h4>Custom Branding</h4>
-                    <p>White-label solutions that match your business identity perfectly</p>
+                    <h4>Website Design</h4>
+                    <p>Free setup · £30/mo hosting/support. See details on the design page.</p>
+                    <a class="btn btn-primary" href="website-design.html">Open design page</a>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-sync"></i></div>
-                    <h4>Auto Updates</h4>
-                    <p>Always up-to-date with the latest vehicle data and features</p>
+                    <div class="feature-icon"><i class="fas fa-server"></i></div>
+                    <h4>Portal Demo</h4>
+                    <p>See the full portal workflow in the demo environment.</p>
+                    <a class="btn btn-outline" href="portal-demo.html">View portal demo</a>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
-                    <h4>24/7 Support</h4>
-                    <p>Dedicated support team ready to help you whenever you need</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-chart-pie"></i></div>
-                    <h4>Analytics Dashboard</h4>
-                    <p>Track your business performance with detailed insights and reports</p>
+                    <div class="feature-icon"><i class="fas fa-search"></i></div>
+                    <h4>Widget Demo</h4>
+                    <p>Experience the embeddable vehicle search widget.</p>
+                    <a class="btn btn-outline" href="widget-demo.html">View widget demo</a>
                 </div>
             </div>
         </div>
