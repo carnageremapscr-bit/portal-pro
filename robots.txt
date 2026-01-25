@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portal-pro-portal-pro.up.railway.app/sitemap.xml
+Sitemap: https://www.webportalpro.co.uk/sitemap.xml

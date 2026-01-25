@@ -4,58 +4,64 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://portal-pro-portal-pro.up.railway.app/</loc>
+    <loc>https://www.webportalpro.co.uk/</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://portal-pro-portal-pro.up.railway.app/portal-design.html</loc>
+    <loc>https://www.webportalpro.co.uk/portal-design.html</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://portal-pro-portal-pro.up.railway.app/website-design.html</loc>
+    <loc>https://www.webportalpro.co.uk/website-design.html</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://portal-pro-portal-pro.up.railway.app/widget-design.html</loc>
+    <loc>https://www.webportalpro.co.uk/widget-design.html</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://portal-pro-portal-pro.up.railway.app/reviews.html</loc>
+    <loc>https://www.webportalpro.co.uk/reviews.html</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://portal-pro-portal-pro.up.railway.app/tuning-tools.html</loc>
+    <loc>https://www.webportalpro.co.uk/tuning-tools.html</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://portal-pro-portal-pro.up.railway.app/pricing.html</loc>
+    <loc>https://www.webportalpro.co.uk/pricing.html</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://portal-pro-portal-pro.up.railway.app/how-it-works.html</loc>
+    <loc>https://www.webportalpro.co.uk/how-it-works.html</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://portal-pro-portal-pro.up.railway.app/resources.html</loc>
+    <loc>https://www.webportalpro.co.uk/resources.html</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.webportalpro.co.uk/case-studies.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <!-- Demo pages intentionally excluded (noindex) -->
 </urlset>
