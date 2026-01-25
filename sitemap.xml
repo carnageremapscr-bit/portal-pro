@@ -28,7 +28,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-
+    <loc>https://www.webportalpro.co.uk/vrm-lookup.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.webportalpro.co.uk/tuning-tools.html</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>monthly</changefreq>
