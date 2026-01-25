@@ -68,6 +68,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 
 /* Dropdown Menu */
 .dropdown { position: relative; }
+.dropdown > a { display: flex; align-items: center; gap: 4px; }
 .dropdown-menu { 
   display: none;
   position: absolute;
@@ -82,7 +83,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
   margin-top: 8px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.5);
   list-style: none;
-  z-index: 100;
+  z-index: 1000;
 }
 .dropdown:hover .dropdown-menu { display: block; }
 .dropdown-menu li { margin: 0; }
