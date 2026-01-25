@@ -63,6 +63,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .nav-links a { padding: 8px 12px; border-radius: 8px; color: var(--muted); }
 .nav-links a { padding: 8px 12px; border-radius: 8px; color: var(--muted); transition: color 0.2s ease, background 0.2s ease; }
 .nav-links a:hover { color: var(--text); background: rgba(255,255,255,0.06); }
+.nav-links a.active { color: var(--text); background: rgba(91,140,255,0.18); border: 1px solid rgba(91,140,255,0.3); }
 .mobile-toggle { display: none; background: transparent; border: 1px solid var(--border); color: var(--text); padding: 8px 10px; border-radius: 8px; }
 
 /* Dropdown Menu */
@@ -100,6 +101,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
   color: var(--text);
   transform: translateX(4px);
 }
+.dropdown-menu a.active { background: rgba(91,140,255,0.22); color: var(--text); border: 1px solid rgba(91,140,255,0.35); }
 .dropdown-menu a i {
   color: var(--primary);
   width: 20px;
@@ -216,6 +218,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .demo-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; transition: transform 0.2s ease, box-shadow 0.3s ease, border-color 0.2s ease; }
 .demo-card:hover { transform: translateY(-3px); box-shadow: 0 16px 36px var(--shadow); border-color: rgba(124,77,255,0.3); }
 .demo-thumbnail { position: relative; }
+.demo-thumbnail img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
 .play-button { position: absolute; inset: 0; display: grid; place-items: center; color: white; font-size: 24px; opacity: 0; transition: opacity 0.2s ease; }
 .demo-thumbnail:hover .play-button { opacity: 1; background: rgba(0,0,0,0.35); }
 .demo-card h4 { padding: 12px 14px 4px; margin: 0; }
@@ -317,14 +320,14 @@ input::placeholder, textarea::placeholder { color: #7a879d; }
   .hero .container { grid-template-columns: 1fr; }
   .hero-image { min-height: 280px; }
   .dashboard-preview { position: relative; right: auto; bottom: auto; width: 100%; max-width: none; margin-top: 16px; }
-  .preview-content { grid-template-columns: 1fr; }
-  .preview-sidebar { border-right: none; border-bottom: 1px solid var(--border); display: flex; gap: 4px; padding: 4px; }
-  .preview-nav-item { flex: 1; height: 16px; }
-  .preview-main { padding: 8px; }
+  .preview-content { grid-template-columns: 140px 1fr; }
+  .preview-sidebar { border-right: 1px solid var(--border); padding: 6px 0; display: flex; flex-direction: column; gap: 4px; }
+  .preview-nav-item { height: 18px; margin: 2px 4px; }
+  .preview-main { padding: 10px; }
   .preview-stats-grid { grid-template-columns: repeat(2, 1fr); }
   .services-grid, .features-grid, .pricing-grid, .demos-grid, .testimonials-grid { grid-template-columns: 1fr 1fr; }
   .dashboard-features { grid-template-columns: repeat(2, 1fr); }
-  .preview-content { grid-template-columns: 120px 1fr; min-height: 300px; }
+  .preview-content { grid-template-columns: 140px 1fr; min-height: 300px; }
   .contact-wrapper { grid-template-columns: 1fr; }
 }
 

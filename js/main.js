@@ -1,5 +1,29 @@
 // Portal Pro - Enhanced Interactions
 (function(){
+  // Highlight active nav link across pages
+  const markActiveNav = () => {
+    const path = window.location.pathname.split('/').pop() || 'index.html';
+    const allLinks = document.querySelectorAll('.nav-links a, .dropdown-menu a');
+    let matchedDropdown = false;
+    allLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      // Normalize hash-only links and absolute URLs
+      if (!href) return;
+      const hrefFile = href.includes('http') ? href.split('/').pop() : href.split('#')[0];
+      if (hrefFile === '' && path === 'index.html') {
+        link.classList.add('active');
+      } else if (hrefFile === path) {
+        link.classList.add('active');
+        if (link.closest('.dropdown')) matchedDropdown = true;
+      }
+    });
+    // If a dropdown item is active, mark the parent Services link too
+    if (matchedDropdown) {
+      const parentServices = document.querySelector('.dropdown > a');
+      if (parentServices) parentServices.classList.add('active');
+    }
+  };
+  markActiveNav();
   // Mobile menu toggle
   const toggle = document.getElementById('mobileToggle');
   const nav = document.querySelector('.nav-links');
