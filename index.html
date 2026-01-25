@@ -24,22 +24,33 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'; this.onload=null;">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <img src="assets/logo.svg" alt="Portal Pro" class="logo-img" />
                 Portal <span class="highlight">Pro</span>
             </a>
             <ul class="nav-links">
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="website-design.html">Website Design</a></li>
-                <li><a href="widget-design.html">Widget Design</a></li>
-                <li><a href="portal-design.html">Portal Design</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Services <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 4px;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="portal-design.html"><i class="fas fa-server"></i> ECU File Portal</a></li>
+                        <li><a href="website-design.html"><i class="fas fa-paint-brush"></i> Website Design</a></li>
+                        <li><a href="widget-design.html"><i class="fas fa-search"></i> VRM Widget</a></li>
+                        <li><a href="tuning-tools.html"><i class="fas fa-tools"></i> Tuning Tools</a></li>
+                    </ul>
+                </li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="resources.html">Resources</a></li>
                 <li><a href="#contact" class="btn btn-primary">Contact Us</a></li>
             </ul>
             <button class="mobile-toggle" id="mobileToggle">
@@ -84,6 +95,7 @@
                     <h3>ECU Tuning File Portal Software</h3>
                     <p>Complete portal software for ECU remapping businesses. Client file uploads, automated invoicing, support ticket system, and secure file management. Perfect for tuning specialists and automotive service providers.</p>
                     <a class="btn btn-outline" href="portal-design.html">Learn more →</a>
+                    <a class="btn btn-outline" href="tuning-tools.html" style="margin-top: 8px;"><i class="fas fa-tools"></i> Compatible Tools</a>
                 </div>
                 <div class="feature-card">
                     <img src="image-1768058514421.png" alt="Vehicle Widget" loading="lazy" style="width: 100%; border-radius: 8px; margin-bottom: 16px;">
@@ -153,6 +165,66 @@
         </div>
     </section>
 
+    <!-- Featured Testimonials Section -->
+    <section class="testimonials" style="background: rgba(91,140,255,0.03); padding: 60px 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Client Success Stories</span>
+                <h2>Trusted by 100+ Automotive Businesses</h2>
+                <p>See what our clients say about working with Portal Pro</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 40px;">
+                <div style="background: rgba(15,20,34,0.8); border: 1px solid var(--border); border-radius: 12px; padding: 28px; backdrop-filter: blur(10px);">
+                    <div style="display: flex; gap: 12px; margin-bottom: 16px; align-items: center;">
+                        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #5b8cff, #7c4dff); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px;">JL</div>
+                        <div>
+                            <div style="font-weight: 600; margin-bottom: 2px;">James Lightfoot</div>
+                            <div style="font-size: 14px; color: #a9b1c6;">AutoLab Performance Ltd</div>
+                        </div>
+                    </div>
+                    <div style="color: #fbbf24; margin-bottom: 12px; font-size: 18px;">★★★★★</div>
+                    <p style="color: #a9b1c6; line-height: 1.6; margin: 0;">"The ECU portal has completely transformed our business. We've gone from manual file handling to fully automated workflow. Our clients love how easy it is to upload files and track their jobs."</p>
+                    <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 14px; color: #5b8cff;">
+                        <i class="fas fa-server"></i> ECU File Portal Client
+                    </div>
+                </div>
+
+                <div style="background: rgba(15,20,34,0.8); border: 1px solid var(--border); border-radius: 12px; padding: 28px; backdrop-filter: blur(10px);">
+                    <div style="display: flex; gap: 12px; margin-bottom: 16px; align-items: center;">
+                        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #25D366, #128C7E); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px;">TC</div>
+                        <div>
+                            <div style="font-weight: 600; margin-bottom: 2px;">Tom Clarke</div>
+                            <div style="font-size: 14px; color: #a9b1c6;">Elite Car Sales</div>
+                        </div>
+                    </div>
+                    <div style="color: #fbbf24; margin-bottom: 12px; font-size: 18px;">★★★★★</div>
+                    <p style="color: #a9b1c6; line-height: 1.6; margin: 0;">"The VRM widget on our website is a game-changer. Customers can instantly look up vehicle details and we capture their info automatically. Lead generation has increased by 40%!"</p>
+                    <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 14px; color: #25D366;">
+                        <i class="fas fa-search"></i> VRM Widget Client
+                    </div>
+                </div>
+
+                <div style="background: rgba(15,20,34,0.8); border: 1px solid var(--border); border-radius: 12px; padding: 28px; backdrop-filter: blur(10px);">
+                    <div style="display: flex; gap: 12px; margin-bottom: 16px; align-items: center;">
+                        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px;">SM</div>
+                        <div>
+                            <div style="font-weight: 600; margin-bottom: 2px;">Sarah Mitchell</div>
+                            <div style="font-size: 14px; color: #a9b1c6;">Speed Demon Tuning</div>
+                        </div>
+                    </div>
+                    <div style="color: #fbbf24; margin-bottom: 12px; font-size: 18px;">★★★★★</div>
+                    <p style="color: #a9b1c6; line-height: 1.6; margin: 0;">"Amazing service! Our new website looks professional and the setup was incredibly fast. The team handled everything including SEO optimization and mobile responsiveness."</p>
+                    <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 14px; color: #f5576c;">
+                        <i class="fas fa-paint-brush"></i> Website Design Client
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 32px;">
+                <a href="reviews.html" class="btn btn-outline"><i class="fas fa-comments"></i> Read All 100+ Reviews</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
@@ -197,49 +269,61 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="logo">
+                    <a href="index.html" class="logo">
                         <span class="logo-icon">⚡</span>
                         Portal <span class="highlight">Pro</span>
                     </a>
-                    <p>Vehicle lookup portals, ECU file services, and conversion‑focused web design.</p>
-                    <p class="powered-by">Powered by Carnage Remaps</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <p>Professional automotive web solutions: ECU file portals, website design, and vehicle lookup widgets for UK businesses.</p>
+                    <p class="powered-by">⚙️ Powered by Carnage Remaps</p>
+                    <div style="margin-top: 16px;">
+                        <p style="margin-bottom: 8px;"><i class="fas fa-phone" style="color: #5b8cff;"></i> <a href="tel:+447546371963" style="color: #e8ecf3;">+44 7546 371963</a></p>
+                        <p style="margin-bottom: 8px;"><i class="fab fa-whatsapp" style="color: #25D366;"></i> <a href="https://wa.me/447546371963" style="color: #e8ecf3;" target="_blank">WhatsApp Us</a></p>
+                        <p><i class="fas fa-envelope" style="color: #5b8cff;"></i> <a href="mailto:carnageremaps@gmail.com" style="color: #e8ecf3;">carnageremaps@gmail.com</a></p>
+                    </div>
+                    <div class="social-links" style="margin-top: 16px;">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="footer-links">
-                    <h4>Services</h4>
+                    <h4>Our Services</h4>
                     <ul>
-                        <li><a href="#services">Vehicle Search Widget</a></li>
-                        <li><a href="#services">Web Design</a></li>
-                        <li><a href="#services">ECU File Portal</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="portal-design.html"><i class="fas fa-server"></i> ECU File Portal</a></li>
+                        <li><a href="website-design.html"><i class="fas fa-paint-brush"></i> Website Design</a></li>
+                        <li><a href="widget-design.html"><i class="fas fa-search"></i> VRM Lookup Widget</a></li>
+                        <li><a href="tuning-tools.html"><i class="fas fa-tools"></i> Tuning Tools Integration</a></li>
+                        <li><a href="pricing.html"><i class="fas fa-tags"></i> Pricing Plans</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>Company</h4>
+                    <h4>Resources</h4>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="how-it-works.html"><i class="fas fa-info-circle"></i> How It Works</a></li>
+                        <li><a href="reviews.html"><i class="fas fa-star"></i> Client Reviews</a></li>
+                        <li><a href="resources.html"><i class="fas fa-book"></i> Guides & Tutorials</a></li>
+                        <li><a href="portal-demo.html"><i class="fas fa-desktop"></i> Portal Demo</a></li>
+                        <li><a href="widget-demo.html"><i class="fas fa-play-circle"></i> Widget Demo</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>Support</h4>
+                    <h4>Trust & Security</h4>
                     <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">API Reference</a></li>
-                        <li><a href="#">Status</a></li>
+                        <li><i class="fas fa-shield-alt" style="color: #5b8cff;"></i> SSL Encrypted</li>
+                        <li><i class="fas fa-lock" style="color: #5b8cff;"></i> GDPR Compliant</li>
+                        <li><i class="fas fa-check-circle" style="color: #5b8cff;"></i> 99.9% Uptime</li>
+                        <li><i class="fas fa-headset" style="color: #5b8cff;"></i> 2hr Support Response</li>
+                        <li><i class="fas fa-users" style="color: #5b8cff;"></i> 100+ Active Clients</li>
                     </ul>
+                    <div style="margin-top: 16px; padding: 12px; background: rgba(91,140,255,0.1); border-radius: 8px; border: 1px solid rgba(91,140,255,0.3);">
+                        <p style="font-size: 14px; margin: 0;">⭐⭐⭐⭐⭐ <strong>5.0 Rating</strong></p>
+                        <p style="font-size: 12px; margin: 4px 0 0; color: #a9b1c6;">Based on 100+ reviews</p>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Portal Pro. All rights reserved.</p>
+                <p>&copy; 2026 Portal Pro by Carnage Remaps. All rights reserved. | <a href="sitemap.xml" style="color: #5b8cff;">XML Sitemap</a> | Professional ECU Portal Software & Automotive Web Design UK</p>
             </div>
         </div>
     </footer>
