@@ -35,12 +35,30 @@
 </head>
 <body>
   <nav class="navbar">
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
-      <a href="index.html" class="logo"><span class="logo-icon">⚡</span>Portal <span class="highlight">Pro</span></a>
-      <div style="display: flex; gap: 12px;">
-        <a class="btn btn-outline" href="portal-design.html">Portal Software</a>
-        <a class="btn btn-primary" href="https://wa.me/447546371963?text=Hi!%20I%20need%20a%20portal%20that%20works%20with%20my%20tuning%20tools." target="_blank"><i class="fab fa-whatsapp"></i> Get Started</a>
-      </div>
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.svg" alt="Portal Pro" class="logo-img" />
+        Portal <span class="highlight">Pro</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Services <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 4px;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="portal-design.html"><i class="fas fa-server"></i> ECU File Portal</a></li>
+            <li><a href="website-design.html"><i class="fas fa-paint-brush"></i> Website Design</a></li>
+            <li><a href="widget-design.html"><i class="fas fa-search"></i> VRM Widget</a></li>
+            <li><a href="tuning-tools.html"><i class="fas fa-tools"></i> Tuning Tools</a></li>
+          </ul>
+        </li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="#contact" class="btn btn-primary">Contact Us</a></li>
+      </ul>
+      <button class="mobile-toggle" id="mobileToggle">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </nav>
 
