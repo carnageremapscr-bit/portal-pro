@@ -4,8 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VRM Lookup Service | Vehicle Registration Checker | Portal Pro</title>
-  <meta name="description" content="Fast and accurate VRM lookup service from Portal Pro. Get comprehensive vehicle information by registration number. Check MOT status, ownership history, and detailed specifications.">
-  <meta name="keywords" content="VRM lookup, vehicle registration lookup, reg check, car registration check, VRM checker, vehicle details by reg">
+  <meta name="description" content="Fast and accurate VRM lookup service from Portal Pro. Verify UK vehicle details by registration number with MOT status, emissions data, keeper changes, and spec breakdown. Built for garages, tuners, and trade websites.">
+  <meta name="keywords" content="VRM lookup, vehicle registration lookup, reg check, car registration check, VRM checker, vehicle details by reg, DVLA data, MOT status lookup">
+  <meta property="og:title" content="VRM Lookup Service | Vehicle Registration Checker | Portal Pro">
+  <meta property="og:description" content="Instant UK vehicle data by registration: MOT status, emissions class, keeper changes, insurance group, BHP, and more. Embed the widget or call the API.">
+  <meta property="og:url" content="https://www.webportalpro.co.uk/vrm-lookup.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.webportalpro.co.uk/assets/logo.svg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://www.webportalpro.co.uk/vrm-lookup.html">
   <meta name="robots" content="index,follow">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -20,109 +26,83 @@
       display: flex;
       flex-direction: column;
     }
-    .construction-container {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 20px;
-    }
-    .construction-content {
-      max-width: 700px;
-      text-align: center;
-    }
-    .construction-icon {
-      font-size: 120px;
-      color: #5b8cff;
-      margin-bottom: 32px;
-      animation: pulse 2s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.7; transform: scale(1.05); }
-    }
-    .construction-title {
-      font-size: 48px;
-      font-weight: 900;
-      margin-bottom: 20px;
-      background: linear-gradient(135deg, #5b8cff, #7c4dff);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .construction-subtitle {
-      font-size: 24px;
-      color: #a9b1c6;
-      margin-bottom: 16px;
-      font-weight: 600;
-    }
-    .construction-description {
-      font-size: 18px;
-      color: #8892a6;
-      line-height: 1.7;
-      margin-bottom: 40px;
-    }
-    .construction-features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin: 40px 0;
-    }
-    .feature-badge {
-      background: rgba(91, 140, 255, 0.1);
-      border: 1px solid rgba(91, 140, 255, 0.2);
-      padding: 20px;
-      border-radius: 12px;
-      font-size: 15px;
-      color: #a9b1c6;
-    }
-    .feature-badge i {
-      color: #5b8cff;
-      font-size: 24px;
-      display: block;
-      margin-bottom: 12px;
-    }
-    .cta-group {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .vrm-container {
-      width: 100%;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-    .vrm-title {
-      font-size: 42px;
-      font-weight: 900;
-      margin-bottom: 12px;
-      background: linear-gradient(135deg, #5b8cff, #7c4dff);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-align: center;
-    }
-    .vrm-subtitle {
-      font-size: 18px;
-      color: #a9b1c6;
-      text-align: center;
-      margin-bottom: 32px;
-      font-weight: 500;
-    }
-    .vrm-iframe-wrapper {
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(91, 140, 255, 0.15);
+    main { flex: 1; }
+    .page-section { padding: 60px 0; }
+    .vrm-hero { padding: 70px 0 40px; position: relative; overflow: hidden; }
+    .vrm-hero::after { content: ""; position: absolute; inset: 0; background: radial-gradient(700px 420px at 85% 10%, rgba(91,140,255,0.18), transparent 65%); pointer-events: none; }
+    .vrm-hero .container { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 30px; align-items: center; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; background: rgba(91,140,255,0.12); border: 1px solid rgba(91,140,255,0.2); color: #c7d3f3; font-size: 13px; letter-spacing: 0.2px; }
+    .vrm-hero h1 { margin: 12px 0 12px; font-size: 44px; line-height: 1.15; background: linear-gradient(135deg, #5b8cff, #7c4dff); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .vrm-hero p.lede { color: #a9b1c6; font-size: 18px; margin-bottom: 20px; }
+    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+    .hero-bullets { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; color: #cbd3e6; }
+    .hero-bullets li { display: flex; align-items: center; gap: 10px; font-size: 15px; }
+    .hero-bullets i { color: #36d399; }
+    .hero-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+    .stat-chip { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px; text-align: left; }
+    .stat-chip strong { display: block; font-size: 20px; color: #e8ecf3; }
+    .stat-chip span { color: #8ea0c5; font-size: 12px; }
+    .vrm-panel { background: rgba(15,20,34,0.85); border: 1px solid #1e2536; border-radius: 16px; padding: 18px; box-shadow: 0 18px 60px rgba(0,0,0,0.4); backdrop-filter: blur(6px); }
+    .vrm-panel h2 { margin: 0 0 8px; font-size: 22px; }
+    .vrm-panel p { color: #a9b1c6; margin: 0 0 14px; font-size: 14px; }
+    .vrm-iframe-wrapper { border-radius: 12px; overflow: hidden; box-shadow: 0 20px 60px rgba(91, 140, 255, 0.18); border: 1px solid rgba(91,140,255,0.2); }
+    .signal-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+    .signal { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border-radius: 10px; background: rgba(91,140,255,0.14); border: 1px solid rgba(91,140,255,0.28); color: #c7d3f3; font-size: 13px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .info-card { background: rgba(15,20,34,0.85); border: 1px solid #1e2536; border-radius: 14px; padding: 16px; box-shadow: 0 10px 32px rgba(0,0,0,0.28); }
+    .info-card h3 { margin: 8px 0 10px; font-size: 18px; }
+    .info-card p { margin: 0; color: #9fb1cf; font-size: 14px; }
+    .info-card i { color: #5b8cff; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 18px; }
+    .step { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 14px; }
+    .step strong { display: block; margin-bottom: 6px; }
+    .faq { display: grid; gap: 12px; margin-top: 10px; }
+    .faq details { background: rgba(15,20,34,0.9); border: 1px solid #1e2536; border-radius: 12px; padding: 12px 14px; }
+    .faq summary { cursor: pointer; font-weight: 600; }
+    .faq p { color: #9fb1cf; margin: 8px 0 0; }
+    .cta-banner { background: linear-gradient(135deg, rgba(91,140,255,0.24), rgba(124,77,255,0.24)); border: 1px solid rgba(91,140,255,0.35); border-radius: 16px; padding: 26px; display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; box-shadow: 0 18px 50px rgba(0,0,0,0.32); }
+    .badge-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+    .badge { padding: 8px 12px; border-radius: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: #c7d3f3; font-size: 13px; }
+    @media (max-width: 1024px) {
+      .vrm-hero .container { grid-template-columns: 1fr; }
+      .cta-banner { grid-template-columns: 1fr; text-align: center; }
     }
     @media (max-width: 768px) {
-      .construction-title { font-size: 36px; }
-      .construction-subtitle { font-size: 20px; }
-      .construction-icon { font-size: 80px; }
-      .vrm-title { font-size: 32px; }
+      .vrm-hero h1 { font-size: 32px; }
+      .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .cta-banner { align-items: start; }
     }
   </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Portal Pro VRM Lookup",
+      "url": "https://www.webportalpro.co.uk/vrm-lookup.html",
+      "description": "Instant UK vehicle registration lookups with MOT, emissions, insurance group, and powertrain data.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Portal Pro",
+        "url": "https://www.webportalpro.co.uk",
+        "logo": "https://www.webportalpro.co.uk/assets/logo.svg"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      },
+      "serviceType": "Vehicle registration lookup",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "GBP",
+          "price": "0",
+          "name": "Sandbox access"
+        }
+      }
+    }
+  </script>
 </head>
 <body>
   <!-- Navigation -->
@@ -154,19 +134,164 @@
     </div>
   </nav>
 
-  <!-- Under Construction Content -->
-  <div class="construction-container">
-    <div class="vrm-container">
-      <h1 class="vrm-title">VRM Lookup Service</h1>
-      <p class="vrm-subtitle">Enter a UK vehicle registration number to get instant vehicle information</p>
-      <div class="vrm-iframe-wrapper">
-        <iframe src="https://web-production-df12d.up.railway.app/test-vrm.html" width="100%" height="520" style="border:none;border-radius:12px;max-width:100%;" title="Carnage VRM Lookup" loading="lazy"></iframe>
+  <main>
+    <section class="vrm-hero">
+      <div class="container">
+        <div>
+          <div class="pill"><i class="fas fa-shield-alt"></i> DVLA-aligned, UK coverage</div>
+          <h1>VRM Lookup Service for garages, tuners, and trade websites</h1>
+          <p class="lede">Instant UK vehicle data from a single number plate. Surface MOT, emissions class, insurance group, BHP, VIN matches, and keeper changes in under a second.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#vrm-check"><i class="fas fa-play-circle"></i> Start a lookup</a>
+            <a class="btn btn-outline" href="https://wa.me/447546371963"><i class="fab fa-whatsapp"></i> Talk to an engineer</a>
+            <a class="btn btn-ghost" href="widget-design.html"><i class="fas fa-code"></i> Embed the widget</a>
+          </div>
+          <ul class="hero-bullets">
+            <li><i class="fas fa-check-circle"></i> 40+ data points: MOT, tax, emissions, engine output, gearbox, insurance group</li>
+            <li><i class="fas fa-check-circle"></i> Throttle & IP rate limiting to protect your quota</li>
+            <li><i class="fas fa-check-circle"></i> White-label embeddable widget + REST API access</li>
+          </ul>
+          <div class="hero-stats">
+            <div class="stat-chip"><strong>150k+</strong><span>UK registrations checked</span></div>
+            <div class="stat-chip"><strong>&lt; 800ms</strong><span>Median response time</span></div>
+            <div class="stat-chip"><strong>99.97%</strong><span>Uptime across 12 months</span></div>
+          </div>
+        </div>
+        <div class="vrm-panel" id="vrm-check">
+          <h2>Run a live lookup</h2>
+          <p>Enter a registration to see the live data payload your customers will get.</p>
+          <div class="vrm-iframe-wrapper">
+            <iframe src="https://web-production-df12d.up.railway.app/test-vrm.html" width="100%" height="520" style="border:none;border-radius:12px;max-width:100%;" title="Portal Pro VRM Lookup" loading="lazy"></iframe>
+          </div>
+          <div class="signal-row">
+            <span class="signal"><i class="fas fa-database"></i> DVLA + DVSA signals</span>
+            <span class="signal"><i class="fas fa-lock"></i> Encrypted in transit</span>
+            <span class="signal"><i class="fas fa-gauge-high"></i> Optimised for uptime</span>
+          </div>
+        </div>
       </div>
-      <p style="color: #a9b1c6; margin-top: 32px; text-align: center; font-size: 15px;">
-        Need more information? Check out our <a href="widget-design.html" style="color: #5b8cff; text-decoration: underline;">Vehicle Search Widget</a> for embeddable lookup functionality on your website, or <a href="https://wa.me/447546371963" style="color: #5b8cff; text-decoration: underline;">contact us</a> for API access.
-      </p>
-    </div>
-  </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="pill">What you get</div>
+          <h2>Deep vehicle intelligence in one response</h2>
+          <p style="color:#a9b1c6; max-width: 800px; margin: 10px auto 0;">Every lookup returns the essentials for compliance, quoting, and customer communication.</p>
+        </div>
+        <div class="grid-3">
+          <div class="info-card">
+            <i class="fas fa-car-burst"></i>
+            <h3>MOT & safety</h3>
+            <p>MOT status and expiry, advisory count, recall flags, and mileage markers so you can quote responsibly.</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-leaf"></i>
+            <h3>Emissions & ULEZ</h3>
+            <p>Fuel type, Euro class, CO₂ g/km, ULEZ/CAZ readiness, and hybrid markers to manage compliance checks.</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-engine-warning"></i>
+            <h3>Powertrain detail</h3>
+            <p>BHP, torque, engine code, displacement, gearbox, driven wheels, and VIN ranges for tuning and parts matching.</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-user-shield"></i>
+            <h3>Keeper & insurance</h3>
+            <p>Keeper change count and dates, insurance group, model variant, and body type for policy and trade checks.</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-cloud-arrow-up"></i>
+            <h3>API + webhook ready</h3>
+            <p>REST endpoints with auth tokens, IP allowlists, and optional webhooks to push updates into your CRM.</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-puzzle-piece"></i>
+            <h3>Widgets you can embed</h3>
+            <p>Drop-in vehicle lookup widget for WordPress, Webflow, or custom portals with your logo and brand colours.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" style="padding-top: 20px;">
+      <div class="container">
+        <div class="section-header">
+          <div class="pill">Implementation</div>
+          <h2>Go live in 3 steps</h2>
+          <p style="color:#a9b1c6; max-width: 760px; margin: 10px auto 0;">Choose the delivery that matches your workflow—embed, API, or fully white-label portals.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <strong>1) Connect</strong>
+            <p style="color:#9fb1cf; margin:0;">Provision API keys or request a branded widget. We help you set DNS, webhooks, and IP allowlists.</p>
+          </div>
+          <div class="step">
+            <strong>2) Configure</strong>
+            <p style="color:#9fb1cf; margin:0;">Map the data fields you need (MOT, emissions, BHP, VIN match) and throttle limits for your team.</p>
+          </div>
+          <div class="step">
+            <strong>3) Launch</strong>
+            <p style="color:#9fb1cf; margin:0;">Embed the widget or hit the REST endpoint; we monitor uptime and send alerts if DVLA signals change.</p>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="badge"><i class="fas fa-clock"></i> Median response &lt; 800ms</span>
+          <span class="badge"><i class="fas fa-shield-check"></i> TLS 1.2+ enforced</span>
+          <span class="badge"><i class="fas fa-bolt"></i> Burst handling with fair use</span>
+          <span class="badge"><i class="fas fa-person-chalkboard"></i> Onboarding support</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" style="padding-top: 0;">
+      <div class="container">
+        <div class="section-header">
+          <div class="pill">FAQ</div>
+          <h2>Common questions</h2>
+          <p style="color:#a9b1c6; max-width: 760px; margin: 10px auto 0;">Short, direct answers so you can choose the right delivery model.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>What data sources do you use?</summary>
+            <p>We aggregate DVLA, DVSA, and insurance group references. We do not expose personal keeper data—only the counts and dates needed for trade checks.</p>
+          </details>
+          <details>
+            <summary>Can I embed this on my website?</summary>
+            <p>Yes. The widget is responsive, WCAG-friendly, and can be branded. If you prefer API, you can hit a single REST endpoint and render results yourself.</p>
+          </details>
+          <details>
+            <summary>How do you handle rate limits?</summary>
+            <p>Each key has a throttle window plus IP allowlisting. We also provide burst allowances for peak periods and send alerts if you approach quota.</p>
+          </details>
+          <details>
+            <summary>Do you store vehicle or user data?</summary>
+            <p>We log anonymous request metadata for reliability and abuse detection. You can request log pruning or region-specific storage if required.</p>
+          </details>
+          <details>
+            <summary>Can I test before paying?</summary>
+            <p>We provide a free sandbox with masked data so you can validate the integration. Book a call if you need guided setup.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" style="padding-top: 10px; padding-bottom: 80px;">
+      <div class="container">
+        <div class="cta-banner">
+          <div>
+            <div class="pill" style="margin-bottom:10px;">Ready to ship</div>
+            <h3 style="margin:0 0 8px;">Launch VRM lookups in your portal</h3>
+            <p style="margin:0; color:#c7d3f3;">Use the embedded widget, connect the API, or let us host a white-label portal for your team.</p>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap: wrap; justify-content: flex-end;">
+            <a class="btn btn-primary" href="pricing.html"><i class="fas fa-pound-sign"></i> View pricing</a>
+            <a class="btn btn-outline" href="#contact"><i class="fas fa-envelope"></i> Talk to sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer id="contact" class="footer">
