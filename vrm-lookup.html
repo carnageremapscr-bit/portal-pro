@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VRM Lookup Service - Coming Soon | Portal Pro</title>
-  <meta name="description" content="VRM lookup service coming soon from Portal Pro. Get vehicle information by registration number. Advanced lookup features for automotive businesses currently under development.">
+  <title>VRM Lookup Service | Vehicle Registration Checker | Portal Pro</title>
+  <meta name="description" content="Fast and accurate VRM lookup service from Portal Pro. Get comprehensive vehicle information by registration number. Check MOT status, ownership history, and detailed specifications.">
   <meta name="keywords" content="VRM lookup, vehicle registration lookup, reg check, car registration check, VRM checker, vehicle details by reg">
   <link rel="canonical" href="https://www.webportalpro.co.uk/vrm-lookup.html">
-  <meta name="robots" content="noindex,follow">
+  <meta name="robots" content="index,follow">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -88,10 +88,39 @@
       justify-content: center;
       flex-wrap: wrap;
     }
+    .vrm-container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .vrm-title {
+      font-size: 42px;
+      font-weight: 900;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #5b8cff, #7c4dff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+    }
+    .vrm-subtitle {
+      font-size: 18px;
+      color: #a9b1c6;
+      text-align: center;
+      margin-bottom: 32px;
+      font-weight: 500;
+    }
+    .vrm-iframe-wrapper {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(91, 140, 255, 0.15);
+    }
     @media (max-width: 768px) {
       .construction-title { font-size: 36px; }
       .construction-subtitle { font-size: 20px; }
       .construction-icon { font-size: 80px; }
+      .vrm-title { font-size: 32px; }
     }
   </style>
 </head>
@@ -127,49 +156,15 @@
 
   <!-- Under Construction Content -->
   <div class="construction-container">
-    <div class="construction-content">
-      <div class="construction-icon">
-        <i class="fas fa-hammer"></i>
+    <div class="vrm-container">
+      <h1 class="vrm-title">VRM Lookup Service</h1>
+      <p class="vrm-subtitle">Enter a UK vehicle registration number to get instant vehicle information</p>
+      <div class="vrm-iframe-wrapper">
+        <iframe src="https://web-production-df12d.up.railway.app/test-vrm.html" width="100%" height="520" style="border:none;border-radius:12px;max-width:100%;" title="Carnage VRM Lookup" loading="lazy"></iframe>
       </div>
-      <h1 class="construction-title">Under Construction</h1>
-      <h2 class="construction-subtitle">VRM Lookup Service</h2>
-      <p class="construction-description">
-        We're developing a powerful VRM lookup service that will allow you to instantly retrieve comprehensive vehicle information by registration number. This service is currently under development and will be available soon.
+      <p style="color: #a9b1c6; margin-top: 32px; text-align: center; font-size: 15px;">
+        Need more information? Check out our <a href="widget-design.html" style="color: #5b8cff; text-decoration: underline;">Vehicle Search Widget</a> for embeddable lookup functionality on your website, or <a href="https://wa.me/447546371963" style="color: #5b8cff; text-decoration: underline;">contact us</a> for API access.
       </p>
-      
-      <div class="construction-features">
-        <div class="feature-badge">
-          <i class="fas fa-search"></i>
-          <strong>Instant Lookup</strong><br>
-          Fast vehicle data retrieval
-        </div>
-        <div class="feature-badge">
-          <i class="fas fa-database"></i>
-          <strong>Comprehensive Data</strong><br>
-          Full vehicle specifications
-        </div>
-        <div class="feature-badge">
-          <i class="fas fa-bolt"></i>
-          <strong>API Access</strong><br>
-          Direct integration available
-        </div>
-      </div>
-
-      <p style="color: #a9b1c6; margin-bottom: 32px; font-size: 16px;">
-        Meanwhile, check out our <a href="widget-design.html" style="color: #5b8cff; text-decoration: underline;">Vehicle Search Widget</a> for embeddable vehicle lookup functionality on your website.
-      </p>
-
-      <div class="cta-group">
-        <a href="index.html" class="btn btn-primary btn-lg">
-          <i class="fas fa-home"></i> Back to Home
-        </a>
-        <a href="widget-design.html" class="btn btn-outline btn-lg">
-          <i class="fas fa-search"></i> Vehicle Search Widget
-        </a>
-        <a href="https://wa.me/447546371963" class="btn btn-outline btn-lg" style="background: #25d366; border-color: #25d366;">
-          <i class="fab fa-whatsapp"></i> Contact Us
-        </a>
-      </div>
     </div>
   </div>
 
