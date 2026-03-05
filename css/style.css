@@ -32,6 +32,10 @@ body {
   line-height: 1.7;
 }
 
+h1, h2, h3, h4, .logo {
+  font-family: 'Sora', 'Manrope', 'Segoe UI', sans-serif;
+}
+
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 
@@ -123,6 +127,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 10px; border: 1px solid var(--border); transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease; }
 .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.35); }
 .btn-primary { background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; border: none; }
+.btn-primary { background: linear-gradient(135deg, #f97316, #0f8aa8); color: white; border: none; box-shadow: 0 12px 24px rgba(249,115,22,0.22); }
 .btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.14); }
 .btn-outline:hover { background: rgba(15,138,168,0.08); border-color: rgba(15,138,168,0.28); }
 .btn-ghost { background: transparent; color: var(--muted); border: none; }
@@ -349,7 +354,7 @@ h1, h2, h3, h4, h5, h6 { color: #0c1f30; letter-spacing: -0.01em; }
 .features:nth-of-type(even),
 .pricing:nth-of-type(even),
 .contact:nth-of-type(even) {
-  background: linear-gradient(180deg, rgba(255,255,255,0.44), rgba(232,242,250,0.52));
+  background: linear-gradient(180deg, rgba(255,248,238,0.72), rgba(232,244,250,0.74));
 }
 
 .card,
@@ -366,7 +371,49 @@ article.card {
 }
 
 .page-hero {
-  background: linear-gradient(130deg, rgba(15,138,168,0.13), rgba(242,138,47,0.14)) !important;
+  background: linear-gradient(120deg, rgba(249,115,22,0.17), rgba(15,138,168,0.2) 55%, rgba(31,154,118,0.18)) !important;
+  border-bottom: 1px solid rgba(15,138,168,0.22);
+}
+
+.section-header h2,
+.page-hero h1,
+.hero h1 {
+  background: linear-gradient(120deg, #0c1f30 0%, #0f8aa8 46%, #f97316 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card,
+.feature-card,
+.pricing-card,
+.testimonial-card,
+.demo-card,
+.resource-card,
+.tool-card,
+.review-card {
+  border-top: 4px solid transparent !important;
+  border-image: linear-gradient(90deg, #0f8aa8, #f97316, #1f9a76) 1;
+}
+
+.cards > *:nth-child(4n+1),
+.features-grid > *:nth-child(4n+1) {
+  box-shadow: 0 10px 26px rgba(15,138,168,0.16) !important;
+}
+
+.cards > *:nth-child(4n+2),
+.features-grid > *:nth-child(4n+2) {
+  box-shadow: 0 10px 26px rgba(249,115,22,0.16) !important;
+}
+
+.cards > *:nth-child(4n+3),
+.features-grid > *:nth-child(4n+3) {
+  box-shadow: 0 10px 26px rgba(31,154,118,0.16) !important;
+}
+
+.cards > *:nth-child(4n+4),
+.features-grid > *:nth-child(4n+4) {
+  box-shadow: 0 10px 26px rgba(226,75,107,0.14) !important;
 }
 
 .footer .logo,
@@ -402,6 +449,16 @@ article.card {
 [style*="#5b8cff"],
 [style*="#7c4dff"] {
   border-color: rgba(15,138,168,0.3) !important;
+}
+
+[style*="color: #0f8aa8"],
+[style*="color:#0f8aa8"] {
+  color: #f97316 !important;
+}
+
+[style*="background: linear-gradient(135deg, #0f8aa8, #f28a2f)"],
+[style*="background:linear-gradient(135deg, #0f8aa8, #f28a2f)"] {
+  background: linear-gradient(135deg, #f97316, #0f8aa8) !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -456,7 +513,7 @@ article.card {
 }
 
 @media (max-width: 768px) {
-  .nav-links { position: fixed; top: 64px; right: 0; width: 100%; max-width: 420px; height: calc(100vh - 64px); background: rgba(10,14,22,0.92); backdrop-filter: blur(8px); border-left: 1px solid var(--border); padding: 16px; flex-direction: column; align-items: stretch; gap: 8px; transform: translateX(100%); transition: transform 0.25s ease; }
+  .nav-links { position: fixed; top: 64px; right: 0; width: 100%; max-width: 420px; height: calc(100vh - 64px); background: rgba(255,255,255,0.96); backdrop-filter: blur(8px); border-left: 1px solid var(--border); padding: 16px; flex-direction: column; align-items: stretch; gap: 8px; transform: translateX(100%); transition: transform 0.25s ease; }
   .nav-links.open { transform: translateX(0); }
   .mobile-toggle { display: inline-block; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
