@@ -155,7 +155,7 @@
     const btn = document.createElement('button');
     btn.innerHTML = '<i class="fas fa-arrow-up"></i>';
     btn.className = 'scroll-to-top';
-    btn.style.cssText = 'position: fixed; bottom: 90px; right: 20px; width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #5b8cff, #7c4dff); border: none; color: white; cursor: pointer; opacity: 0; transition: opacity 0.3s, transform 0.2s; z-index: 40; box-shadow: 0 4px 12px rgba(0,0,0,0.3);';
+    btn.style.cssText = 'position: fixed; bottom: 90px; right: 20px; width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #0f8aa8, #1f9a76); border: 1px solid rgba(255,255,255,0.6); color: white; cursor: pointer; opacity: 0; transition: opacity 0.3s, transform 0.2s; z-index: 40; box-shadow: 0 8px 20px rgba(15,53,74,0.25);';
     btn.setAttribute('aria-label', 'Scroll to top');
     
     window.addEventListener('scroll', () => {
@@ -182,4 +182,30 @@
   };
 
   addScrollToTop();
+
+  // Improve scanability for content-heavy pages with small reveal transitions.
+  const revealSections = () => {
+    const targets = document.querySelectorAll('.section, .card, .feature-card, .pricing-card, details.card');
+    if (!targets.length || !window.IntersectionObserver) return;
+
+    targets.forEach((el) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    targets.forEach((el) => observer.observe(el));
+  };
+
+  revealSections();
 })();
