@@ -573,15 +573,6 @@ article.card {
   align-self: flex-start;
 }
 
-@media (max-width: 1100px) {
-  .portfolio-grid { grid-template-columns: repeat(3, 1fr); }
-}
-
-@media (max-width: 640px) {
-  .portfolio-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .portfolio-logo-panel { height: 100px; padding: 12px 14px; }
-  .portfolio-logo-panel img { max-height: 72px; }
-}
 
 
 /* Responsive */
@@ -599,6 +590,7 @@ article.card {
   .preview-content { grid-template-columns: 140px 1fr; min-height: 300px; }
   .contact-wrapper { grid-template-columns: 1fr; }
   .cards { grid-template-columns: 1fr 1fr; }
+  .portfolio-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 
@@ -643,6 +635,10 @@ article.card {
   .btn { min-height: 44px; }
   .contact-methods { grid-template-columns: 1fr !important; }
 
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .portfolio-logo-panel { height: 100px; padding: 12px 14px; }
+  .portfolio-logo-panel img { max-height: 72px; }
+  .portfolio-body { padding: 12px; }
 }
 
 /* Light overrides removed — dark portal theme is canonical */
