@@ -523,14 +523,14 @@ article.card {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 130px;
-  padding: 18px 20px;
+  height: 90px;
+  padding: 12px 16px;
   flex-shrink: 0;
 }
 
 .portfolio-logo-panel img {
   max-width: 100%;
-  max-height: 94px;
+  max-height: 62px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -636,8 +636,8 @@ article.card {
   .contact-methods { grid-template-columns: 1fr !important; }
 
   .portfolio-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .portfolio-logo-panel { height: 100px; padding: 12px 14px; }
-  .portfolio-logo-panel img { max-height: 72px; }
+  .portfolio-logo-panel { height: 80px; padding: 10px 12px; }
+  .portfolio-logo-panel img { max-height: 56px; }
   .portfolio-body { padding: 12px; }
 }
 
