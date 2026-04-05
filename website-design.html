@@ -49,8 +49,9 @@
     .portfolio-item { background: #151b28; border: 1px solid rgba(91,140,255,0.12); border-radius: 12px; padding: 16px; }
     .portfolio-preview {
       width: 100%;
-      aspect-ratio: 16 / 9;
+      height: 180px;
       object-fit: cover;
+      object-position: top center;
       border-radius: 10px;
       border: 1px solid rgba(91,140,255,0.2);
       margin-bottom: 12px;
@@ -69,6 +70,7 @@
       .cta-row { flex-direction: column; }
       .btn-row { flex-direction: column; }
       .cards { grid-template-columns: 1fr; }
+      .portfolio-preview { height: 150px; }
     }
   </style>
 </head>
@@ -133,7 +135,7 @@
       <h2 style="text-align:center; margin-bottom:18px;">See examples of our work</h2>
       <p style="text-align:center; color:#8892a8; margin-bottom:24px;">Real client websites built and launched by us. Click any project to view it live.</p>
       <div style="background: #151b28; border: 1px solid rgba(91,140,255,0.12); border-radius: 12px; overflow: hidden; margin-bottom: 16px;">
-        <img src="https://image.thum.io/get/width/1600/noanimate/https://www.carnageremaps.co.uk/" alt="Website Design Showcase" loading="lazy" style="width: 100%; display: block;">
+        <img src="https://image.thum.io/get/width/1600/noanimate/https://www.carnageremaps.co.uk/" alt="Website Design Showcase" loading="lazy" style="width: 100%; height: 260px; object-fit: cover; object-position: top center; display: block;">
       </div>
       <div class="portfolio-grid" style="margin-top: 20px;">
         <div class="portfolio-item">

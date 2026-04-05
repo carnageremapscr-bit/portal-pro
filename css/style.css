@@ -532,6 +532,11 @@ article.card {
   .hero h1 { font-size: 2.4rem; }
   .btn { min-height: 44px; }
   .contact-methods { grid-template-columns: 1fr !important; }
+
+  /* Keep portfolio website previews compact on mobile. */
+  .cards .card img[alt^="Preview of"] {
+    height: 150px !important;
+  }
 }
 
 /* Light overrides removed — dark portal theme is canonical */
