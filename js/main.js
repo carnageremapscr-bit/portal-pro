@@ -208,7 +208,9 @@
   addScrollToTop();
 
   // Improve scanability for content-heavy pages with small reveal transitions.
+  // Skip on landing pages — handled by initLandingReveal instead.
   const revealSections = () => {
+    if (document.body.classList.contains('landing-page')) return;
     const targets = document.querySelectorAll('.section, .card, .feature-card, .pricing-card, details.card');
     if (!targets.length || !window.IntersectionObserver) return;
 
@@ -230,6 +232,41 @@
 
     targets.forEach((el) => observer.observe(el));
   };
+
+  // Landing page scroll reveal with stagger
+  const initLandingReveal = () => {
+    if (!document.body.classList.contains('landing-page')) return;
+
+    const els = document.querySelectorAll(
+      '.card, .step-card, .section-header, .price-banner, .faq details, ' +
+      '.contact-methods > a, .use-case-card, .code-block, .demo-panel'
+    );
+    if (!els.length) return;
+
+    // Set initial transition with stagger handled per-group
+    els.forEach(el => {
+      el.style.transition = 'opacity 0.65s cubic-bezier(.22,1,.36,1), transform 0.65s cubic-bezier(.22,1,.36,1), box-shadow 0.4s ease, border-color 0.4s ease';
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const parent = el.parentElement;
+        if (parent && (parent.classList.contains('cards') || parent.classList.contains('steps-grid') ||
+            parent.classList.contains('faq') || parent.classList.contains('contact-methods'))) {
+          const idx = Array.from(parent.children).indexOf(el);
+          el.style.transitionDelay = (idx * 0.09) + 's';
+        }
+        requestAnimationFrame(() => el.classList.add('revealed'));
+        observer.unobserve(el);
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+    els.forEach(el => observer.observe(el));
+  };
+
+  initLandingReveal();
 
   revealSections();
 })();

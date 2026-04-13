@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VRM Lookup API Integration | Vehicle Registration Data API | Portal Pro</title>
+  <meta name="description" content="VRM lookup API for developers and businesses. Integrate UK vehicle registration data into your app, CRM, or booking system. RESTful API with JSON responses. MOT, emissions, BHP, and keeper data.">
+  <link rel="canonical" href="https://www.webportalpro.co.uk/vrm-api-integration.html">
+  <meta name="robots" content="index,follow">
+  <meta name="keywords" content="VRM API, vehicle registration API, reg lookup API, car data API, DVLA API, vehicle check API, UK vehicle API, registration lookup API, VRM data integration, vehicle registration data">
+  <meta name="author" content="Portal Pro">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VRM Lookup API | Vehicle Registration Data API">
+  <meta property="og:description" content="RESTful VRM API for UK vehicle data. MOT, emissions, BHP, and more. Integrate into any app or system.">
+  <meta property="og:url" content="https://www.webportalpro.co.uk/vrm-api-integration.html">
+  <meta property="og:image" content="https://www.webportalpro.co.uk/image-1768058455622.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VRM Lookup API | Portal Pro">
+  <meta name="twitter:description" content="RESTful VRM API for UK vehicle registration data.">
+  <meta name="twitter:image" content="https://www.webportalpro.co.uk/image-1768058455622.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { background: #0d1117; color: #d2deef; }
+    .page-hero { padding: 80px 0 40px; text-align: center; }
+    .page-hero h1 { font-size: 2.8rem; margin-bottom: 12px; }
+    .page-hero p { color: #8892a8; max-width: 780px; margin: 0 auto; }
+    .cta-row { display: flex; gap: 12px; justify-content: center; margin-top: 20px; }
+    .section { padding: 60px 0; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .card { background: #151b28; border: 1px solid rgba(91,140,255,0.12); border-radius: 12px; padding: 24px; }
+    .card h3 { margin: 0 0 8px 0; color: #e2e8f0; }
+    .card p { color: #8892a8; margin: 0; font-size: 15px; }
+    .card i { font-size: 28px; margin-bottom: 12px; color: #0bb8c8; }
+    .pill { display: inline-block; padding: 6px 12px; border-radius: 999px; background: rgba(11,184,200,0.12); color: #0bb8c8; font-weight: 600; font-size: 13px; }
+    .feature-list { list-style: none; padding: 0; margin: 12px 0 0 0; }
+    .feature-list li { margin-bottom: 8px; color: #8892a8; }
+    .feature-list li i { color: #10b981; margin-right: 8px; }
+    .section-header { text-align: center; margin-bottom: 32px; }
+    .section-header h2 { font-size: 2rem; margin-bottom: 8px; }
+    .section-header p { color: #8892a8; max-width: 680px; margin: 0 auto; }
+    .code-block { background: #0a0e16; border: 1px solid rgba(91,140,255,0.15); border-radius: 12px; padding: 20px; font-family: 'Courier New', monospace; font-size: 13px; color: #10b981; overflow-x: auto; margin: 20px 0; line-height: 1.6; }
+    .code-block .comment { color: #6b7280; }
+    .code-block .key { color: #0bb8c8; }
+    .code-block .string { color: #10b981; }
+    .price-banner { background: linear-gradient(135deg, rgba(11,184,200,0.15), rgba(16,185,129,0.15)); border: 1px solid rgba(11,184,200,0.25); border-radius: 16px; padding: 32px; text-align: center; margin-top: 40px; }
+    .faq { display: grid; gap: 12px; margin-top: 10px; }
+    .faq details { background: rgba(21,27,40,0.9); border: 1px solid rgba(91,140,255,0.12); border-radius: 12px; padding: 12px 14px; }
+    .faq summary { cursor: pointer; font-weight: 600; color: #e2e8f0; }
+    .faq p { color: #8892a8; margin: 8px 0 0; }
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 2rem; }
+      .cta-row { flex-direction: column; align-items: center; }
+      .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "VRM Lookup API",
+    "description": "RESTful API for UK vehicle registration lookups. Returns MOT status, emissions, engine data, keeper history, and insurance group data in JSON format.",
+    "url": "https://www.webportalpro.co.uk/vrm-api-integration.html",
+    "provider": { "@type": "Organization", "name": "Portal Pro", "url": "https://www.webportalpro.co.uk" },
+    "areaServed": { "@type": "Country", "name": "United Kingdom" },
+    "serviceType": "Vehicle Registration API"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How does the VRM API work?", "acceptedAnswer": { "@type": "Answer", "text": "Send a GET or POST request with a UK registration number and receive a JSON response with full vehicle details including make, model, MOT status, emissions, BHP, and more." } },
+      { "@type": "Question", "name": "Can I integrate the VRM API into my booking system?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The API returns JSON data that can be integrated into any booking system, CRM, garage management software, or custom application." } },
+      { "@type": "Question", "name": "What programming languages does the API support?", "acceptedAnswer": { "@type": "Answer", "text": "The API is language-agnostic. It works with any language that can make HTTP requests — JavaScript, Python, PHP, C#, Java, Ruby, Go, and more." } },
+      { "@type": "Question", "name": "Is the VRM API rate-limited?", "acceptedAnswer": { "@type": "Answer", "text": "Contact us to discuss rate limits and pricing based on your expected volume. We offer flexible plans suitable for small businesses through to enterprise-level usage." } }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.webportalpro.co.uk/" },
+    { "@type": "ListItem", "position": 2, "name": "VRM Lookup", "item": "https://www.webportalpro.co.uk/vrm-lookup.html" },
+    { "@type": "ListItem", "position": 3, "name": "VRM API Integration", "item": "https://www.webportalpro.co.uk/vrm-api-integration.html" }
+  ] }
+  </script>
+</head>
+<body class="landing-page">
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="assets/logo.svg" alt="Portal Pro" class="logo-img" /> Portal <span class="highlight">Pro</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Services <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 4px;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="portal-design.html"><i class="fas fa-server"></i> ECU File Portal</a></li>
+            <li><a href="website-design.html"><i class="fas fa-paint-brush"></i> Website Design</a></li>
+            <li><a href="widget-design.html"><i class="fas fa-search"></i> Vehicle Search Widget</a></li>
+            <li><a href="vrm-lookup.html"><i class="fas fa-car"></i> VRM Lookup</a></li>
+            <li><a href="tuning-tools.html"><i class="fas fa-tools"></i> Tuning Tools</a></li>
+          </ul>
+        </li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="#contact" class="btn btn-primary">Contact Us</a></li>
+        <li><a href="https://secure-file-portal-portal-pro.up.railway.app/login.html" class="btn btn-outline" target="_blank"><i class="fas fa-sign-in-alt"></i> Portal Login</a></li>
+      </ul>
+      <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+    <div class="container">
+      <span class="pill"><i class="fas fa-plug"></i> Developer API</span>
+      <h1>VRM Lookup API &mdash; Vehicle Registration Data for Your App</h1>
+      <p>Integrate UK vehicle registration data into your application, CRM, or booking system. RESTful API with JSON responses covering MOT status, emissions, BHP, insurance group, keeper history, and more.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/447546371963?text=Hi!%20I'm%20interested%20in%20the%20VRM%20lookup%20API%20for%20my%20application." target="_blank"><i class="fab fa-whatsapp"></i> Discuss API Access</a>
+        <a class="btn btn-outline" href="vrm-lookup.html"><i class="fas fa-car"></i> VRM Lookup Overview</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- API Overview -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Simple API, Powerful Data</h2>
+        <p>One request, comprehensive vehicle data. Integrate into any system in minutes.</p>
+      </div>
+      <div class="code-block">
+        <span class="comment">// Example API Response</span><br>
+        {<br>
+        &nbsp;&nbsp;<span class="key">"registration"</span>: <span class="string">"AB12 CDE"</span>,<br>
+        &nbsp;&nbsp;<span class="key">"make"</span>: <span class="string">"BMW"</span>,<br>
+        &nbsp;&nbsp;<span class="key">"model"</span>: <span class="string">"320d M Sport"</span>,<br>
+        &nbsp;&nbsp;<span class="key">"year"</span>: <span class="string">"2021"</span>,<br>
+        &nbsp;&nbsp;<span class="key">"engineSize"</span>: <span class="string">"1995cc"</span>,<br>
+        &nbsp;&nbsp;<span class="key">"fuelType"</span>: <span class="string">"Diesel"</span>,<br>
+        &nbsp;&nbsp;<span class="key">"bhp"</span>: <span class="string">"190"</span>,<br>
+        &nbsp;&nbsp;<span class="key">"co2"</span>: <span class="string">"117 g/km"</span>,<br>
+        &nbsp;&nbsp;<span class="key">"motStatus"</span>: <span class="string">"Valid"</span>,<br>
+        &nbsp;&nbsp;<span class="key">"motExpiry"</span>: <span class="string">"2026-09-15"</span>,<br>
+        &nbsp;&nbsp;<span class="key">"taxStatus"</span>: <span class="string">"Taxed"</span>,<br>
+        &nbsp;&nbsp;<span class="key">"insuranceGroup"</span>: <span class="string">"28E"</span>,<br>
+        &nbsp;&nbsp;<span class="key">"keeperChanges"</span>: <span class="string">"2"</span><br>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section class="section" style="background: linear-gradient(135deg, rgba(11,184,200,0.04), rgba(16,185,129,0.04)); border-top: 1px solid rgba(91,140,255,0.12); border-bottom: 1px solid rgba(91,140,255,0.12);">
+    <div class="container">
+      <div class="section-header">
+        <h2>API Use Cases</h2>
+        <p>Integrate vehicle data wherever you need it.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <i class="fas fa-calendar-alt"></i>
+          <h3>Booking Systems</h3>
+          <p>Auto-fill vehicle details when customers enter their reg during the booking process. Reduces form fields and errors.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-address-book"></i>
+          <h3>CRM Integration</h3>
+          <p>Enrich customer records with vehicle data automatically. Know what your customers drive without asking them.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-calculator"></i>
+          <h3>Quoting Tools</h3>
+          <p>Generate accurate quotes based on vehicle type, engine size, and age. Automate pricing for services like remapping or insurance.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-warehouse"></i>
+          <h3>Garage Management</h3>
+          <p>Integrate into your DMS or workshop software. Auto-populate vehicle details when creating job cards or work orders.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Mobile Apps</h3>
+          <p>Build vehicle lookup features into native iOS and Android apps. Fast JSON responses for smooth mobile experiences.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-chart-bar"></i>
+          <h3>Data Analysis</h3>
+          <p>Bulk vehicle data for fleet management, market research, or inventory analysis. Understand your customer base better.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integration Examples -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Works With Any Language</h2>
+        <p>Standard REST API &mdash; integrate with JavaScript, Python, PHP, C#, or any language that makes HTTP requests.</p>
+      </div>
+      <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+        <div class="card"><i class="fab fa-js-square"></i><h3>JavaScript / Node.js</h3><p>Use fetch() or axios to call the API from frontend or backend JavaScript applications.</p></div>
+        <div class="card"><i class="fab fa-python"></i><h3>Python</h3><p>Simple requests library integration for Django, Flask, or standalone Python applications.</p></div>
+        <div class="card"><i class="fab fa-php"></i><h3>PHP</h3><p>cURL or Guzzle HTTP client for WordPress plugins, Laravel apps, or custom PHP integrations.</p></div>
+        <div class="card"><i class="fab fa-microsoft"></i><h3>C# / .NET</h3><p>HttpClient integration for ASP.NET, WPF, or any .NET application needing vehicle data.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" style="background: linear-gradient(135deg, rgba(11,184,200,0.04), rgba(16,185,129,0.04));">
+    <div class="container" style="max-width: 800px;">
+      <div class="section-header"><h2>VRM API FAQ</h2></div>
+      <div class="faq">
+        <details><summary>How does the VRM API work?</summary><p>Send a request with a UK registration number and receive a JSON response with full vehicle details including make, model, MOT status, emissions, BHP, and more.</p></details>
+        <details><summary>Can I integrate the API into my booking system?</summary><p>Yes. The API returns JSON data that integrates into any booking system, CRM, garage management software, or custom application.</p></details>
+        <details><summary>What programming languages does it support?</summary><p>The API is language-agnostic. It works with JavaScript, Python, PHP, C#, Java, Ruby, Go &mdash; any language that can make HTTP requests.</p></details>
+        <details><summary>Is there a rate limit?</summary><p>Contact us to discuss rate limits and pricing based on your expected volume. We offer flexible plans for small businesses through to enterprise usage.</p></details>
+        <details><summary>Is the data accurate and up to date?</summary><p>Yes. Vehicle data is sourced from official UK databases and updated regularly to ensure accuracy of MOT, tax, and registration information.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-wrapper" style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <span class="section-tag">Get In Touch</span>
+        <h2>Ready to integrate VRM data?</h2>
+        <p style="margin-bottom: 32px; font-size: 18px; color: #8892a8;">Contact us to discuss API access, pricing, and integration support.</p>
+        <div class="contact-methods" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px;">
+          <a href="https://wa.me/447546371963" class="contact-method whatsapp" target="_blank" style="padding: 24px; border-radius: 12px; background: linear-gradient(135deg, #25D366, #128C7E); border: none; text-decoration: none; display: block;"><i class="fab fa-whatsapp" style="font-size: 48px; margin-bottom: 12px;"></i><div><strong style="display: block; font-size: 18px; margin-bottom: 4px;">WhatsApp</strong><span style="font-size: 14px; opacity: 0.9;">+44 7546 371963</span></div></a>
+          <a href="mailto:carnageremaps@gmail.com" class="contact-method email" style="padding: 24px; border-radius: 12px; background: linear-gradient(135deg, #0bb8c8, #10b981); border: none; text-decoration: none; display: block;"><i class="fas fa-envelope" style="font-size: 48px; margin-bottom: 12px;"></i><div><strong style="display: block; font-size: 18px; margin-bottom: 4px;">Email</strong><span style="font-size: 14px; opacity: 0.9;">carnageremaps@gmail.com</span></div></a>
+          <a href="tel:+447546371963" class="contact-method phone" style="padding: 24px; border-radius: 12px; background: linear-gradient(135deg, #667eea, #764ba2); border: none; text-decoration: none; display: block;"><i class="fas fa-phone" style="font-size: 48px; margin-bottom: 12px;"></i><div><strong style="display: block; font-size: 18px; margin-bottom: 4px;">Phone</strong><span style="font-size: 14px; opacity: 0.9;">+44 7546 371963</span></div></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><span class="logo-icon">*</span> Portal <span class="highlight">Pro</span></a>
+          <p>Professional automotive web solutions and vehicle lookup tools for UK businesses.</p>
+          <div style="margin-top: 16px;">
+            <p style="margin-bottom: 8px;"><i class="fas fa-phone" style="color: #0bb8c8;"></i> <a href="tel:+447546371963" style="color: #d2deef;">+44 7546 371963</a></p>
+            <p style="margin-bottom: 8px;"><i class="fab fa-whatsapp" style="color: #25D366;"></i> <a href="https://wa.me/447546371963" style="color: #d2deef;" target="_blank">WhatsApp Us</a></p>
+            <p><i class="fas fa-envelope" style="color: #0bb8c8;"></i> <a href="mailto:carnageremaps@gmail.com" style="color: #d2deef;">carnageremaps@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="footer-links"><h4>VRM Solutions</h4><ul>
+          <li><a href="vrm-lookup.html"><i class="fas fa-car"></i> VRM Lookup</a></li>
+          <li><a href="vrm-embed-widget.html"><i class="fas fa-code"></i> Embed Widget</a></li>
+          <li><a href="vrm-api-integration.html"><i class="fas fa-plug"></i> API Integration</a></li>
+          <li><a href="vrm-lookup-garages.html"><i class="fas fa-wrench"></i> VRM for Garages</a></li>
+        </ul></div>
+        <div class="footer-links"><h4>Our Services</h4><ul>
+          <li><a href="portal-design.html"><i class="fas fa-server"></i> ECU File Portal</a></li>
+          <li><a href="website-design.html"><i class="fas fa-paint-brush"></i> Website Design</a></li>
+          <li><a href="widget-design.html"><i class="fas fa-search"></i> Vehicle Search Widget</a></li>
+          <li><a href="tuning-tools.html"><i class="fas fa-tools"></i> Tuning Tools</a></li>
+        </ul></div>
+        <div class="footer-links"><h4>Resources</h4><ul>
+          <li><a href="how-it-works.html"><i class="fas fa-info-circle"></i> How It Works</a></li>
+          <li><a href="pricing.html"><i class="fas fa-tags"></i> Pricing</a></li>
+          <li><a href="resources.html"><i class="fas fa-book"></i> Guides</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Portal Pro by Carnage Remaps. All rights reserved. | <a href="sitemap.xml" style="color: #0bb8c8;">Sitemap</a></p></div>
+    </div>
+  </footer>
+  <a href="https://wa.me/447546371963" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <script src="js/main.js"></script>
+</body>
+</html>
