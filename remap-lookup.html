@@ -104,7 +104,8 @@
           </div>
         </div>
         <button class="btn btn-primary" onclick="regLookup()" style="padding:14px 36px;font-size:16px;"><i class="fas fa-search"></i> Look Up Remap Gains</button>
-        <p style="color:#6b7280;font-size:13px;margin-top:12px;"><i class="fas fa-lock"></i> Free &amp; instant — no sign-up required</p>
+        <p style="color:#6b7280;font-size:13px;margin-top:12px;"><i class="fas fa-lock"></i> Free &amp; instant - no sign-up required</p>
+        <p style="color:#8892a8;font-size:12px;margin-top:8px;">Figures shown are stage 1 baseline estimates and are capped to realistic limits.</p>
       </div>
 
       <!-- Result -->
@@ -113,7 +114,7 @@
           <div style="text-align:center;margin-bottom:20px;">
             <div style="display:inline-block;background:rgba(11,184,200,0.1);border:1px solid rgba(11,184,200,0.2);border-radius:10px;padding:10px 20px;">
               <span style="font-size:12px;color:#8892a8;display:block;">Vehicle Identified</span>
-              <span style="font-size:20px;font-weight:800;color:#e2e8f0;">BMW 320d 2.0 TDI (F30) — 190 BHP</span>
+              <span id="vehicleTitle" style="font-size:20px;font-weight:800;color:#e2e8f0;">Registration AB12CDE - Estimated stock 190 BHP</span>
             </div>
           </div>
 
@@ -124,34 +125,34 @@
               <div style="position:relative;width:140px;height:140px;margin:0 auto 12px;">
                 <svg viewBox="0 0 140 140" style="transform:rotate(-90deg);">
                   <circle cx="70" cy="70" r="60" fill="none" stroke="rgba(91,140,255,0.08)" stroke-width="10"/>
-                  <circle cx="70" cy="70" r="60" fill="none" stroke="url(#bhpGrad)" stroke-width="10" stroke-dasharray="377" stroke-dashoffset="180" stroke-linecap="round" style="transition:stroke-dashoffset 1.2s cubic-bezier(.22,1,.36,1);"/>
+                  <circle id="bhpArc" cx="70" cy="70" r="60" fill="none" stroke="url(#bhpGrad)" stroke-width="10" stroke-dasharray="377" stroke-dashoffset="180" stroke-linecap="round" style="transition:stroke-dashoffset 1.2s cubic-bezier(.22,1,.36,1);"/>
                   <defs><linearGradient id="bhpGrad"><stop offset="0%" stop-color="#0bb8c8"/><stop offset="100%" stop-color="#10b981"/></linearGradient></defs>
                 </svg>
                 <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-                  <span style="font-size:32px;font-weight:800;color:#10b981;">240</span>
+                  <span id="bhpValue" style="font-size:32px;font-weight:800;color:#10b981;">240</span>
                   <span style="font-size:11px;color:#8892a8;">BHP</span>
                 </div>
               </div>
-              <div style="color:#10b981;font-weight:700;">+50 BHP (+26%)</div>
+              <div id="bhpGainText" style="color:#10b981;font-weight:700;">+50 BHP (+26%)</div>
             </div>
             <div style="background:rgba(16,185,129,0.04);border:1px solid rgba(16,185,129,0.12);border-radius:14px;padding:24px;text-align:center;">
               <div style="font-size:11px;text-transform:uppercase;font-weight:600;color:#8892a8;letter-spacing:1px;margin-bottom:12px;">Torque</div>
               <div style="position:relative;width:140px;height:140px;margin:0 auto 12px;">
                 <svg viewBox="0 0 140 140" style="transform:rotate(-90deg);">
                   <circle cx="70" cy="70" r="60" fill="none" stroke="rgba(91,140,255,0.08)" stroke-width="10"/>
-                  <circle cx="70" cy="70" r="60" fill="none" stroke="url(#tqGrad)" stroke-width="10" stroke-dasharray="377" stroke-dashoffset="160" stroke-linecap="round" style="transition:stroke-dashoffset 1.2s cubic-bezier(.22,1,.36,1);"/>
+                  <circle id="tqArc" cx="70" cy="70" r="60" fill="none" stroke="url(#tqGrad)" stroke-width="10" stroke-dasharray="377" stroke-dashoffset="160" stroke-linecap="round" style="transition:stroke-dashoffset 1.2s cubic-bezier(.22,1,.36,1);"/>
                   <defs><linearGradient id="tqGrad"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#6366f1"/></linearGradient></defs>
                 </svg>
                 <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-                  <span style="font-size:32px;font-weight:800;color:#10b981;">480</span>
+                  <span id="tqValue" style="font-size:32px;font-weight:800;color:#10b981;">480</span>
                   <span style="font-size:11px;color:#8892a8;">Nm</span>
                 </div>
               </div>
-              <div style="color:#10b981;font-weight:700;">+80 Nm (+20%)</div>
+              <div id="tqGainText" style="color:#10b981;font-weight:700;">+80 Nm (+20%)</div>
             </div>
           </div>
           <div style="text-align:center;">
-            <a class="btn btn-primary" href="https://wa.me/447546371963?text=Hi!%20I%20looked%20up%20my%20remap%20gains%20and%20want%20to%20book." target="_blank"><i class="fab fa-whatsapp"></i> Get a Quote for This Remap</a>
+            <a id="quoteButton" class="btn btn-primary" href="https://wa.me/447546371963?text=Hi!%20I%20looked%20up%20my%20remap%20gains%20and%20want%20to%20book." target="_blank"><i class="fab fa-whatsapp"></i> Get a Quote for This Remap</a>
           </div>
         </div>
       </div>
@@ -373,6 +374,113 @@
   </footer>
   <a href="https://wa.me/447546371963" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
   <script src="js/main.js"></script>
-  <script>function regLookup(){document.getElementById('regResult').style.display='block';}</script>
+  <script>
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function hashString(value) {
+      var hash = 0;
+      for (var i = 0; i < value.length; i++) {
+        hash = ((hash << 5) - hash) + value.charCodeAt(i);
+        hash |= 0;
+      }
+      return Math.abs(hash);
+    }
+
+    function randomIntFromSeed(seed, min, max, shift) {
+      var value = (seed >> shift) & 1023;
+      return min + (value % (max - min + 1));
+    }
+
+    function inferEngineProfile(seed) {
+      var bucket = seed % 100;
+      if (bucket < 16) {
+        return { key: 'na-petrol', label: 'Naturally aspirated petrol', bhpPctMin: 6, bhpPctMax: 12, tqPctMin: 6, tqPctMax: 12, bhpCap: 45, tqCap: 65 };
+      }
+      if (bucket < 52) {
+        return { key: 'turbo-petrol', label: 'Turbo petrol', bhpPctMin: 12, bhpPctMax: 20, tqPctMin: 14, tqPctMax: 23, bhpCap: 90, tqCap: 140 };
+      }
+      if (bucket < 88) {
+        return { key: 'turbo-diesel', label: 'Turbo diesel', bhpPctMin: 13, bhpPctMax: 22, tqPctMin: 16, tqPctMax: 28, bhpCap: 80, tqCap: 170 };
+      }
+      return { key: 'supercharged', label: 'Supercharged / high output', bhpPctMin: 10, bhpPctMax: 18, tqPctMin: 12, tqPctMax: 21, bhpCap: 95, tqCap: 150 };
+    }
+
+    function generateStockFigures(seed, profileKey) {
+      var tierRoll = seed % 100;
+      var stockBhp;
+
+      // Most lookups remain mainstream, with a smaller chance of high-output stock vehicles.
+      if (tierRoll < 84) {
+        stockBhp = randomIntFromSeed(seed, 95, 320, 0);
+      } else if (tierRoll < 97) {
+        stockBhp = randomIntFromSeed(seed, 320, 520, 2);
+      } else {
+        stockBhp = randomIntFromSeed(seed, 520, 680, 4);
+      }
+
+      var tqFactor = 1.95;
+      if (profileKey === 'turbo-diesel') {
+        tqFactor = 2.35;
+      } else if (profileKey === 'na-petrol') {
+        tqFactor = 1.45;
+      } else if (profileKey === 'supercharged') {
+        tqFactor = 1.8;
+      }
+
+      var stockTq = Math.round((stockBhp * tqFactor) + randomIntFromSeed(seed, 18, 95, 6));
+      return { bhp: stockBhp, tq: stockTq };
+    }
+
+    function regLookup() {
+      var input = document.getElementById('regPlate');
+      var reg = (input.value || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+
+      if (!/^[A-Z0-9]{2,8}$/.test(reg)) {
+        alert('Please enter a valid registration.');
+        return;
+      }
+
+      var seed = hashString(reg);
+      var profile = inferEngineProfile(seed);
+      var stock = generateStockFigures(seed, profile.key);
+      var stockBhp = stock.bhp;
+      var stockTq = stock.tq;
+
+      var bhpPct = randomIntFromSeed(seed, profile.bhpPctMin, profile.bhpPctMax, 8);
+      var tqPct = randomIntFromSeed(seed, profile.tqPctMin, profile.tqPctMax, 10);
+
+      var baseMaxBhpGain = stockBhp < 140 ? 38 : (stockBhp < 260 ? 58 : (stockBhp < 430 ? 75 : 95));
+      var baseMaxTqGain = stockTq < 280 ? 72 : (stockTq < 500 ? 115 : 170);
+      var maxBhpGain = Math.min(baseMaxBhpGain, profile.bhpCap);
+      var maxTqGain = Math.min(baseMaxTqGain, profile.tqCap);
+
+      var bhpGain = clamp(Math.round(stockBhp * (bhpPct / 100)), 18, maxBhpGain);
+      var tqGain = clamp(Math.round(stockTq * (tqPct / 100)), 35, maxTqGain);
+
+      var tunedBhp = stockBhp + bhpGain;
+      var tunedTq = stockTq + tqGain;
+
+      var bhpGainPct = Math.round((bhpGain / stockBhp) * 100);
+      var tqGainPct = Math.round((tqGain / stockTq) * 100);
+
+      document.getElementById('vehicleTitle').textContent = 'Registration ' + reg + ' - Estimated stock ' + stockBhp + ' BHP (' + profile.label + ')';
+      document.getElementById('bhpValue').textContent = tunedBhp;
+      document.getElementById('tqValue').textContent = tunedTq;
+      document.getElementById('bhpGainText').textContent = '+' + bhpGain + ' BHP (+' + bhpGainPct + '%)';
+      document.getElementById('tqGainText').textContent = '+' + tqGain + ' Nm (+' + tqGainPct + '%)';
+
+      var bhpProgress = clamp(tunedBhp / 420, 0.2, 1);
+      var tqProgress = clamp(tunedTq / 760, 0.2, 1);
+      document.getElementById('bhpArc').setAttribute('stroke-dashoffset', String(Math.round(377 - (377 * bhpProgress))));
+      document.getElementById('tqArc').setAttribute('stroke-dashoffset', String(Math.round(377 - (377 * tqProgress))));
+
+      var message = 'Hi! I looked up my remap gains for ' + reg + '. Estimated stock: ' + stockBhp + ' BHP / ' + stockTq + ' Nm. Stage 1 estimate: ' + tunedBhp + ' BHP / ' + tunedTq + ' Nm. Can I get a quote?';
+      document.getElementById('quoteButton').href = 'https://wa.me/447546371963?text=' + encodeURIComponent(message);
+
+      document.getElementById('regResult').style.display = 'block';
+    }
+  </script>
 </body>
 </html>
