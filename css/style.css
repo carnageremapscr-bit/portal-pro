@@ -64,6 +64,15 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .nav-links a { padding: 8px 12px; border-radius: 8px; color: var(--muted); transition: color 0.2s ease, background 0.2s ease; }
 .nav-links a:hover { color: #fff; background: rgba(11,184,200,0.12); }
 .nav-links a.active { color: #fff; background: rgba(11,184,200,0.18); border: 1px solid rgba(11,184,200,0.3); }
+.nav-links a.editor-link {
+  font-weight: 800;
+  color: var(--primary);
+  background: rgba(11,184,200,0.06);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(11,184,200,0.12);
+}
+.nav-links a.editor-link strong { font-weight: 800; color: inherit; }
 .mobile-toggle { display: none; background: transparent; border: 1px solid var(--border); color: var(--text); padding: 8px 10px; border-radius: 8px; }
 
 /* Dropdown Menu */
