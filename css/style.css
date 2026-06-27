@@ -577,7 +577,8 @@ article.card {
 
 /* Responsive */
 @media (max-width: 992px) {
-  .hero .container { grid-template-columns: 1fr; }
+  .hero .container,
+  .page-hero .container { grid-template-columns: 1fr; }
   .hero-image { min-height: 280px; }
   .dashboard-preview { position: relative; right: auto; bottom: auto; width: 100%; max-width: none; margin-top: 16px; }
   .preview-content { grid-template-columns: 140px 1fr; }
