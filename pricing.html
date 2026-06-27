@@ -37,6 +37,23 @@
     .whats-included h4 { margin: 0 0 16px 0; font-size: 16px; color: #4f6ebd; }
     .whats-included ul { list-style: none; padding: 0; margin: 0; }
     .whats-included li { padding: 8px 0; color: #8892a8; font-size: 14px; }
+    @media (max-width: 768px) {
+      .page-hero .container { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+      .pricing-card { width: 100% !important; padding: 24px !important; }
+      .plan-price { font-size: 36px !important; }
+      .plan-desc { padding-bottom: 18px !important; }
+      .whats-included { padding: 20px !important; }
+      .whats-included h4 { font-size: 16px !important; }
+      .price-tag { display: inline-flex; flex-wrap: wrap; }
+      .btn { width: 100%; justify-content: center; }
+    }
+    @media (max-width: 520px) {
+      .page-hero h1 { font-size: 2.2rem !important; }
+      .page-hero p { font-size: 1rem !important; }
+      .pricing-card { padding: 20px !important; }
+      .plan-price { font-size: 32px !important; }
+    }
   </style>
 </head>
 <body>
