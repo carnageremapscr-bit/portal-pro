@@ -31,18 +31,18 @@
     .cta-row { display: flex; gap: 12px; justify-content: center; margin-top: 20px; }
     .section { padding: 60px 0; }
     .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
-    .card { background: #151b28; border: 1px solid rgba(91,140,255,0.12); border-radius: 12px; padding: 20px; }
+    .card { background: #151b28; border: 1px solid rgba(79,110,189,0.12); border-radius: 12px; padding: 20px; }
     .card h3 { margin: 0 0 8px 0; color: #e2e8f0; }
-    .pill { display: inline-block; padding: 6px 12px; border-radius: 999px; background: rgba(11,184,200,0.12); color: #0bb8c8; font-weight: 600; font-size: 13px; }
+    .pill { display: inline-block; padding: 6px 12px; border-radius: 999px; background: rgba(29,59,122,0.12); color: #4f6ebd; font-weight: 600; font-size: 13px; }
     .feature-list { list-style: none; padding: 0; margin: 12px 0 0 0; }
     .feature-list li { margin-bottom: 8px; color: #8892a8; }
-    .price-card { background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid rgba(11,184,200,0.25); }
+    .price-card { background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid rgba(29,59,122,0.25); }
     .price { font-size: 42px; font-weight: 800; margin: 12px 0 4px; color: #e2e8f0; }
     .sub { color: #8892a8; }
     .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
-    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 10px; border: 1px solid rgba(91,140,255,0.12); color: #d2deef; text-decoration: none; font-weight: 600; }
-    .btn-primary { background: linear-gradient(135deg, #0bb8c8, #10b981); border: none; color: #fff; }
-    .btn-outline { background: rgba(11,184,200,0.06); border: 1px solid rgba(11,184,200,0.2); }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 10px; border: 1px solid rgba(79,110,189,0.12); color: #d2deef; text-decoration: none; font-weight: 600; }
+    .btn-primary { background: linear-gradient(135deg, #4f6ebd, #2e4c8f); border: none; color: #fff; }
+    .btn-outline { background: rgba(29,59,122,0.06); border: 1px solid rgba(29,59,122,0.2); }
     .stack { display: grid; gap: 18px; }
     header.navbar { background: rgba(10,14,22,0.8); position: sticky; top: 0; backdrop-filter: blur(8px); }
     .contact-buttons { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
@@ -88,13 +88,18 @@
   </nav>
 
   <header class="page-hero">
-    <div class="container">
-      <span class="pill">Embed & capture leads</span>
-      <h1>Vehicle Search Widget</h1>
-      <p>Add an interactive vehicle lookup widget to your website. Let customers search vehicles, enter their data, and instantly get quotes. Capture high-quality leads on autopilot.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="https://wa.me/447546371963?text=Hi!%20I'd%20like%20to%20get%20the%20Vehicle%20Search%20Widget%20set%20up%20for%20%C2%A39.99/month.%20Can%20you%20help?" target="_blank"><i class="fab fa-whatsapp"></i> Get Setup (WhatsApp)</a>
-        <a class="btn btn-outline" href="mailto:carnageremaps@gmail.com?subject=Widget%20Setup%20Request"><i class="fas fa-envelope"></i> Email Us</a>
+    <div class="container" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: center;">
+      <div>
+        <span class="pill">Embed & capture leads</span>
+        <h1>Vehicle Search Widget</h1>
+        <p>Add an interactive vehicle lookup widget to your website. Let customers search vehicles, enter their data, and instantly get quotes. Capture high-quality leads on autopilot.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://wa.me/447546371963?text=Hi!%20I'd%20like%20to%20get%20the%20Vehicle%20Search%20Widget%20set%20up%20for%20%C2%A39.99/month.%20Can%20you%20help?" target="_blank"><i class="fab fa-whatsapp"></i> Get Setup (WhatsApp)</a>
+          <a class="btn btn-outline" href="mailto:carnageremaps@gmail.com?subject=Widget%20Setup%20Request"><i class="fas fa-envelope"></i> Email Us</a>
+        </div>
+      </div>
+      <div class="hero-image" style="min-height: 320px; display: flex; align-items: center; justify-content: center;">
+        <img src="assets/illustration-vrm.svg" alt="Vehicle search widget illustration" loading="lazy" />
       </div>
     </div>
   </header>
@@ -120,7 +125,7 @@
       <p style="text-align:center; color:#8892a8; margin-bottom:24px;">Start small, scale as you grow. No long contracts.</p>
       <div class="cards">
         <div class="card price-card">
-          <div class="pill" style="background:rgba(11,184,200,0.15); color:#0bb8c8;">Most popular</div>
+          <div class="pill" style="background:rgba(29,59,122,0.15); color:#4f6ebd;">Most popular</div>
           <h3>Widget Subscription</h3>
           <div class="price">£9.99<span style="font-size:18px; font-weight:600;">/mo</span></div>
           <p class="sub">Setup included  -  Fair-use lookups</p>
@@ -166,20 +171,20 @@
     </div>
   </section>
 
-  <section class="section" style="background: rgba(11,184,200,0.05);">
+  <section class="section" style="background: rgba(29,59,122,0.05);">
     <div class="container">
       <h2 style="text-align:center; margin-bottom:32px;">Real results from real businesses</h2>
       <div class="cards">
         <div class="card" style="text-align: center;">
-          <div style="font-size: 48px; font-weight: 800; background: linear-gradient(135deg, #0bb8c8, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px;">40%</div>
+          <div style="font-size: 48px; font-weight: 800; background: linear-gradient(135deg, #4f6ebd, #2e4c8f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px;">40%</div>
           <p class="sub" style="margin: 0;">Increase in quote submissions</p>
         </div>
         <div class="card" style="text-align: center;">
-          <div style="font-size: 48px; font-weight: 800; background: linear-gradient(135deg, #0bb8c8, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px;">500+</div>
+          <div style="font-size: 48px; font-weight: 800; background: linear-gradient(135deg, #4f6ebd, #2e4c8f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px;">500+</div>
           <p class="sub" style="margin: 0;">Vehicle lookups per month</p>
         </div>
         <div class="card" style="text-align: center;">
-          <div style="font-size: 48px; font-weight: 800; background: linear-gradient(135deg, #0bb8c8, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px;">2min</div>
+          <div style="font-size: 48px; font-weight: 800; background: linear-gradient(135deg, #4f6ebd, #2e4c8f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px;">2min</div>
           <p class="sub" style="margin: 0;">Average time to capture lead</p>
         </div>
       </div>
@@ -190,16 +195,16 @@
     <div class="container">
       <h2 style="text-align:center; margin-bottom:32px;">Integration is simple</h2>
       <div style="max-width: 700px; margin: 0 auto;">
-        <div class="card" style="background: #0a0e16; border: 1px solid rgba(91,140,255,0.12); padding: 24px; margin-bottom: 24px;">
-          <h3 style="margin: 0 0 12px 0; font-size: 18px; color: #0bb8c8;">Step 1: Sign Up</h3>
+        <div class="card" style="background: #0a0e16; border: 1px solid rgba(79,110,189,0.12); padding: 24px; margin-bottom: 24px;">
+          <h3 style="margin: 0 0 12px 0; font-size: 18px; color: #4f6ebd;">Step 1: Sign Up</h3>
           <p style="margin: 0; color: #8892a8;">Create your account and customize your widget settings (colors, fields, notifications).</p>
         </div>
-        <div class="card" style="background: #0a0e16; border: 1px solid rgba(91,140,255,0.12); padding: 24px; margin-bottom: 24px;">
-          <h3 style="margin: 0 0 12px 0; font-size: 18px; color: #0bb8c8;">Step 2: Copy Code</h3>
+        <div class="card" style="background: #0a0e16; border: 1px solid rgba(79,110,189,0.12); padding: 24px; margin-bottom: 24px;">
+          <h3 style="margin: 0 0 12px 0; font-size: 18px; color: #4f6ebd;">Step 2: Copy Code</h3>
           <p style="margin: 0; color: #8892a8;">Copy the one-line embed code from your dashboard.</p>
         </div>
-        <div class="card" style="background: #0a0e16; border: 1px solid rgba(91,140,255,0.12); padding: 24px;">
-          <h3 style="margin: 0 0 12px 0; font-size: 18px; color: #0bb8c8;">Step 3: Paste & Launch</h3>
+        <div class="card" style="background: #0a0e16; border: 1px solid rgba(79,110,189,0.12); padding: 24px;">
+          <h3 style="margin: 0 0 12px 0; font-size: 18px; color: #4f6ebd;">Step 3: Paste & Launch</h3>
           <p style="margin: 0; color: #8892a8;">Paste it into your website HTML and you're live. Works on any website platform.</p>
         </div>
       </div>

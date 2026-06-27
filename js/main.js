@@ -179,7 +179,7 @@
     const btn = document.createElement('button');
     btn.innerHTML = '<i class="fas fa-arrow-up"></i>';
     btn.className = 'scroll-to-top';
-    btn.style.cssText = 'position: fixed; bottom: 90px; right: 20px; width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #0f8aa8, #1f9a76); border: 1px solid rgba(255,255,255,0.6); color: white; cursor: pointer; opacity: 0; transition: opacity 0.3s, transform 0.2s; z-index: 40; box-shadow: 0 8px 20px rgba(15,53,74,0.25);';
+    btn.style.cssText = 'position: fixed; bottom: 90px; right: 20px; width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #1d3b7a, #1f9a76); border: 1px solid rgba(255,255,255,0.6); color: white; cursor: pointer; opacity: 0; transition: opacity 0.3s, transform 0.2s; z-index: 40; box-shadow: 0 8px 20px rgba(15,53,74,0.25);';
     btn.setAttribute('aria-label', 'Scroll to top');
     
     window.addEventListener('scroll', () => {

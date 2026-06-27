@@ -32,18 +32,18 @@
     .cta-row { display: flex; gap: 12px; justify-content: center; margin-top: 20px; }
     .section { padding: 60px 0; }
     .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
-    .card { background: #151b28; border: 1px solid rgba(91,140,255,0.12); border-radius: 12px; padding: 20px; }
+    .card { background: #151b28; border: 1px solid rgba(79,110,189,0.12); border-radius: 12px; padding: 20px; }
     .card h3 { margin: 0 0 8px 0; color: #e2e8f0; }
-    .pill { display: inline-block; padding: 6px 12px; border-radius: 999px; background: rgba(11,184,200,0.12); color: #0bb8c8; font-weight: 600; font-size: 13px; }
+    .pill { display: inline-block; padding: 6px 12px; border-radius: 999px; background: rgba(29,59,122,0.12); color: #4f6ebd; font-weight: 600; font-size: 13px; }
     .feature-list { list-style: none; padding: 0; margin: 12px 0 0 0; }
     .feature-list li { margin-bottom: 8px; color: #8892a8; }
-    .price-card { background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid rgba(11,184,200,0.25); }
+    .price-card { background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid rgba(29,59,122,0.25); }
     .price { font-size: 42px; font-weight: 800; margin: 12px 0 4px; color: #e2e8f0; }
     .sub { color: #8892a8; }
     .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
-    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 10px; border: 1px solid rgba(91,140,255,0.12); color: #d2deef; text-decoration: none; font-weight: 600; }
-    .btn-primary { background: linear-gradient(135deg, #0bb8c8, #10b981); border: none; color: #fff; }
-    .btn-outline { background: rgba(11,184,200,0.06); border: 1px solid rgba(11,184,200,0.2); }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 10px; border: 1px solid rgba(79,110,189,0.12); color: #d2deef; text-decoration: none; font-weight: 600; }
+    .btn-primary { background: linear-gradient(135deg, #4f6ebd, #2e4c8f); border: none; color: #fff; }
+    .btn-outline { background: rgba(29,59,122,0.06); border: 1px solid rgba(29,59,122,0.2); }
     .stack { display: grid; gap: 18px; }
     header.navbar { background: rgba(10,14,22,0.8); position: sticky; top: 0; backdrop-filter: blur(8px); }
     .contact-buttons { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
@@ -90,28 +90,33 @@
   </nav>
 
   <header class="page-hero">
-    <div class="container">
-      <span class="pill">Complete Business Automation</span>
-      <h1>ECU Tuning File Portal & Remapping Business Software</h1>
-      <p>Professional portal software designed specifically for ECU tuning services, remapping specialists, and dyno tuning businesses. Automate file uploads, invoice generation, payment processing, and client communication. Receive ECU files from clients, manage your tuning workflow, track support tickets, and deliver remapped files-all through one secure, branded portal system. Trusted by UK-based tuning shops, chiptuning specialists, and automotive performance businesses.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="https://wa.me/447546371963?text=Hi!%20I'd%20like%20to%20learn%20more%20about%20the%20ECU%20File%20Portal.%20Can%20you%20share%20pricing%20and%20features?" target="_blank"><i class="fab fa-whatsapp"></i> Get Details (WhatsApp)</a>
-        <a class="btn btn-outline" href="mailto:carnageremaps@gmail.com?subject=Portal%20Inquiry"><i class="fas fa-envelope"></i> Email Us</a>
+    <div class="container" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: center;">
+      <div>
+        <span class="pill">Complete Business Automation</span>
+        <h1>ECU Tuning File Portal & Remapping Business Software</h1>
+        <p>Professional portal software designed specifically for ECU tuning services, remapping specialists, and dyno tuning businesses. Automate file uploads, invoice generation, payment processing, and client communication. Receive ECU files from clients, manage your tuning workflow, track support tickets, and deliver remapped files-all through one secure, branded portal system. Trusted by UK-based tuning shops, chiptuning specialists, and automotive performance businesses.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://wa.me/447546371963?text=Hi!%20I'd%20like%20to%20learn%20more%20about%20the%20ECU%20File%20Portal.%20Can%20you%20share%20pricing%20and%20features?" target="_blank"><i class="fab fa-whatsapp"></i> Get Details (WhatsApp)</a>
+          <a class="btn btn-outline" href="mailto:carnageremaps@gmail.com?subject=Portal%20Inquiry"><i class="fas fa-envelope"></i> Email Us</a>
+        </div>
+      </div>
+      <div class="hero-image" style="min-height: 320px; display: flex; align-items: center; justify-content: center;">
+        <img src="assets/illustration-portal.svg" alt="ECU portal software illustration" loading="lazy" />
       </div>
     </div>
   </header>
 
   <!-- Trust Badges & Social Proof -->
-  <section style="padding: 40px 0; background: rgba(11,184,200,0.03); border-top: 1px solid rgba(91,140,255,0.12); border-bottom: 1px solid rgba(91,140,255,0.12);">
+  <section style="padding: 40px 0; background: rgba(29,59,122,0.03); border-top: 1px solid rgba(79,110,189,0.12); border-bottom: 1px solid rgba(79,110,189,0.12);">
     <div class="container">
       <p style="text-align: center; color: #8892a8; font-size: 14px; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 1px;">Trusted by UK Tuning Businesses</p>
       <div style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap;">
         <div style="text-align: center;">
-          <div style="font-size: 36px; font-weight: 800; color: #0bb8c8;">100+</div>
+          <div style="font-size: 36px; font-weight: 800; color: #4f6ebd;">100+</div>
           <div style="color: #8892a8; font-size: 13px;">Active Clients</div>
         </div>
         <div style="text-align: center;">
-          <div style="font-size: 36px; font-weight: 800; color: #10b981;">99.9%</div>
+          <div style="font-size: 36px; font-weight: 800; color: #2e4c8f;">99.9%</div>
           <div style="color: #8892a8; font-size: 13px;">Uptime</div>
         </div>
         <div style="text-align: center;">
@@ -161,27 +166,27 @@
       <div style="display: grid; grid-template-columns: 1fr; gap: 32px; margin-bottom: 32px;">
 
         <!-- Dashboard -->
-        <div style="background: #151b28; border: 1px solid rgba(91,140,255,0.12); border-radius: 12px; overflow: hidden;">
+        <div style="background: #151b28; border: 1px solid rgba(79,110,189,0.12); border-radius: 12px; overflow: hidden;">
           <img src="image-1775398844789.png" alt="Portal Pro Dashboard - Stats, alerts, quick actions and file overview" loading="lazy" style="width: 100%; display: block;">
           <div style="padding: 16px 20px;">
-            <h3 style="margin: 0 0 4px 0; font-size: 18px;"><i class="fas fa-tachometer-alt" style="color: #0bb8c8; margin-right: 8px;"></i>Dashboard</h3>
+            <h3 style="margin: 0 0 4px 0; font-size: 18px;"><i class="fas fa-tachometer-alt" style="color: #4f6ebd; margin-right: 8px;"></i>Dashboard</h3>
             <p style="margin: 0; color: #8892a8; font-size: 14px;">At-a-glance stats, alerts, quick actions, and recent files — everything your team needs in one view.</p>
           </div>
         </div>
 
         <!-- Files + Upload side by side -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 24px;">
-          <div style="background: #151b28; border: 1px solid rgba(91,140,255,0.12); border-radius: 12px; overflow: hidden;">
+          <div style="background: #151b28; border: 1px solid rgba(79,110,189,0.12); border-radius: 12px; overflow: hidden;">
             <img src="image-1775398863737.png" alt="Portal Pro Files - File history with vehicle details and status tracking" loading="lazy" style="width: 100%; display: block;">
             <div style="padding: 16px 20px;">
-              <h3 style="margin: 0 0 4px 0; font-size: 18px;"><i class="fas fa-folder-open" style="color: #0bb8c8; margin-right: 8px;"></i>File Management</h3>
+              <h3 style="margin: 0 0 4px 0; font-size: 18px;"><i class="fas fa-folder-open" style="color: #4f6ebd; margin-right: 8px;"></i>File Management</h3>
               <p style="margin: 0; color: #8892a8; font-size: 14px;">Full file history with vehicle details, registration, status tracking, and filtering.</p>
             </div>
           </div>
-          <div style="background: #151b28; border: 1px solid rgba(91,140,255,0.12); border-radius: 12px; overflow: hidden;">
+          <div style="background: #151b28; border: 1px solid rgba(79,110,189,0.12); border-radius: 12px; overflow: hidden;">
             <img src="image-1775398883461.png" alt="Portal Pro Upload - ECU tuning file upload with vehicle selection" loading="lazy" style="width: 100%; display: block;">
             <div style="padding: 16px 20px;">
-              <h3 style="margin: 0 0 4px 0; font-size: 18px;"><i class="fas fa-cloud-upload-alt" style="color: #0bb8c8; margin-right: 8px;"></i>File Upload</h3>
+              <h3 style="margin: 0 0 4px 0; font-size: 18px;"><i class="fas fa-cloud-upload-alt" style="color: #4f6ebd; margin-right: 8px;"></i>File Upload</h3>
               <p style="margin: 0; color: #8892a8; font-size: 14px;">Guided upload flow with vehicle selection, tuning stage options, and drag-and-drop file support.</p>
             </div>
           </div>
@@ -189,27 +194,27 @@
 
         <!-- Vehicle Search + Knowledge Base side by side -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 24px;">
-          <div style="background: #151b28; border: 1px solid rgba(91,140,255,0.12); border-radius: 12px; overflow: hidden;">
+          <div style="background: #151b28; border: 1px solid rgba(79,110,189,0.12); border-radius: 12px; overflow: hidden;">
             <img src="image-1775398905170.png" alt="Portal Pro Vehicle Search - UK registration plate lookup" loading="lazy" style="width: 100%; display: block;">
             <div style="padding: 16px 20px;">
-              <h3 style="margin: 0 0 4px 0; font-size: 18px;"><i class="fas fa-search" style="color: #0bb8c8; margin-right: 8px;"></i>Vehicle Search</h3>
+              <h3 style="margin: 0 0 4px 0; font-size: 18px;"><i class="fas fa-search" style="color: #4f6ebd; margin-right: 8px;"></i>Vehicle Search</h3>
               <p style="margin: 0; color: #8892a8; font-size: 14px;">Instant UK registration lookup with full DVLA model data — find any vehicle in seconds.</p>
             </div>
           </div>
-          <div style="background: #151b28; border: 1px solid rgba(91,140,255,0.12); border-radius: 12px; overflow: hidden;">
+          <div style="background: #151b28; border: 1px solid rgba(79,110,189,0.12); border-radius: 12px; overflow: hidden;">
             <img src="image-1775398921631.png" alt="Portal Pro Knowledge Base - Help guides and tuning references" loading="lazy" style="width: 100%; display: block;">
             <div style="padding: 16px 20px;">
-              <h3 style="margin: 0 0 4px 0; font-size: 18px;"><i class="fas fa-book" style="color: #0bb8c8; margin-right: 8px;"></i>Knowledge Base</h3>
+              <h3 style="margin: 0 0 4px 0; font-size: 18px;"><i class="fas fa-book" style="color: #4f6ebd; margin-right: 8px;"></i>Knowledge Base</h3>
               <p style="margin: 0; color: #8892a8; font-size: 14px;">Built-in help guides and tuning references your team and clients can search instantly.</p>
             </div>
           </div>
         </div>
 
         <!-- API Access -->
-        <div style="background: #151b28; border: 1px solid rgba(91,140,255,0.12); border-radius: 12px; overflow: hidden;">
+        <div style="background: #151b28; border: 1px solid rgba(79,110,189,0.12); border-radius: 12px; overflow: hidden;">
           <img src="image-1775398942896.png" alt="Portal Pro API Access - Embeddable vehicle lookup widget with customisation" loading="lazy" style="width: 100%; display: block;">
           <div style="padding: 16px 20px;">
-            <h3 style="margin: 0 0 4px 0; font-size: 18px;"><i class="fas fa-code" style="color: #0bb8c8; margin-right: 8px;"></i>API Access & Embeddable Widget</h3>
+            <h3 style="margin: 0 0 4px 0; font-size: 18px;"><i class="fas fa-code" style="color: #4f6ebd; margin-right: 8px;"></i>API Access & Embeddable Widget</h3>
             <p style="margin: 0; color: #8892a8; font-size: 14px;">Customisable vehicle lookup widget you can embed on any website — branded colours, live preview, and one-click embed code.</p>
           </div>
         </div>
@@ -224,7 +229,7 @@
       <p style="text-align:center; color:#8892a8; margin-bottom:24px;">Setup is customized to your business. Support and updates always included.</p>
       <div class="cards">
         <div class="card price-card">
-          <div class="pill" style="background:rgba(11,184,200,0.15); color:#0bb8c8;">Popular</div>
+          <div class="pill" style="background:rgba(29,59,122,0.15); color:#4f6ebd;">Popular</div>
           <h3>Portal Subscription</h3>
           <div class="price">Custom<span style="font-size:18px; font-weight:600;">/mo</span></div>
           <p class="sub">Setup fee varies  -  Based on features needed</p>
@@ -270,12 +275,12 @@
     </div>
   </section>
 
-  <section class="section" style="background: rgba(11,184,200,0.05);">
+  <section class="section" style="background: rgba(29,59,122,0.05);">
     <div class="container">
       <h2 style="text-align:center; margin-bottom:32px;">How businesses use the portal</h2>
       <div class="cards">
         <div class="card">
-          <h3 style="color: #0bb8c8; margin: 0 0 12px 0;">ECU Tuning Shops</h3>
+          <h3 style="color: #4f6ebd; margin: 0 0 12px 0;">ECU Tuning Shops</h3>
           <p class="sub" style="margin-bottom: 12px;">Receive ECU files from clients, process remaps, send invoices, and deliver tuned files-all in one place.</p>
           <ul class="feature-list">
             <li>- Automated file intake</li>
@@ -284,7 +289,7 @@
           </ul>
         </div>
         <div class="card">
-          <h3 style="color: #0bb8c8; margin: 0 0 12px 0;">Software Agencies</h3>
+          <h3 style="color: #4f6ebd; margin: 0 0 12px 0;">Software Agencies</h3>
           <p class="sub" style="margin-bottom: 12px;">Manage client projects, deliverables, milestones, and payments without juggling multiple tools.</p>
           <ul class="feature-list">
             <li>- Project file sharing</li>
@@ -293,7 +298,7 @@
           </ul>
         </div>
         <div class="card">
-          <h3 style="color: #0bb8c8; margin: 0 0 12px 0;">Creative Studios</h3>
+          <h3 style="color: #4f6ebd; margin: 0 0 12px 0;">Creative Studios</h3>
           <p class="sub" style="margin-bottom: 12px;">Deliver designs, get approvals, track revisions, and invoice clients seamlessly.</p>
           <ul class="feature-list">
             <li>- Asset delivery system</li>
@@ -409,7 +414,7 @@
   </section>
 
   <!-- Alternatives Section (neutral, multi"‘company) -->
-  <section id="alternatives" class="section" style="background: rgba(11,184,200,0.05);">
+  <section id="alternatives" class="section" style="background: rgba(29,59,122,0.05);">
     <div class="container">
       <h2 style="text-align:center; margin-bottom:18px;">Industry Alternatives</h2>
       <p style="text-align:center; color:#8892a8; max-width:900px; margin:0 auto 24px;">There are several ECU file portal providers in the market. WebPortalPro focuses on fast deployment, WhatsApp"‘first support, and flexible integrations. If you're evaluating options, consider established providers such as BenSky, File Service Portals, or other tuning"‘focused platforms - then compare implementation speed, support responsiveness, tooling coverage, and total cost of ownership.</p>
