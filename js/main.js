@@ -30,20 +30,31 @@
   const toggle = document.getElementById('mobileToggle');
   const nav = document.querySelector('.nav-links');
   if (toggle && nav) {
+    const syncMobileNav = () => {
+      const isOpen = nav.classList.contains('open');
+      const icon = toggle.querySelector('i');
+      if (icon) icon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    };
+
     toggle.addEventListener('click', () => {
       nav.classList.toggle('open');
-      const icon = toggle.querySelector('i');
-      if (icon) {
-        icon.className = nav.classList.contains('open') ? 'fas fa-times' : 'fas fa-bars';
-      }
+      dropdowns.forEach(d => {
+        d.classList.remove('open');
+        d.classList.remove('active');
+      });
+      syncMobileNav();
     });
 
     // Close mobile menu when clicking outside
     document.addEventListener('click', (e) => {
       if (!nav.contains(e.target) && !toggle.contains(e.target) && nav.classList.contains('open')) {
         nav.classList.remove('open');
-        const icon = toggle.querySelector('i');
-        if (icon) icon.className = 'fas fa-bars';
+        dropdowns.forEach(d => {
+          d.classList.remove('open');
+          d.classList.remove('active');
+        });
+        syncMobileNav();
       }
     });
   }
@@ -87,6 +98,12 @@
         d.classList.remove('open');
         d.classList.remove('active');
       });
+      const nav = document.querySelector('.nav-links');
+      if (nav) nav.classList.remove('open');
+      const toggle = document.getElementById('mobileToggle');
+      const icon = toggle && toggle.querySelector('i');
+      if (icon) icon.className = 'fas fa-bars';
+      document.body.style.overflow = '';
     }
   });
 

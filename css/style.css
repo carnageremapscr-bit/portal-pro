@@ -1162,7 +1162,7 @@ article.card {
 }
 
 @media (max-width: 768px) {
-  .nav-links { position: fixed; top: 64px; right: 0; width: 100%; max-width: 420px; height: calc(100vh - 64px); background: rgba(13,17,23,0.98); border-left: 1px solid var(--border); padding: 16px; flex-direction: column; align-items: stretch; gap: 8px; transform: translateX(100%); transition: transform 0.25s ease; }
+  .nav-links { position: fixed; top: 64px; right: 0; width: min(100vw, 420px); max-width: 100vw; height: calc(100vh - 64px); background: rgba(13,17,23,0.98); border-left: 1px solid var(--border); padding: 16px; flex-direction: column; align-items: stretch; gap: 8px; transform: translateX(100%); transition: transform 0.25s ease; overflow-y: auto; overflow-x: hidden; }
   .nav-links.open { transform: translateX(0); }
   .dropdown::after { display: none; }
   .dropdown-menu {
@@ -1170,11 +1170,13 @@ article.card {
     top: auto;
     left: auto;
     min-width: 0;
+    width: 100%;
     margin-top: 8px;
     box-shadow: none;
     border-color: rgba(79,110,189,0.2);
     background: rgba(21,27,40,0.9);
   }
+  html, body { overflow-x: hidden; }
   .mobile-toggle { display: inline-block; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .hero h1 { font-size: 2.4rem; }
