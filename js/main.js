@@ -29,38 +29,62 @@
   // Mobile menu toggle
   const toggle = document.getElementById('mobileToggle');
   const nav = document.querySelector('.nav-links');
-  if (toggle && nav) {
-    const syncMobileNav = () => {
-      const isOpen = nav.classList.contains('open');
-      const icon = toggle.querySelector('i');
-      if (icon) icon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-    };
+  const dropdowns = document.querySelectorAll('.dropdown');
 
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      dropdowns.forEach(d => {
-        d.classList.remove('open');
-        d.classList.remove('active');
-      });
-      syncMobileNav();
+  const closeMobileNav = () => {
+    if (!nav) return;
+    nav.classList.remove('open');
+    dropdowns.forEach(d => {
+      d.classList.remove('open');
+      d.classList.remove('active');
+    });
+    document.body.classList.remove('nav-open');
+    document.body.style.overflow = '';
+    if (toggle) {
+      const icon = toggle.querySelector('i');
+      if (icon) icon.className = 'fas fa-bars';
+    }
+  };
+
+  const openMobileNav = () => {
+    if (!nav) return;
+    nav.classList.add('open');
+    document.body.classList.add('nav-open');
+    document.body.style.overflow = 'hidden';
+    if (toggle) {
+      const icon = toggle.querySelector('i');
+      if (icon) icon.className = 'fas fa-times';
+    }
+  };
+
+  if (toggle && nav) {
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (nav.classList.contains('open')) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
     });
 
-    // Close mobile menu when clicking outside
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        closeMobileNav();
+      });
+    });
+
     document.addEventListener('click', (e) => {
       if (!nav.contains(e.target) && !toggle.contains(e.target) && nav.classList.contains('open')) {
-        nav.classList.remove('open');
-        dropdowns.forEach(d => {
-          d.classList.remove('open');
-          d.classList.remove('active');
-        });
-        syncMobileNav();
+        closeMobileNav();
       }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) closeMobileNav();
     });
   }
 
   // Dropdown toggle for click/touch devices
-  const dropdowns = document.querySelectorAll('.dropdown');
   dropdowns.forEach(dropdown => {
     const link = dropdown.querySelector(':scope > a');
     if (link) {
