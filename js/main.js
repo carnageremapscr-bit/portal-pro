@@ -31,70 +31,42 @@
   const nav = document.querySelector('.nav-links');
   const dropdowns = document.querySelectorAll('.dropdown');
 
-  const closeMobileNav = () => {
-    if (!nav) return;
-    nav.classList.remove('open');
-    nav.setAttribute('aria-hidden', 'true');
-    dropdowns.forEach(d => {
-      d.classList.remove('open');
-      d.classList.remove('active');
-    });
-    document.body.classList.remove('nav-open');
-    document.body.style.overflow = '';
-    if (toggle) {
-      toggle.setAttribute('aria-expanded', 'false');
-      const icon = toggle.querySelector('i');
-      if (icon) icon.className = 'fas fa-bars';
-    }
+  const setMobileNavState = (isOpen) => {
+    if (!nav || !toggle) return;
+
+    nav.classList.toggle('open', isOpen);
+    nav.setAttribute('aria-hidden', String(!isOpen));
+    toggle.setAttribute('aria-expanded', String(isOpen));
+
+    const icon = toggle.querySelector('i');
+    if (icon) icon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
+
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   };
-
-  const openMobileNav = () => {
-    if (!nav) return;
-    nav.classList.add('open');
-    nav.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('nav-open');
-    document.body.style.overflow = 'hidden';
-    if (toggle) {
-      toggle.setAttribute('aria-expanded', 'true');
-      const icon = toggle.querySelector('i');
-      if (icon) icon.className = 'fas fa-times';
-    }
-  };
-
-  if (window.innerWidth <= 768) {
-    closeMobileNav();
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    if (window.innerWidth <= 768) {
-      closeMobileNav();
-    }
-  });
 
   if (toggle && nav) {
+    setMobileNavState(false);
+
     toggle.addEventListener('click', (e) => {
       e.stopPropagation();
-      if (nav.classList.contains('open')) {
-        closeMobileNav();
-      } else {
-        openMobileNav();
-      }
+      const willOpen = !nav.classList.contains('open');
+      setMobileNavState(willOpen);
     });
 
     nav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        closeMobileNav();
+        setMobileNavState(false);
       });
     });
 
     document.addEventListener('click', (e) => {
       if (!nav.contains(e.target) && !toggle.contains(e.target) && nav.classList.contains('open')) {
-        closeMobileNav();
+        setMobileNavState(false);
       }
     });
 
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 768) closeMobileNav();
+      if (window.innerWidth > 768) setMobileNavState(false);
     });
   }
 
