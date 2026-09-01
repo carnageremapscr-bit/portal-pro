@@ -1046,6 +1046,10 @@ article.card {
   .vrm-visual { min-height: 620px; }
 }
 @media (max-width: 768px) {
+  .quote-btn,
+  .navbar .quote-btn {
+    display: none !important;
+  }
   .hero-grid { grid-template-columns: 1fr; min-height: auto; }
   .hero-visual { min-height: 300px; transform: none; background-size: cover; }
   .feature-strip { grid-template-columns: 1fr 1fr; }
