@@ -46,6 +46,10 @@
     }
   };
 
+  if (window.innerWidth <= 768) {
+    closeMobileNav();
+  }
+
   const openMobileNav = () => {
     if (!nav) return;
     nav.classList.add('open');
