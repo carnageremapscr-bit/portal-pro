@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /portal-design-temp.html
 
 Sitemap: https://www.webportalpro.co.uk/sitemap.xml
+Host: www.webportalpro.co.uk

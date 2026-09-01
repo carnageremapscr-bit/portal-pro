@@ -1,344 +1,191 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transparent Pricing for ECU Portal & Website Services | Portal Pro UK</title>
-  <meta name="description" content="Clear pricing for all Portal Pro services: ECU file portal from £500 setup + £50/mo, website design £30/mo (free setup), vehicle search widget £9.99/mo. No hidden fees. Includes support, updates, and hosting.">
-  <meta name="keywords" content="ECU portal pricing, file service portal cost, remapping portal price, tuning software pricing, portal setup fee, monthly portal subscription, ECU portal cost UK, file management pricing, website design pricing UK, vehicle widget pricing">
-  <link rel="canonical" href="https://www.webportalpro.co.uk/pricing.html">
-  <meta name="robots" content="index,follow">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing for Website Design, VRM Lookup & Portal Software | Portal Pro</title>
+  <meta name="description" content="Transparent pricing for website design, VRM lookup services and custom portal software from Portal Pro for garages, tuning businesses and trade brands across the UK." />
+  <link rel="canonical" href="https://www.webportalpro.co.uk/pricing.html" />
+  <meta property="og:title" content="Pricing for Website Design, VRM Lookup & Portal Software | Portal Pro" />
+  <meta property="og:description" content="View pricing for automotive website packages, VRM lookup subscriptions and custom software solutions." />
+  <meta property="og:url" content="https://www.webportalpro.co.uk/pricing.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    body { background: #0d1117; color: #d2deef; }
-    .page-hero { padding: 80px 0 40px; text-align: center; background: linear-gradient(135deg, rgba(29,59,122,0.08), rgba(22,50,99,0.06)); }
-    .page-hero h1 { font-size: 2.8rem; margin-bottom: 16px; }
-    .page-hero p { color: #8892a8; max-width: 700px; margin: 0 auto; font-size: 18px; }
+    body { background: #0b1220; color: #edf3ff; }
+    .page-hero { padding: 72px 0 36px; background: radial-gradient(circle at 20% 12%, rgba(90,140,255,0.14), transparent 28%), #0b1220; }
+    .page-hero h1 { font-size: clamp(2.4rem, 4vw, 3.8rem); line-height: 0.94; letter-spacing: -0.06em; margin: 18px 0 16px; text-transform: none; }
+    .page-hero p { color: var(--muted); max-width: 700px; margin: 0 auto; }
     .section { padding: 60px 0; }
-    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; margin-top: 40px; max-width: 1100px; margin-left: auto; margin-right: auto; }
-    .pricing-card { background: #151b28; border: 2px solid rgba(79,110,189,0.12); border-radius: 16px; padding: 40px; position: relative; transition: all 0.3s; }
-    .pricing-card.featured { border-color: #4f6ebd; background: linear-gradient(135deg, rgba(29,59,122,0.08), rgba(22,50,99,0.04)); }
-    .pricing-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(29,59,122,0.15); }
-    .price-tag { display: inline-block; padding: 6px 16px; border-radius: 999px; background: rgba(29,59,122,0.15); color: #4f6ebd; font-weight: 600; font-size: 13px; margin-bottom: 16px; }
-    .price-tag.popular { background: rgba(251,191,36,0.15); color: #fbbf24; }
-    .plan-name { font-size: 24px; font-weight: 700; margin-bottom: 12px; color: #e2e8f0; }
-    .plan-price { font-size: 48px; font-weight: 800; margin-bottom: 8px; color: #e2e8f0; }
-    .plan-price span { font-size: 18px; font-weight: 600; color: #8892a8; }
-    .plan-desc { color: #8892a8; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid rgba(79,110,189,0.12); }
-    .plan-features { list-style: none; padding: 0; margin: 0 0 32px 0; }
-    .plan-features li { padding: 12px 0; color: #d2deef; display: flex; align-items: flex-start; gap: 12px; }
-    .plan-features li i { color: #2e4c8f; margin-top: 4px; }
-    .whats-included { background: rgba(29,59,122,0.06); padding: 24px; border-radius: 12px; margin-top: 24px; }
-    .whats-included h4 { margin: 0 0 16px 0; font-size: 16px; color: #4f6ebd; }
-    .whats-included ul { list-style: none; padding: 0; margin: 0; }
-    .whats-included li { padding: 8px 0; color: #8892a8; font-size: 14px; }
-    @media (max-width: 768px) {
-      .page-hero .container { grid-template-columns: 1fr; }
-      .pricing-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
-      .pricing-card { width: 100% !important; padding: 24px !important; }
-      .plan-price { font-size: 36px !important; }
-      .plan-desc { padding-bottom: 18px !important; }
-      .whats-included { padding: 20px !important; }
-      .whats-included h4 { font-size: 16px !important; }
-      .price-tag { display: inline-flex; flex-wrap: wrap; }
-      .btn { width: 100%; justify-content: center; }
-    }
-    @media (max-width: 520px) {
-      .page-hero h1 { font-size: 2.2rem !important; }
-      .page-hero p { font-size: 1rem !important; }
-      .pricing-card { padding: 20px !important; }
-      .plan-price { font-size: 32px !important; }
-    }
+    .pricing-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 24px; }
+    .pricing-hero-layout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; align-items: center; text-align: left; }
+    .pricing-hero-copy { max-width: 720px; }
+    .pricing-hero-copy h1 { text-align: left; }
+    .pricing-hero-copy p { text-align: left; }
+    .pricing-visual { background: rgba(14,22,36,0.96); border: 1px solid rgba(90,140,255,0.14); border-radius: 24px; overflow: hidden; box-shadow: 0 22px 48px rgba(0,0,0,0.28); }
+    .pricing-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .card { background: rgba(20,31,49,0.92); border: 1px solid rgba(90,140,255,0.12); border-radius: 22px; padding: 28px; box-shadow: 0 20px 44px rgba(4,8,18,0.24); }
+    .card.featured { background: linear-gradient(180deg, rgba(22,38,58,0.96), rgba(14,22,36,0.98)); border-color: rgba(90,140,255,0.3); transform: translateY(-8px); }
+    .plan-name { display: inline-block; padding: 7px 12px; border-radius: 999px; background: rgba(90,140,255,0.12); border: 1px solid rgba(90,140,255,0.2); color: #8ec5ff; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.7rem; font-weight: 800; }
+    .card h3 { font-size: clamp(2rem, 3vw, 3.2rem); letter-spacing: -0.06em; margin: 18px 0 10px; }
+    .card h3 span { font-size: 1rem; color: var(--muted); }
+    .card p { color: var(--muted); }
+    .card ul { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 10px; }
+    .card li { display: flex; align-items: flex-start; gap: 10px; color: var(--muted); }
+    .card li i { color: var(--primary); margin-top: 3px; }
+    .cta-band { padding: 20px 0 70px; }
+    .cta-box { background: linear-gradient(135deg, rgba(47,87,160,0.2), rgba(12,19,32,0.96)); border: 1px solid rgba(90,140,255,0.18); border-radius: 26px; padding: clamp(24px, 5vw, 52px); display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .cta-box h2 { margin: 0 0 10px; font-size: clamp(2rem, 4vw, 2.8rem); letter-spacing: -0.06em; }
+    .cta-box p { margin: 0; color: var(--muted); }
+    @media (max-width: 980px) { .pricing-grid { grid-template-columns: 1fr; } .cta-box { display: grid; grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
   <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="assets/logo.svg" alt="Portal Pro" class="logo-img" />
-        Portal <span class="highlight">Pro</span>
+    <div class="container nav-shell">
+      <a href="index.html" class="logo" aria-label="Portal Pro home">
+        <img src="assets/logo.svg" alt="Portal Pro logo" class="logo-img" />
+        <span class="brand-text">WEB PORTAL PRO</span>
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-          <a href="#">Services <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 4px;"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="portal-design.html"><i class="fas fa-server"></i> ECU File Portal</a></li>
-            <li><a href="https://onlineapp-production-894d.up.railway.app/explorer" target="_blank"><i class="fas fa-microchip"></i> ECU Editor</a></li>
-            <li><a href="website-design.html"><i class="fas fa-paint-brush"></i> Website Design</a></li>
-            <li><a href="widget-design.html"><i class="fas fa-search"></i> Vehicle Search Widget</a></li>
-            <li><a href="vrm-lookup.html"><i class="fas fa-car"></i> VRM Lookup</a></li>
-            <li><a href="tuning-tools.html"><i class="fas fa-tools"></i> Tuning Tools</a></li>
-          </ul>
-        </li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="how-it-works.html">How It Works</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="#contact" class="btn btn-primary">Contact Us</a></li>
-        <li><a href="https://onlineapp-production-894d.up.railway.app/explorer" class="editor-link" target="_blank"><strong>ECU Editor</strong></a></li>
-        <li><a href="https://secure-file-portal-portal-pro.up.railway.app/login.html" class="btn btn-outline" target="_blank"><i class="fas fa-sign-in-alt"></i> Portal Login</a></li>
+        <li><a href="website-design.html">Web Design</a></li>
+        <li><a href="vrm-lookup.html">VRM Lookup</a></li>
+        <li><a href="portal-design.html">Portal</a></li>
+        <li><a href="ecu-editor.html">ECU Editor</a></li>
+        <li><a href="pricing.html" class="active">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-      <button class="mobile-toggle" id="mobileToggle">
-        <i class="fas fa-bars"></i>
-      </button>
+      <a href="contact.html" class="btn btn-primary quote-btn">Book a Call</a>
+      <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
     </div>
   </nav>
 
   <header class="page-hero">
-    <div class="container">
-      <h1>ECU File Portal Pricing</h1>
-      <p>Transparent, affordable pricing for professional tuning file portals. No hidden fees. Cancel anytime. All plans include setup, hosting, SSL, support, and unlimited clients.</p>
+    <div class="container pricing-hero-layout">
+      <div class="pricing-hero-copy">
+        <span class="section-tag">Pricing</span>
+        <h1>Simple pricing that scales with your business.</h1>
+        <p>Choose the website, lookup or software package that matches your needs. Every plan is built to be clear, flexible, and ready to convert more enquiries.</p>
+      </div>
+      <div class="pricing-visual">
+        <img src="assets/images/media-web-portal.png" alt="Portal Pro product preview" />
+      </div>
     </div>
   </header>
 
   <section class="section">
-    <div class="container">
-      <div class="pricing-grid">
-        <!-- Starter Plan -->
-        <div class="pricing-card">
-          <span class="price-tag">Starter</span>
-          <div class="plan-name">Essential Portal</div>
-          <div class="plan-price">£299<span>/setup</span></div>
-          <div class="plan-price" style="font-size: 32px; margin-bottom: 0;">£49<span>/month</span></div>
-          <p class="plan-desc">Perfect for solo tuners and new remapping businesses</p>
-          <ul class="plan-features">
-            <li><i class="fas fa-check-circle"></i> Client file uploads (unlimited)</li>
-            <li><i class="fas fa-check-circle"></i> Basic invoice generation</li>
-            <li><i class="fas fa-check-circle"></i> Support ticket system</li>
-            <li><i class="fas fa-check-circle"></i> Up to 3 admin users</li>
-            <li><i class="fas fa-check-circle"></i> Email notifications</li>
-            <li><i class="fas fa-check-circle"></i> SSL & secure hosting</li>
-            <li><i class="fas fa-check-circle"></i> 10GB file storage</li>
-            <li><i class="fas fa-check-circle"></i> Email support</li>
-          </ul>
-          <a href="https://wa.me/447546371963?text=Hi!%20I'm%20interested%20in%20the%20Starter%20plan." target="_blank" class="btn btn-outline" style="width: 100%;">Get Started</a>
-        </div>
+    <div class="container pricing-grid">
+      <article class="card">
+        <span class="plan-name">Web Design</span>
+        <h3>£45 <span>/ month</span></h3>
+        <p>Annual option available: £450/year</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Custom website build to match your brand</li>
+          <li><i class="fas fa-check"></i> Hosting, SSL and support included</li>
+          <li><i class="fas fa-check"></i> Lead-focused design and mobile responsiveness</li>
+          <li><i class="fas fa-check"></i> Ongoing updates and maintenance</li>
+        </ul>
+        <div style="margin-top:22px;"><a href="contact.html" class="btn btn-outline">Ask for quote</a></div>
+      </article>
 
-        <!-- Professional Plan (Featured) -->
-        <div class="pricing-card featured">
-          <span class="price-tag popular">Most Popular</span>
-          <div class="plan-name">Professional Portal</div>
-          <div class="plan-price">£499<span>/setup</span></div>
-          <div class="plan-price" style="font-size: 32px; margin-bottom: 0;">£99<span>/month</span></div>
-          <p class="plan-desc">For established tuning businesses with multiple clients</p>
-          <ul class="plan-features">
-            <li><i class="fas fa-check-circle"></i> <strong>Everything in Starter, plus:</strong></li>
-            <li><i class="fas fa-check-circle"></i> Automated invoice & payment</li>
-            <li><i class="fas fa-check-circle"></i> Stripe/PayPal integration</li>
-            <li><i class="fas fa-check-circle"></i> Unlimited admin users</li>
-            <li><i class="fas fa-check-circle"></i> WhatsApp notifications</li>
-            <li><i class="fas fa-check-circle"></i> Custom branding & domain</li>
-            <li><i class="fas fa-check-circle"></i> 50GB file storage</li>
-            <li><i class="fas fa-check-circle"></i> Analytics & reporting</li>
-            <li><i class="fas fa-check-circle"></i> Priority WhatsApp support</li>
-          </ul>
-          <a href="https://wa.me/447546371963?text=Hi!%20I'm%20interested%20in%20the%20Professional%20plan." target="_blank" class="btn btn-primary" style="width: 100%;">Get Started</a>
-        </div>
+      <article class="card featured">
+        <span class="plan-name">VRM Lookup</span>
+        <h3>£14.99 <span>/ month</span></h3>
+        <p>Unlimited lookups with annual option: £149.99/year</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Unlimited vehicle lookups</li>
+          <li><i class="fas fa-check"></i> Instant vehicle data</li>
+          <li><i class="fas fa-check"></i> Website embed ready</li>
+          <li><i class="fas fa-check"></i> Fast setup and support</li>
+        </ul>
+        <div style="margin-top:22px;"><a href="contact.html" class="btn btn-primary">Get started</a></div>
+      </article>
 
-        <!-- Enterprise Plan -->
-        <div class="pricing-card">
-          <span class="price-tag">Enterprise</span>
-          <div class="plan-name">Custom Portal</div>
-          <div class="plan-price">Custom<span></span></div>
-          <div class="plan-price" style="font-size: 32px; margin-bottom: 0;">£199+<span>/month</span></div>
-          <p class="plan-desc">For high-volume tuning companies and franchises</p>
-          <ul class="plan-features">
-            <li><i class="fas fa-check-circle"></i> <strong>Everything in Professional, plus:</strong></li>
-            <li><i class="fas fa-check-circle"></i> Multi-location support</li>
-            <li><i class="fas fa-check-circle"></i> API access & integrations</li>
-            <li><i class="fas fa-check-circle"></i> Custom features & workflows</li>
-            <li><i class="fas fa-check-circle"></i> Dealer/reseller portals</li>
-            <li><i class="fas fa-check-circle"></i> Unlimited file storage</li>
-            <li><i class="fas fa-check-circle"></i> Dedicated account manager</li>
-            <li><i class="fas fa-check-circle"></i> SLA guarantee (99.9% uptime)</li>
-            <li><i class="fas fa-check-circle"></i> 24/7 priority support</li>
-          </ul>
-          <a href="https://wa.me/447546371963?text=Hi!%20I'm%20interested%20in%20the%20Enterprise%20plan." target="_blank" class="btn btn-outline" style="width: 100%;">Contact Sales</a>
-        </div>
-      </div>
+      <article class="card">
+        <span class="plan-name">Website + VRM</span>
+        <h3>£59.99 <span>/ month</span></h3>
+        <p>Best value for businesses wanting both online presence and lookup tools.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Premium website design</li>
+          <li><i class="fas fa-check"></i> Unlimited VRM lookup access</li>
+          <li><i class="fas fa-check"></i> Brand-aligned lead generation setup</li>
+          <li><i class="fas fa-check"></i> Priority support and setup help</li>
+        </ul>
+        <div style="margin-top:22px;"><a href="contact.html" class="btn btn-outline">Talk to us</a></div>
+      </article>
 
-      <div class="section" style="padding: 20px 0 10px;">
-        <div class="section-header" style="text-align:center; margin-bottom: 10px;">
-          <span class="price-tag" style="background: rgba(29,59,122,0.18); color:#4f6ebd;">VRM & Widgets</span>
-          <h2 style="margin: 12px 0 6px;">Lookup embeds vs lead-gen widgets</h2>
-          <p style="color:#8892a8; margin:0 auto; max-width: 800px;">Keep VRM data embeds separate from the lead-gen widget so you can pick the right tool and billing. VRM embed is £17.99/mo; lead-gen widget remains £9.99/mo.</p>
-        </div>
-        <div class="pricing-grid" style="margin-top: 24px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-          <div class="pricing-card featured" style="border-color: rgba(29,59,122,0.6);">
-            <span class="price-tag" style="background: rgba(29,59,122,0.18); color:#4f6ebd;">VRM Embed</span>
-            <div class="plan-name">VRM Lookup Widget</div>
-            <div class="plan-price">£17.99<span>/month</span></div>
-            <p class="plan-desc">Embed the VRM data lookup on your site; ideal for MOT, emissions, and spec checks.</p>
-            <ul class="plan-features">
-              <li><i class="fas fa-check-circle"></i> Live VRM lookups via embedded widget</li>
-              <li><i class="fas fa-check-circle"></i> MOT, tax, emissions, keeper change counts, BHP</li>
-              <li><i class="fas fa-check-circle"></i> Throttling + uptime monitoring included</li>
-              <li><i class="fas fa-check-circle"></i> Email setup & onboarding support</li>
-            </ul>
-            <div style="display: grid; gap: 10px;">
-              <a class="btn btn-primary" style="background: linear-gradient(135deg, #4f6ebd, #f97316); border:none;" href="mailto:info@webportalpro.co.uk?subject=VRM%20Embed%20Widget%20-%20%C2%A317.99%2Fmonth&body=Hi%20Portal%20Pro%20team%2C%0A%0AI%27d%20like%20to%20activate%20the%20VRM%20embed%20widget%20at%20%C2%A317.99%2Fmonth.%20Please%20send%20setup%20instructions.%0A%0AWebsite%3A%0AExpected%20volume%3A%0A%0AThanks!" style="text-align:center; font-weight: 700;">Email to activate</a>
-              <a class="btn btn-primary" style="background: linear-gradient(135deg, #22c55e, #16a34a); border:none;" href="https://wa.me/447546371963?text=Hi!%20Please%20set%20up%20the%20VRM%20embed%20for%20%C2%A317.99%2Fmonth%20on%20my%20site." target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp setup</a>
-              <a class="btn btn-outline" href="vrm-lookup.html" style="text-align:center;">View VRM page</a>
-            </div>
-          </div>
-          <div class="pricing-card" style="border-color: rgba(79,110,189,0.12);">
-            <span class="price-tag" style="background: rgba(251,191,36,0.12); color:#fbbf24;">Lead Gen Widget</span>
-            <div class="plan-name">Vehicle Search Widget</div>
-            <div class="plan-price">£9.99<span>/month</span></div>
-            <p class="plan-desc">Customer-facing lead-capture widget (search + quote form) with alerts.</p>
-            <ul class="plan-features">
-              <li><i class="fas fa-check-circle"></i> Vehicle search + quote capture form</li>
-              <li><i class="fas fa-check-circle"></i> Email + WhatsApp lead alerts</li>
-              <li><i class="fas fa-check-circle"></i> Basic analytics & dashboard</li>
-              <li><i class="fas fa-check-circle"></i> Works on any website</li>
-            </ul>
-            <div style="display: grid; gap: 10px;">
-              <a class="btn btn-primary" href="mailto:carnageremaps@gmail.com?subject=Vehicle%20Search%20Widget%20%C2%A39.99%2Fmonth"><i class="fas fa-envelope"></i> Email to activate</a>
-              <a class="btn btn-outline" href="widget-design.html" style="text-align:center;">View widget page</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- What's Included in All Plans -->
-      <div class="whats-included" style="max-width: 900px; margin: 60px auto 0;">
-        <h4><i class="fas fa-gift"></i> Included in ALL Plans at No Extra Cost</h4>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
-          <ul>
-            <li>- Free setup & onboarding</li>
-            <li>- SSL certificate included</li>
-            <li>- Secure cloud hosting</li>
-            <li>- Daily automated backups</li>
-          </ul>
-          <ul>
-            <li>- Unlimited client accounts</li>
-            <li>- Mobile responsive design</li>
-            <li>- Regular software updates</li>
-            <li>- Team training & docs</li>
-          </ul>
-          <ul>
-            <li>- No long-term contracts</li>
-            <li>- Cancel anytime</li>
-            <li>- 30-day money-back guarantee</li>
-            <li>- Free feature requests</li>
-          </ul>
-        </div>
-      </div>
+      <article class="card">
+        <span class="plan-name">Software</span>
+        <h3>Custom</h3>
+        <p>Quote-based pricing for business-specific portals and tools.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Custom portals and automation</li>
+          <li><i class="fas fa-check"></i> Client file workflows</li>
+          <li><i class="fas fa-check"></i> Support and billing tools</li>
+          <li><i class="fas fa-check"></i> Built around your exact process</li>
+        </ul>
+        <div style="margin-top:22px;"><a href="contact.html" class="btn btn-outline">Request a quote</a></div>
+      </article>
     </div>
   </section>
 
-  <section class="section" style="background: rgba(29,59,122,0.05);">
+  <section class="cta-band">
     <div class="container">
-      <h2 style="text-align: center; margin-bottom: 32px;">Frequently Asked Questions About Pricing</h2>
-      <div style="max-width: 800px; margin: 0 auto;">
-        <details class="card" style="margin-bottom: 16px; padding: 20px; cursor: pointer;" open>
-          <summary style="font-weight: 600; font-size: 18px; cursor: pointer;">Are there any hidden fees?</summary>
-          <p style="margin-top: 12px; color: #8892a8;">No. The only costs are the one-time setup fee and monthly subscription. Hosting, SSL, updates, support, and all features are included. Payment processing fees (Stripe/PayPal) are separate if you use those integrations.</p>
-        </details>
-        
-        <details class="card" style="margin-bottom: 16px; padding: 20px; cursor: pointer;">
-          <summary style="font-weight: 600; font-size: 18px; cursor: pointer;">Can I upgrade or downgrade my plan?</summary>
-          <p style="margin-top: 12px; color: #8892a8;">Yes, anytime. If you upgrade, we'll prorate the difference. If you downgrade, the change takes effect at your next billing cycle.</p>
-        </details>
-        
-        <details class="card" style="margin-bottom: 16px; padding: 20px; cursor: pointer;">
-          <summary style="font-weight: 600; font-size: 18px; cursor: pointer;">Is there a contract or minimum term?</summary>
-          <p style="margin-top: 12px; color: #8892a8;">No long-term contracts. Pay monthly and cancel anytime. We believe in earning your business every month through great service, not locking you in.</p>
-        </details>
-        
-        <details class="card" style="margin-bottom: 16px; padding: 20px; cursor: pointer;">
-          <summary style="font-weight: 600; font-size: 18px; cursor: pointer;">What payment methods do you accept?</summary>
-          <p style="margin-top: 12px; color: #8892a8;">We accept bank transfer, credit/debit cards (via Stripe), and PayPal for monthly subscriptions. Setup fees can be paid by any of these methods.</p>
-        </details>
-
-        <details class="card" style="margin-bottom: 16px; padding: 20px; cursor: pointer;">
-          <summary style="font-weight: 600; font-size: 18px; cursor: pointer;">How long does setup take?</summary>
-          <p style="margin-top: 12px; color: #8892a8;">Starter plans typically take 3-5 business days. Professional plans take 1-2 weeks. Enterprise plans vary based on custom requirements (usually 2-4 weeks).</p>
-        </details>
-
-        <details class="card" style="margin-bottom: 16px; padding: 20px; cursor: pointer;">
-          <summary style="font-weight: 600; font-size: 18px; cursor: pointer;">Do you offer a free trial?</summary>
-          <p style="margin-top: 12px; color: #8892a8;">We offer free demos and a 30-day money-back guarantee. If you're not satisfied within 30 days, we'll refund your setup fee-no questions asked.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" style="text-align: center;">
-    <div class="container">
-      <h2 style="margin-bottom: 16px;">Still have questions?</h2>
-      <p style="color: #8892a8; max-width: 600px; margin: 0 auto 32px;">Chat with us on WhatsApp or email. We typically respond within 2 hours.</p>
-      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-        <a class="btn btn-primary btn-lg" href="https://wa.me/447546371963?text=Hi!%20I%20have%20questions%20about%20portal%20pricing." target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-        <a class="btn btn-outline btn-lg" href="mailto:carnageremaps@gmail.com?subject=Pricing%20Question">Email Us</a>
-        <a class="btn btn-outline btn-lg" href="how-it-works.html">How It Works</a>
-      </div>
-      <div style="margin-top: 40px; padding-top: 40px; border-top: 1px solid rgba(79,110,189,0.12);">
-        <p style="color: #8892a8; font-size: 14px; margin-bottom: 16px;">Learn more about our solutions:</p>
-        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-          <a href="portal-design.html" style="color: #4f6ebd; text-decoration: none;"><i class="fas fa-server"></i> Portal Features</a>
-          <a href="tuning-tools.html" style="color: #4f6ebd; text-decoration: none;"><i class="fas fa-tools"></i> Compatible Tools</a>
-          <a href="website-design.html" style="color: #4f6ebd; text-decoration: none;"><i class="fas fa-paint-brush"></i> Website Design</a>
+      <div class="cta-box">
+        <div>
+          <span class="section-tag">Need something custom?</span>
+          <h2>Talk to us about the right package for your business.</h2>
+          <p>Whether you need a premium website, an unlimited VRM lookup product or a custom software workflow, we can recommend the right option.</p>
+        </div>
+        <div class="hero-stack" style="justify-content:flex-end;">
+          <a href="contact.html" class="btn btn-primary">Get in touch</a>
+          <a href="https://wa.me/447546371963?text=Hi%20Portal%20Pro%2C%20I%27d%20like%20to%20discuss%20a%20pricing%20package." class="btn btn-outline" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </div>
       </div>
     </div>
   </section>
 
   <footer class="footer">
-    <div class="container">
-      <div class="footer-bottom">
-        <p>&copy; 2026 Portal Pro. Transparent pricing. No hidden fees.</p>
+    <div class="container footer-grid">
+      <div>
+        <div class="logo">
+          <img src="assets/logo.svg" alt="Portal Pro" class="logo-img" />
+          <div>
+            <span class="brand-text">Portal <span class="highlight">Pro</span></span>
+            <small>Automotive web solutions</small>
+          </div>
+        </div>
+        <p>Professional websites, VRM lookup tools and custom software for automotive and trade businesses.</p>
       </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="website-design.html">Website Design</a></li>
+          <li><a href="vrm-lookup.html">VRM Lookup</a></li>
+          <li><a href="contact.html">Custom Software</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Get in touch</a></li>
+          <li><a href="https://wa.me/447546371963" target="_blank">WhatsApp</a></li>
+          <li><a href="mailto:carnageremaps@gmail.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Portal Pro by Carnage Remaps. All rights reserved.</p>
     </div>
   </footer>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Portal Pro ECU File Portal Software",
-    "description": "Professional ECU file portal software for tuning businesses",
-    "url": "https://www.webportalpro.co.uk/portal-design.html",
-    "image": "https://www.webportalpro.co.uk/image-1768058423706.png",
-    "brand": {"@type": "Brand", "name": "Portal Pro"},
-    "offers": [
-      {
-        "@type": "Offer",
-        "name": "Starter Plan",
-        "price": "49",
-        "priceCurrency": "GBP",
-        "availability": "https://schema.org/InStock",
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "price": "49",
-          "priceCurrency": "GBP",
-          "unitText": "MONTH"
-        }
-      },
-      {
-        "@type": "Offer",
-        "name": "Professional Plan",
-        "price": "99",
-        "priceCurrency": "GBP",
-        "availability": "https://schema.org/InStock",
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "price": "99",
-          "priceCurrency": "GBP",
-          "unitText": "MONTH"
-        }
-      }
-    ]
-  }
-  </script>
   <script src="js/main.js"></script>
 </body>
 </html>
-
-
-

@@ -1,16 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Portal Pro logo">
+<svg width="520" height="300" viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Portal Pro logo">
   <defs>
-    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#7c3aed"/>
-      <stop offset="100%" stop-color="#4c1d95"/>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4f8ff"/>
+      <stop offset="18%" stop-color="#dfe6f7"/>
+      <stop offset="45%" stop-color="#8c96a9"/>
+      <stop offset="70%" stop-color="#eef5ff"/>
+      <stop offset="100%" stop-color="#afb9cb"/>
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.35"/>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#28d6ff"/>
+      <stop offset="18%" stop-color="#0da2ff"/>
+      <stop offset="52%" stop-color="#0b6ae5"/>
+      <stop offset="82%" stop-color="#0a3ea6"/>
+      <stop offset="100%" stop-color="#041c4a"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#9be8ff" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#00b7ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#1f7dff" stop-opacity="0.95"/>
+    </linearGradient>
+    <filter id="softGlow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#0ad4ff" flood-opacity="0.75"/>
+    </filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#000000" flood-opacity="0.35"/>
     </filter>
   </defs>
+
   <g filter="url(#shadow)">
-    <rect x="8" y="8" width="112" height="112" rx="24" fill="url(#grad)"/>
-    <path d="M76 20 L44 72 H64 L52 108 L92 56 H72 L76 20 Z" fill="#ffffff"/>
+    <g transform="translate(12,20)">
+      <path d="M52 158 L122 40 L162 40 L130 158 L90 158 L62 76 L45 158 L-2 158 L67 40 L106 40 L77 158 Z" fill="url(#silver)"/>
+      <path d="M205 158 L283 50 L325 50 L327 86 L286 86 L270 158 L205 158 Z" fill="url(#silver)"/>
+      <path d="M170 48 L255 48 L232 72 L194 72 Z" fill="#d4d9e3" opacity="0.9"/>
+      <path d="M254 48 L290 48 L300 62 L288 87 L255 87 L254 48 Z" fill="#8f98aa" opacity="0.7"/>
+      <path d="M314 174 L442 174 L443 95 L500 95 L500 60 L390 60 L390 92 L416 92 L416 140 L356 140 L356 4 L314 4 Z" fill="url(#blue)" filter="url(#softGlow)"/>
+      <path d="M438 35 L500 35 L500 92 L438 92 Z" fill="url(#glow)" opacity="0.7"/>
+      <path d="M365 0 L500 0 L500 38 L365 38 Z" fill="#0d6ae2" opacity="0.55"/>
+      <path d="M82 42 L152 42 L120 90 L92 90 Z" fill="#f7fbff" opacity="0.9"/>
+      <path d="M16 48 L52 48 L90 158 L58 158 Z" fill="#eef3ff" opacity="0.95"/>
+      <path d="M97 48 L162 48 L198 158 L136 158 Z" fill="#d5dbe8" opacity="0.9"/>
+      <path d="M194 48 L217 48 L254 158 L195 158 Z" fill="#f5f8ff" opacity="0.9"/>
+      <path d="M214 49 L254 49 L294 158 L245 158 Z" fill="#d7dfe9" opacity="0.9"/>
+      <path d="M277 50 L314 50 L346 158 L298 158 Z" fill="#dfe7f3" opacity="0.88"/>
+    </g>
   </g>
 </svg>

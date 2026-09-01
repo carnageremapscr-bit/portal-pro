@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECU Editor | Free Online Tuning File Explorer | Portal Pro</title>
+  <meta name="description" content="Free online ECU editor for tuning businesses and performance specialists. Open the ECU editor, explore files, and manage tuning workflows with a fast, secure online platform." />
+  <link rel="canonical" href="https://www.webportalpro.co.uk/ecu-editor.html" />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      background: #0b1220;
+      color: #edf3ff;
+    }
+
+    .page-hero {
+      padding: 72px 0 32px;
+      background: radial-gradient(circle at 20% 12%, rgba(90,140,255,0.14), transparent 28%), #0b1220;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 0.96fr 1.04fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(90,140,255,0.12);
+      border: 1px solid rgba(90,140,255,0.2);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #8ec5ff;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(2.5rem, 4.1vw, 4.2rem);
+      line-height: 0.94;
+      letter-spacing: -0.06em;
+      margin: 20px 0 18px;
+      text-transform: none;
+    }
+
+    .page-hero h1 .accent {
+      display: inline;
+      color: var(--primary);
+    }
+
+    .page-hero p {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 600px;
+      margin-bottom: 26px;
+    }
+
+    .hero-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .info-box {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 14px;
+      max-width: 600px;
+    }
+
+    .info-card {
+      background: rgba(19, 29, 45, 0.96);
+      border: 1px solid rgba(90,140,255,0.12);
+      border-radius: 18px;
+      padding: 16px 14px;
+      box-shadow: 0 14px 26px rgba(4,8,18,0.2);
+    }
+
+    .info-card strong {
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 3px;
+      color: #edf3ff;
+      letter-spacing: -0.05em;
+    }
+
+    .info-card span {
+      color: var(--muted);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+    }
+
+    .mockup-panel {
+      background: linear-gradient(135deg, rgba(18,30,46,0.96), rgba(12,18,31,0.96));
+      border: 1px solid rgba(90,140,255,0.18);
+      border-radius: 28px;
+      padding: 22px;
+      position: relative;
+      box-shadow: 0 28px 80px rgba(0,0,0,0.38);
+    }
+
+    .mockup-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), transparent);
+      border-radius: 28px 28px 0 0;
+    }
+
+    .editor-window {
+      border-radius: 18px;
+      border: 1px solid rgba(90,140,255,0.16);
+      overflow: hidden;
+      background: #081420;
+    }
+
+    .window-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 16px;
+      background: rgba(20,30,45,0.96);
+      border-bottom: 1px solid rgba(90,140,255,0.12);
+    }
+
+    .window-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .window-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .window-dots span {
+      width: 10px;
+      height: 10px;
+      display: block;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+    }
+
+    .window-title {
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #edf3ff;
+      font-weight: 700;
+    }
+
+    .window-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .window-actions .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 28px;
+      min-width: 84px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: rgba(90,140,255,0.12);
+      border: 1px solid rgba(90,140,255,0.2);
+      color: #8ec5ff;
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .editor-body {
+      padding: 16px;
+    }
+
+    .editor-stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .stat-box {
+      background: rgba(14, 24, 38, 0.9);
+      border: 1px solid rgba(90,140,255,0.12);
+      border-radius: 12px;
+      padding: 12px 10px;
+    }
+
+    .stat-box label {
+      display: block;
+      font-size: 0.6rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .stat-box strong {
+      font-size: 1.1rem;
+      color: #edf3ff;
+      letter-spacing: -0.04em;
+    }
+
+    .editor-table {
+      background: rgba(14,24,38,0.8);
+      border: 1px solid rgba(90,140,255,0.12);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .table-head,
+    .table-row {
+      display: grid;
+      grid-template-columns: 1.4fr 0.9fr 0.7fr 0.8fr;
+      gap: 10px;
+      padding: 12px 14px;
+    }
+
+    .table-head {
+      background: rgba(90,140,255,0.08);
+      color: #dfeaff;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(90,140,255,0.12);
+    }
+
+    .table-row {
+      color: #cfe0ff;
+      font-size: 0.8rem;
+      border-bottom: 1px solid rgba(90,140,255,0.08);
+    }
+
+    .table-row:last-child {
+      border-bottom: none;
+    }
+
+    .table-row .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: rgba(31, 147, 117, 0.12);
+      border: 1px solid rgba(31,147,117,0.28);
+      color: #9ae7d1;
+      font-size: 0.68rem;
+      font-weight: 700;
+    }
+
+    .section {
+      padding: 56px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 3vw, 3rem);
+      letter-spacing: -0.06em;
+      margin: 12px 0 10px;
+    }
+
+    .section-header p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: var(--muted);
+    }
+
+    .feature-grid,
+    .steps-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .feature-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+    .steps-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+
+    .card {
+      background: rgba(20,31,49,0.92);
+      border: 1px solid rgba(90,140,255,0.12);
+      border-radius: 20px;
+      padding: 22px;
+      box-shadow: 0 18px 40px rgba(4,8,18,0.2);
+    }
+
+    .card h3 {
+      margin: 16px 0 10px;
+      font-size: 1.32rem;
+      letter-spacing: -0.04em;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+    }
+
+    .icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: var(--primary);
+      background: rgba(90,140,255,0.12);
+      border: 1px solid rgba(90,140,255,0.16);
+      font-size: 1.2rem;
+    }
+
+    .cta-band {
+      padding: 10px 0 70px;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, rgba(47,87,160,0.2), rgba(12,19,32,0.96));
+      border: 1px solid rgba(90,140,255,0.18);
+      border-radius: 26px;
+      padding: clamp(24px, 5vw, 52px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 22px 40px rgba(0,0,0,0.24);
+    }
+
+    .cta-box h2 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      letter-spacing: -0.06em;
+    }
+
+    .cta-box p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 620px;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .cta-box {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .feature-grid,
+      .steps-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .info-box,
+      .feature-grid,
+      .steps-grid,
+      .editor-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .table-head {
+        display: none;
+      }
+
+      .table-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-shell">
+      <a href="index.html" class="logo" aria-label="Portal Pro home">
+        <img src="assets/logo.svg" alt="Portal Pro logo" class="logo-img" />
+        <span class="brand-text">WEB PORTAL PRO</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="website-design.html">Web Design</a></li>
+        <li><a href="vrm-lookup.html">VRM Lookup</a></li>
+        <li><a href="portal-design.html">Portal</a></li>
+        <li><a href="ecu-editor.html" class="active">ECU Editor</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary quote-btn">Book a Call</a>
+      <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow"><i class="fas fa-code"></i> ECU editor</span>
+        <h1>Free online <span class="accent">ECU editor</span></h1>
+        <p>Access a fast, browser-based ECU editing environment designed for tuning businesses and performance specialists. Open the live editor, review vehicle data, and manage diagnostics with a clean workflow built for speed and simplicity.</p>
+
+        <div class="hero-stack">
+          <a href="https://onlineapp-production-894d.up.railway.app/explorer" class="btn btn-primary" target="_blank" rel="noopener"><i class="fas fa-microchip"></i> Open free editor</a>
+          <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Talk to us</a>
+        </div>
+
+        <div class="info-box">
+          <div class="info-card">
+            <strong>Free</strong>
+            <span>Access</span>
+          </div>
+          <div class="info-card">
+            <strong>Fast</strong>
+            <span>Workflow</span>
+          </div>
+          <div class="info-card">
+            <strong>Secure</strong>
+            <span>Browser-based</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mockup-panel">
+        <img src="assets/images/advanced tuning software media.png" alt="Advanced tuning software preview" style="display:block;width:100%;max-height:560px;object-fit:cover;border-radius:20px;border:1px solid rgba(90,140,255,0.18);background:#081420;" />
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why use it</span>
+        <h2>Built for quicker ECU workflows.</h2>
+        <p>Whether you’re working on a single file or managing multiple customer jobs, the editor gives you a cleaner, smarter workflow from start to finish.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="card">
+          <div class="icon-box"><i class="fas fa-bolt"></i></div>
+          <h3>Fast access</h3>
+          <p>Open the editor quickly in-browser without delays or complex setup.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon-box"><i class="fas fa-folder-open"></i></div>
+          <h3>Easy file handling</h3>
+          <p>Manage file lists, customer profiles and project status in one place.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon-box"><i class="fas fa-lock"></i></div>
+          <h3>Secure workflow</h3>
+          <p>Maintain a controlled, professional process for operational security and clarity.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon-box"><i class="fas fa-check-circle"></i></div>
+          <h3>Built for tuning</h3>
+          <p>Designed around real tuning operations and the day-to-day needs of performance businesses.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">How it works</span>
+        <h2>Simple process, smoother workflow.</h2>
+      </div>
+
+      <div class="steps-grid">
+        <article class="card">
+          <div class="icon-box"><i class="fas fa-upload"></i></div>
+          <h3>1. Upload</h3>
+          <p>Load the file or project into the browser-based environment and begin your workflow.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon-box"><i class="fas fa-magnifying-glass"></i></div>
+          <h3>2. Review</h3>
+          <p>Check the data, customer information and vehicle profile before progressing.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon-box"><i class="fas fa-tools"></i></div>
+          <h3>3. Edit</h3>
+          <p>Work through tuning files in a structured, organised system built around your process.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon-box"><i class="fas fa-share"></i></div>
+          <h3>4. Deliver</h3>
+          <p>Send the final project, track status and keep everything neatly organised.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" id="contact">
+    <div class="container">
+      <div class="cta-box">
+        <div>
+          <span class="section-tag">Need support?</span>
+          <h2>Launch the ECU editor and see how it works.</h2>
+          <p>Use the free online editor or contact us to discuss a setup tailored to your business and workflow.</p>
+        </div>
+        <div class="hero-stack" style="justify-content:flex-end;">
+          <a href="https://onlineapp-production-894d.up.railway.app/explorer" class="btn btn-primary" target="_blank" rel="noopener"><i class="fas fa-microchip"></i> Open editor</a>
+          <a href="https://wa.me/447546371963?text=Hi%20Portal%20Pro%2C%20I%20want%20to%20talk%20about%20the%20ECU%20editor." class="btn btn-outline" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo">
+          <img src="assets/logo.svg" alt="Portal Pro" class="logo-img" />
+          <div>
+            <span class="brand-text">Portal <span class="highlight">Pro</span></span>
+            <small>ECU solutions</small>
+          </div>
+        </div>
+        <p>Professional ECU tools, portals and web solutions for tuning businesses.</p>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="website-design.html">Website Design</a></li>
+          <li><a href="vrm-lookup.html">VRM Lookup</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/447546371963" target="_blank">WhatsApp</a></li>
+          <li><a href="mailto:carnageremaps@gmail.com">Email</a></li>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Portal Pro. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

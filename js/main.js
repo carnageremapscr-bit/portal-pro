@@ -7,10 +7,12 @@
     let matchedDropdown = false;
     allLinks.forEach(link => {
       const href = link.getAttribute('href');
-      // Normalize hash-only links and absolute URLs
       if (!href) return;
+
       const hrefFile = href.includes('http') ? href.split('/').pop() : href.split('#')[0];
-      if (hrefFile === '' && path === 'index.html') {
+      const isHomeHashLink = href === '#home' || href === '#top';
+
+      if (hrefFile === '' && path === 'index.html' && isHomeHashLink) {
         link.classList.add('active');
       } else if (hrefFile === path) {
         link.classList.add('active');
