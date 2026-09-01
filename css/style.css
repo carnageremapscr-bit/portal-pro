@@ -31,7 +31,7 @@ body {
   background:
     radial-gradient(circle at top, rgba(90, 140, 255, 0.1), transparent 32%),
     var(--bg);
-  overflow-x: hidden;
+  overflow-x: clip;
   line-height: 1.65;
   letter-spacing: -0.01em;
 }
@@ -1047,7 +1047,7 @@ article.card {
 }
 @media (max-width: 768px) {
   .hero-grid { grid-template-columns: 1fr; min-height: auto; }
-  .hero-visual { min-height: 300px; }
+  .hero-visual { min-height: 300px; transform: none; background-size: cover; }
   .feature-strip { grid-template-columns: 1fr 1fr; }
   .trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .vrm-brand { margin-bottom: 14px; }
@@ -1060,6 +1060,11 @@ article.card {
   .vrm-visual { min-height: 460px; }
   .vrm-float-badges { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; padding: 0 10px; bottom: 10px; }
   .float-badge { min-height: 62px; font-size: 0.62rem; }
+  .logo { min-width: 0; }
+  .brand-text { white-space: normal; font-size: 0.9rem; }
+  .navbar .container { height: auto; min-height: 76px; flex-wrap: wrap; padding-top: 10px; padding-bottom: 10px; }
+  .nav-shell { gap: 10px; }
+  .quote-btn { display: none; }
 }
 @media (max-width: 520px) {
   .feature-strip { grid-template-columns: 1fr; }
@@ -1085,6 +1090,23 @@ article.card {
   .vrm-car-image { margin-bottom: 0; transform: translateY(-10px); }
   .vrm-float-badges { grid-template-columns: 1fr; left: 12px; right: 12px; bottom: 12px; }
   .float-badge { min-height: 48px; }
+  .hero h1,
+  .page-hero h1,
+  .vrm-copy h2,
+  .landing-page .page-hero h1 {
+    font-size: clamp(2.4rem, 12vw, 4.2rem);
+    max-width: 100%;
+    letter-spacing: -0.06em;
+    word-break: break-word;
+  }
+  .hero-copy,
+  .page-hero p,
+  .landing-page .page-hero p {
+    font-size: 1rem;
+  }
+  .container { padding-left: 16px; padding-right: 16px; }
+  .nav-links { gap: 6px; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.05em; }
 }
 
 /* Responsive */
