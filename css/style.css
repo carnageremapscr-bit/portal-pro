@@ -1107,6 +1107,17 @@ article.card {
   .container { padding-left: 16px; padding-right: 16px; }
   .nav-links { gap: 6px; }
   .nav-links a { font-size: 0.68rem; letter-spacing: 0.05em; }
+  .navbar .container { gap: 8px; }
+  .logo { max-width: 100%; overflow: hidden; }
+  .brand-text { max-width: 180px; line-height: 1.1; }
+  .hero-grid,
+  .page-hero .container,
+  .split-layout,
+  .contact-wrapper,
+  .vrm-lookup-shell {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 /* Responsive */
