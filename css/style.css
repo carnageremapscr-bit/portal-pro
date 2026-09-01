@@ -1163,6 +1163,7 @@ article.card {
 
 @media (max-width: 768px) {
   .nav-links {
+    display: none;
     position: fixed;
     top: 64px;
     right: 0;
@@ -1187,6 +1188,7 @@ article.card {
     z-index: 60;
   }
   .nav-links.open {
+    display: flex;
     transform: translateX(0);
     opacity: 1;
     visibility: visible;
@@ -1349,6 +1351,8 @@ article.card {
   font-weight: 600;
   font-size: 13px;
   border: 1px solid rgba(29,59,122,0.2);
+}
+
 /* --- Sections --- */
 .landing-page .section { padding: 80px 0; position: relative; }
 .landing-page .section-header { text-align: center; margin-bottom: 48px; }
@@ -1359,6 +1363,7 @@ article.card {
   background: linear-gradient(135deg, rgba(29,59,122,0.03), rgba(22,50,99,0.02)) !important;
   border-top: 1px solid rgba(29,59,122,0.08);
   border-bottom: 1px solid rgba(29,59,122,0.08);
+}
 
 /* Gradient separator between sections */
 .section-glow-divider {
