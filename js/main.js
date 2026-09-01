@@ -34,6 +34,7 @@
   const closeMobileNav = () => {
     if (!nav) return;
     nav.classList.remove('open');
+    nav.setAttribute('aria-hidden', 'true');
     dropdowns.forEach(d => {
       d.classList.remove('open');
       d.classList.remove('active');
@@ -41,8 +42,22 @@
     document.body.classList.remove('nav-open');
     document.body.style.overflow = '';
     if (toggle) {
+      toggle.setAttribute('aria-expanded', 'false');
       const icon = toggle.querySelector('i');
       if (icon) icon.className = 'fas fa-bars';
+    }
+  };
+
+  const openMobileNav = () => {
+    if (!nav) return;
+    nav.classList.add('open');
+    nav.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('nav-open');
+    document.body.style.overflow = 'hidden';
+    if (toggle) {
+      toggle.setAttribute('aria-expanded', 'true');
+      const icon = toggle.querySelector('i');
+      if (icon) icon.className = 'fas fa-times';
     }
   };
 
@@ -50,16 +65,11 @@
     closeMobileNav();
   }
 
-  const openMobileNav = () => {
-    if (!nav) return;
-    nav.classList.add('open');
-    document.body.classList.add('nav-open');
-    document.body.style.overflow = 'hidden';
-    if (toggle) {
-      const icon = toggle.querySelector('i');
-      if (icon) icon.className = 'fas fa-times';
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.innerWidth <= 768) {
+      closeMobileNav();
     }
-  };
+  });
 
   if (toggle && nav) {
     toggle.addEventListener('click', (e) => {
