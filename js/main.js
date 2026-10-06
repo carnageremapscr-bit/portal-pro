@@ -66,7 +66,7 @@
     });
 
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 768) setMobileNavState(false);
+      if (window.innerWidth > 1120) setMobileNavState(false);
     });
   }
 

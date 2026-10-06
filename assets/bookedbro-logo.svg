@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="title">
+  <title id="title">BookedBro</title>
+  <rect width="1200" height="300" fill="#fff"/>
+  <g fill="#07131b">
+    <path d="M125 18H80C38 18 6 48 6 87c0 39 31 64 73 64h46z"/>
+    <path d="M125 140H78c-44 0-72 26-72 65 0 40 32 73 74 73h45z"/>
+  </g>
+  <g fill="#12a8e6">
+    <path d="M125 18h43c44 0 74 30 74 69 0 39-30 64-74 64h-43z"/>
+    <path d="M125 140h45c45 0 80 28 80 67 0 40-33 71-81 71h-44z"/>
+  </g>
+  <g fill="#fff">
+    <path d="M125 60H80c-17 0-30 12-30 28 0 17 13 29 30 29h45z"/>
+    <path d="M125 182H80c-17 0-30 12-30 29 0 17 13 29 30 29h45z"/>
+    <path d="M125 60h43c18 0 30 12 30 28 0 17-12 29-30 29h-43z"/>
+    <path d="M125 182h45c19 0 32 12 32 29 0 17-13 29-32 29h-45z"/>
+  </g>
+  <text x="285" y="225" font-family="Arial Black, Manrope, sans-serif" font-size="160" font-weight="900" textLength="860" lengthAdjust="spacingAndGlyphs">
+    <tspan fill="#07131b">booked</tspan><tspan fill="#12a8e6">bro</tspan>
+  </text>
+</svg>
