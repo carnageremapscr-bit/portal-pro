@@ -14,44 +14,11 @@
   <meta property="og:url" content="https://www.webportalpro.co.uk/booking-system.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css?v=20261006-1">
+  <link rel="stylesheet" href="css/booking.css?v=20261015-1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    .booking-hero { padding: 64px 0 54px; }
-    .booking-hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr); gap: 44px; align-items: center; }
-    .booking-copy h1 { margin: 0 0 18px; font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.02; }
-    .bookedbro-logo { display: block; width: min(100%, 480px); height: auto; margin: 0 0 22px; border-radius: 6px; }
-    .booking-copy > p { max-width: 58ch; margin: 0 0 18px; color: var(--muted); font-size: 1.06rem; }
-    .booking-copy .partner-note { padding-left: 14px; border-left: 2px solid var(--success); font-size: 0.94rem; }
-    .booking-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
-    .booking-video { min-width: 0; overflow: hidden; border: 1px solid var(--border); border-radius: 14px; background: #080d16; box-shadow: 0 20px 50px var(--shadow); }
-    .booking-video video { display: block; width: 100%; max-height: 500px; aspect-ratio: 4 / 5; object-fit: contain; background: #05080d; }
-    .booking-video-caption { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 16px; color: var(--muted); font-size: 0.9rem; }
-    .booking-video-caption a { color: var(--accent); white-space: nowrap; }
-    .booking-features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-    .booking-features .feature-card { height: 100%; }
-    .booking-features h3 { margin: 0 0 8px; }
-    .booking-features p { margin: 0; color: var(--muted); }
-    .booking-audience { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 28px auto 0; max-width: 860px; }
-    .booking-audience span { border: 1px solid var(--border); border-radius: 999px; padding: 7px 13px; color: var(--muted); font-size: 0.9rem; }
-    .booking-next { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; }
-    .booking-next h2 { margin: 0 0 10px; }
-    .booking-next p { margin: 0; max-width: 66ch; color: var(--muted); }
-    @media (max-width: 820px) {
-      .booking-hero-grid { grid-template-columns: 1fr; gap: 30px; }
-      .booking-video { max-width: 560px; }
-      .booking-features { grid-template-columns: 1fr; }
-      .booking-next { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 520px) {
-      .booking-hero { padding-top: 42px; }
-      .booking-video-caption { align-items: flex-start; flex-direction: column; }
-      .booking-actions { flex-direction: column; align-items: stretch; }
-      .booking-actions .btn { text-align: center; }
-    }
-  </style>
 </head>
 <body>
   <nav class="navbar">
@@ -77,25 +44,37 @@
     </div>
   </nav>
 
-  <header class="page-hero booking-hero">
-    <div class="container booking-hero-grid">
-      <div class="booking-copy">
-        <img class="bookedbro-logo" src="assets/bookedbro-logo.svg" alt="BookedBro logo" width="1200" height="300">
-        <span class="section-tag">Our booking-system partner</span>
-        <h1>Make it easier for customers to book.</h1>
-        <p>Portal Pro has partnered with BookedBro to help appointment-led businesses take bookings online. Customers can choose a service, pick an available time and book from their phone, while businesses manage appointments in one dashboard.</p>
-        <p class="partner-note">BookedBro is a separate booking service. It is not part of Portal Pro's ECU file portal.</p>
-        <div class="booking-actions">
-          <a class="btn btn-primary" href="https://bookedbro.com/setup" target="_blank" rel="noopener noreferrer">Explore BookedBro <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-          <a class="btn btn-outline" href="https://bookedbro.com/demo" target="_blank" rel="noopener noreferrer">Try the live demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+  <header class="page-hero bk-hero">
+    <div class="container bk-hero-grid">
+      <div>
+        <div class="bk-lockup" aria-label="Portal Pro in partnership with BookedBro">
+          <span class="bk-pro">PORTAL PRO</span><span class="bk-x">&times;</span>
+          <img src="assets/bookedbro-logo.svg" alt="BookedBro logo" width="1200" height="300">
         </div>
+        <span class="section-tag">Official booking-system partner</span>
+        <h1>Take bookings online. <span>Powered by BookedBro.</span></h1>
+        <p class="lead">Portal Pro has partnered with BookedBro to give tuning shops and remap businesses a proper online booking system. Customers pick a remap, dyno run or diagnostic slot, choose a time and book from their phone, while you run the whole workshop diary from one dashboard.</p>
+        <ul class="bk-badges">
+          <li><i class="fas fa-handshake" aria-hidden="true"></i> Portal Pro partner</li>
+          <li><i class="fas fa-mobile-screen" aria-hidden="true"></i> Mobile-first</li>
+          <li><i class="fas fa-gauge-high" aria-hidden="true"></i> Tuning &amp; dyno bookings</li>
+          <li><i class="fas fa-clock" aria-hidden="true"></i> Bookings 24/7</li>
+          <li><i class="fas fa-bell" aria-hidden="true"></i> Confirmations</li>
+        </ul>
+        <div class="bk-actions">
+          <a class="btn btn-primary btn-lg" href="https://bookedbro.com/setup" target="_blank" rel="noopener noreferrer">Get set up with BookedBro <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <a class="btn btn-outline btn-lg" href="https://bookedbro.com/demo" target="_blank" rel="noopener noreferrer">Try the live demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </div>
+        <p class="bk-note">BookedBro is a separate booking service run by its own team. It is not part of Portal Pro's ECU file portal.</p>
       </div>
-      <div class="booking-video">
-        <video controls playsinline preload="metadata" aria-label="BookedBro booking system video">
-          <source src="assets/bookedbro-booking-demo.mov" type="video/mp4">
+      <div class="bk-video">
+        <div class="bk-video-top"><i></i><i></i><i></i><span>bookedbro.com &middot; booking preview</span></div>
+        <video controls autoplay muted loop playsinline preload="auto" aria-label="BookedBro booking system video">
+          <source src="assets/bookedbro-booking-demo.mp4" type="video/mp4">
+          <source src="assets/bookedbro-booking-demo.mov" type="video/quicktime">
           Your browser cannot play this video. <a href="assets/bookedbro-booking-demo.mov">Open the video file</a>.
         </video>
-        <div class="booking-video-caption">
+        <div class="bk-video-caption">
           <span>BookedBro booking system preview</span>
           <a href="https://bookedbro.com/demo" target="_blank" rel="noopener noreferrer">Open live demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
         </div>
@@ -104,46 +83,203 @@
   </header>
 
   <main>
-    <section class="section">
+    <div class="bk-partner-strip">
+      <div class="container">
+        <div><strong>Partnership</strong><span class="t">Portal Pro introduces &mdash; BookedBro delivers and supports the booking platform.</span></div>
+        <div class="bk-trust">
+          <span><i class="fas fa-circle-check" aria-hidden="true"></i>Live customer sites</span>
+          <span><i class="fas fa-circle-check" aria-hidden="true"></i>No app for customers</span>
+          <span><i class="fas fa-circle-check" aria-hidden="true"></i>Works on any device</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="bk-sec">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Online appointments</span>
-          <h2>Bookings without the back-and-forth.</h2>
-          <p>BookedBro gives customers a direct way to book and gives businesses the tools to keep their appointment diary organised.</p>
+          <span class="section-tag">Better together</span>
+          <h2>Two specialists, one smoother customer journey.</h2>
+          <p>Portal Pro builds your tuning website, VRM lookup and ECU file portal. BookedBro handles the workshop appointments. Together your customers go from your site to a confirmed remap or dyno slot in a few taps.</p>
         </div>
-        <div class="booking-features">
-          <article class="feature-card">
-            <div class="feature-icon"><i class="fas fa-calendar-check" aria-hidden="true"></i></div>
-            <h3>Take bookings any time</h3>
-            <p>Customers can book online around the clock, including when you are busy with work.</p>
+        <div class="bk-partner-grid">
+          <article class="bk-pcard">
+            <img src="assets/logo.svg" alt="Portal Pro logo">
+            <h3>Portal Pro</h3>
+            <p>Websites and web tools for tuning and remapping businesses.</p>
+            <ul>
+              <li><i class="fas fa-check" aria-hidden="true"></i>Tuning websites, VRM lookup and ECU file portal</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i>Introduces and recommends BookedBro</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i>Sends quote and remap enquiries to a booking</li>
+            </ul>
           </article>
-          <article class="feature-card">
-            <div class="feature-icon"><i class="fas fa-list-check" aria-hidden="true"></i></div>
-            <h3>Set up your services</h3>
-            <p>Manage services, prices, staff, opening hours, breaks and days off around your business.</p>
+          <div class="bk-plus" aria-hidden="true"><i class="fas fa-plus"></i></div>
+          <article class="bk-pcard hl">
+            <img src="assets/bookedbro-logo.svg" alt="BookedBro logo">
+            <h3>BookedBro</h3>
+            <p>The online booking platform that runs your workshop diary.</p>
+            <ul>
+              <li><i class="fas fa-check" aria-hidden="true"></i>Online booking pages for remaps, dyno runs and more</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i>Dashboard, availability and technicians</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i>Customer confirmations</li>
+            </ul>
           </article>
-          <article class="feature-card">
-            <div class="feature-icon"><i class="fas fa-bell" aria-hidden="true"></i></div>
-            <h3>Keep every booking in view</h3>
-            <p>See and manage appointments from a single dashboard, with confirmations sent to customers.</p>
-          </article>
-        </div>
-        <div class="booking-audience" aria-label="Example appointment-based businesses">
-          <span>Barbers</span><span>Salons</span><span>Beauty</span><span>Mechanics</span><span>Dog groomers</span><span>Personal trainers</span><span>Clinics</span>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container booking-next">
-        <div>
+    <section class="bk-sec alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">How it works</span>
+          <h2>From enquiry to booked in four steps.</h2>
+        </div>
+        <div class="bk-steps">
+          <article class="bk-step"><h3>Talk to us</h3><p>Tell Portal Pro about your tuning business and we'll introduce you to BookedBro.</p></article>
+                    <article class="bk-step"><h3>Set up your tuning services</h3><p>Add Stage 1 and Stage 2 remaps, dyno runs, DPF/EGR work and diagnostics, with prices, durations, technicians and opening hours.</p></article>
+                    <article class="bk-step"><h3>Share your booking link</h3><p>Add it to your tuning website, VRM lookup results, socials and Google listing.</p></article>
+                    <article class="bk-step"><h3>Manage your workshop diary</h3><p>Customers book drop-offs and dyno slots themselves and you see every job in one place.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bk-sec">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">See it in action</span>
+          <h2>What your customers and you will see.</h2>
+          <p>Illustrative previews of the BookedBro experience. Open the live demo for the real thing.</p>
+        </div>
+
+        <div class="bk-showcase">
+          <div class="bk-showtext">
+            <h3>A booking flow customers actually finish.</h3>
+            <p>No phone tag and no account needed. Customers choose a remap or dyno session, see real availability and confirm in seconds.</p>
+            <ul>
+              <li><i class="fas fa-check" aria-hidden="true"></i>Clear tuning services and prices</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i>Only genuinely free workshop slots shown</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i>Designed for phones first</li>
+            </ul>
+          </div>
+          <div class="bk-mock" aria-hidden="true">
+            <div class="bk-mock-title">Book your tuning slot <small>Step 2 of 3</small></div>
+                        <div class="bk-svc"><div>Dyno run &amp; power check<small>1 hr</small></div><b>&pound;85</b></div>
+                        <div class="bk-svc sel"><div>Stage 1 ECU remap<small>3 hrs &middot; drop-off</small></div><b>&pound;300</b></div>
+            <div class="bk-slots"><span>09:00</span><span class="off">09:45</span><span>10:30</span><span class="sel">11:15</span><span>12:00</span><span class="off">13:00</span><span>14:00</span><span>15:15</span></div>
+            <div class="bk-confirm">Confirm booking</div>
+          </div>
+        </div>
+
+        <div class="bk-showcase rev">
+          <div class="bk-showtext">
+            <h3>Your whole diary in one dashboard.</h3>
+            <p>See today's remaps, dyno runs and diagnostics, what's pending and how busy the week is without juggling messages and notebooks.</p>
+            <ul>
+              <li><i class="fas fa-check" aria-hidden="true"></i>Day and week views</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i>Manage technicians, breaks and time off</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i>Confirmations sent to customers</li>
+            </ul>
+          </div>
+          <div class="bk-mock" aria-hidden="true">
+            <div class="bk-mock-title">Today <small>Dashboard</small></div>
+            <div class="bk-tiles">            <div><b>6</b><small>Jobs</small></div><div><b>2</b><small>Free slots</small></div><div><b>1</b><small>Pending</small></div></div>
+                        <div class="bk-dash-row"><time>09:00</time><div>Jake M. &middot; Golf GTI<small>Stage 1 remap</small></div><span class="bk-pill">Confirmed</span></div>
+                        <div class="bk-dash-row"><time>11:30</time><div>Sam R. &middot; BMW 335d<small>Dyno run</small></div><span class="bk-pill">Confirmed</span></div>
+                        <div class="bk-dash-row"><time>14:00</time><div>Lee T. &middot; Transit<small>DPF diagnostics</small></div><span class="bk-pill w">Pending</span></div>
+          </div>
+        </div>
+
+        <div class="section-header" style="margin-top:20px">
+          <span class="section-tag">What you get</span>
+          <h2>Everything a busy diary needs.</h2>
+        </div>
+        <div class="bk-grid6">
+          <article class="bk-fcard"><div class="ic"><i class="fas fa-calendar-check" aria-hidden="true"></i></div><h3>24/7 online booking</h3>          <p>Customers book remaps and dyno runs any time, even when you're under a bonnet or closed.</p></article>
+                    <article class="bk-fcard"><div class="ic"><i class="fas fa-gauge-high" aria-hidden="true"></i></div><h3>Tuning services and pricing</h3><p>Stage 1/2 remaps, dyno runs, DPF/EGR and diagnostics, each with its own duration and price.</p></article>
+                    <article class="bk-fcard"><div class="ic"><i class="fas fa-user-group" aria-hidden="true"></i></div><h3>Technicians and dyno time</h3><p>Opening hours, breaks and days off, per person, so the dyno is never double-booked.</p></article>
+          <article class="bk-fcard"><div class="ic"><i class="fas fa-bell" aria-hidden="true"></i></div><h3>Customer confirmations</h3><p>Customers get a confirmation so they know they're booked.</p></article>
+          <article class="bk-fcard"><div class="ic"><i class="fas fa-mobile-screen-button" aria-hidden="true"></i></div><h3>Built for mobile</h3><p>A fast, simple booking page that works great on any phone.</p></article>
+          <article class="bk-fcard"><div class="ic"><i class="fas fa-link" aria-hidden="true"></i></div><h3>Your own booking site</h3><p>A shareable link for your website, socials and Google profile.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bk-sec alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Who it's for</span>
+          <h2>Made for tuning shops and workshops.</h2>
+          <p>BookedBro suits any appointment-led business, and fits remapping and performance workshops well.</p>
+        </div>
+        <div class="bk-audience" aria-label="Example businesses">
+          <span><i class="fas fa-microchip" aria-hidden="true"></i>ECU remappers</span>
+          <span><i class="fas fa-gauge-high" aria-hidden="true"></i>Dyno &amp; rolling-road shops</span>
+          <span><i class="fas fa-car" aria-hidden="true"></i>Performance tuners</span>
+          <span><i class="fas fa-truck-pickup" aria-hidden="true"></i>Mobile remap services</span>
+          <span><i class="fas fa-wrench" aria-hidden="true"></i>Garages &amp; mechanics</span>
+          <span><i class="fas fa-stethoscope" aria-hidden="true"></i>Diagnostics specialists</span>
+          <span><i class="fas fa-spray-can-sparkles" aria-hidden="true"></i>Detailers</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="bk-sec">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Why switch</span>
+          <h2>Online booking vs. taking remap bookings by phone and DM.</h2>
+        </div>
+        <table class="bk-compare">
+          <thead><tr><th></th><th>Phone / messages</th><th>BookedBro</th></tr></thead>
+          <tbody>
+            <tr><td>Remap &amp; dyno bookings out of hours</td><td class="n"><i class="fas fa-xmark" aria-hidden="true"></i> No</td><td class="y"><i class="fas fa-check" aria-hidden="true"></i> Yes</td></tr>
+            <tr><td>Double-booked dyno or technician</td><td class="n"><i class="fas fa-xmark" aria-hidden="true"></i> Higher</td><td class="y"><i class="fas fa-check" aria-hidden="true"></i> Availability-based</td></tr>
+            <tr><td>Customer confirmations</td><td class="n"><i class="fas fa-xmark" aria-hidden="true"></i> Manual</td><td class="y"><i class="fas fa-check" aria-hidden="true"></i> Sent for you</td></tr>
+            <tr><td>Whole diary in one view</td><td class="n"><i class="fas fa-xmark" aria-hidden="true"></i> Scattered</td><td class="y"><i class="fas fa-check" aria-hidden="true"></i> One dashboard</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="bk-sec alt">
+      <div class="container">
+        <div class="section-header">
           <span class="section-tag">A real example</span>
           <h2>See a live customer booking site.</h2>
-          <p>Try the working BookedBro booking flow for Mitch's Barbershop in Ramsgate, or visit BookedBro to see current plans and setup offers.</p>
+          <p>Try the working BookedBro flow for Mitch's Barbershop in Ramsgate.</p>
         </div>
-        <div class="booking-actions">
+        <div class="bk-actions" style="justify-content:center">
           <a class="btn btn-primary" href="https://book.mitchesbarbershop.com/" target="_blank" rel="noopener noreferrer">View live booking site <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           <a class="btn btn-outline" href="https://bookedbro.com/pricing" target="_blank" rel="noopener noreferrer">Current pricing</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bk-sec">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">FAQ</span>
+          <h2>Quick answers.</h2>
+        </div>
+        <div class="bk-faq">
+          <details><summary>Is BookedBro part of Portal Pro?</summary><p>No. BookedBro is a separate booking service. Portal Pro is a partner that introduces it to appointment-led businesses.</p></details>
+          <details><summary>Do my customers need an account or app?</summary><p>No. They open your booking link, pick a service and time, and book from any device.</p></details>
+          <details><summary>How much does it cost?</summary><p>BookedBro sets its own plans and offers. See the <a href="https://bookedbro.com/pricing" target="_blank" rel="noopener noreferrer">BookedBro pricing page</a> for current details.</p></details>
+          <details><summary>Can I add it to my Portal Pro website?</summary><p>Yes. Share your booking link from your website, VRM lookup page, socials and Google profile. <a href="contact.html">Contact us</a> and we'll help.</p></details>
+          <details><summary>Can customers book a remap or dyno run?</summary><p>Yes. You can set up services such as Stage 1 and Stage 2 remaps, dyno runs and diagnostics, each with its own duration, price and availability.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="bk-sec" style="padding-top:0">
+      <div class="container">
+        <div class="bk-cta">
+          <img src="assets/bookedbro-logo.svg" alt="BookedBro logo">
+          <h2>Ready to fill your workshop diary?</h2>
+                    <p>Get set up with BookedBro for remap, dyno and diagnostic bookings, or talk to Portal Pro first and we'll point you the right way.</p>
+          <div class="bk-actions">
+            <a class="btn btn-primary btn-lg" href="https://bookedbro.com/setup" target="_blank" rel="noopener noreferrer">Get set up with BookedBro <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            <a class="btn btn-outline btn-lg" href="contact.html">Talk to Portal Pro</a>
+          </div>
         </div>
       </div>
     </section>
@@ -179,5 +315,16 @@
   </footer>
 
   <script src="js/main.js?v=20261006-1"></script>
+  <script>
+    (function () {
+      var v = document.querySelector('.bk-video video');
+      if (!v) return;
+      v.muted = true;
+      var tryPlay = function () { var p = v.play(); if (p && p.catch) p.catch(function () {}); };
+      tryPlay();
+      v.addEventListener('canplay', tryPlay, { once: true });
+      document.addEventListener('pointerdown', tryPlay, { once: true });
+    })();
+  </script>
 </body>
 </html>
