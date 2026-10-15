@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynograph Studio | Branded Vehicle Power Graphs | Portal Pro</title>
+  <meta name="description" content="Create branded dynograph sheets with stock and tuned power and torque, optional registration lookup, your logo and watermark, and print-ready PDF export." />
+  <link rel="canonical" href="https://www.webportalpro.co.uk/dynograph.html" />
+  <meta property="og:title" content="Dynograph Studio | Portal Pro" />
+  <meta property="og:description" content="Build professional branded dynograph sheets for cars, bikes, boats and other engine-powered vehicles." />
+  <meta property="og:url" content="https://www.webportalpro.co.uk/dynograph.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.webportalpro.co.uk/assets/images/dynograph-preview.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.webportalpro.co.uk/assets/images/dynograph-preview.jpg" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css?v=20261006-1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body { background: #0b1220; }
+    .dyno-hero { padding: 68px 0 58px; background: radial-gradient(circle at 16% 8%, rgba(90,140,255,0.16), transparent 32%), #0b1220; }
+    .dyno-hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 42px; }
+    .dyno-hero h1 { margin: 12px 0 18px; font-size: clamp(2.8rem, 5.5vw, 5.3rem); line-height: 0.94; letter-spacing: -0.07em; text-transform: none; }
+    .dyno-hero-copy { color: var(--muted); max-width: 620px; font-size: 1.08rem; }
+    .dyno-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .dyno-visual { margin: 0; padding: 20px; background: linear-gradient(145deg, rgba(20,35,56,0.96), rgba(8,13,23,0.98)); border: 1px solid rgba(90,140,255,0.22); border-radius: 24px; box-shadow: 0 24px 56px rgba(0,0,0,0.34); }
+    .dyno-visual img { display: block; width: 100%; height: auto; border-radius: 14px; }
+    .dyno-visual-caption { display: flex; justify-content: space-between; gap: 12px; margin-top: 14px; color: var(--muted); font-size: 0.82rem; }
+    .dyno-visual-caption strong { color: #edf3ff; }
+    .dyno-section { padding: 64px 0; }
+    .dyno-section.alt { background: linear-gradient(180deg, rgba(18,33,58,0.72), rgba(11,18,32,0.9)); }
+    .dyno-section-heading { max-width: 760px; margin: 0 auto 34px; text-align: center; }
+    .dyno-section-heading h2 { margin: 12px 0; font-size: clamp(2rem, 4vw, 3rem); }
+    .dyno-section-heading p { color: var(--muted); margin: 0 auto; max-width: 680px; }
+    .dyno-cards, .dyno-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .dyno-card, .dyno-step { padding: 24px; border: 1px solid var(--border); border-radius: 18px; background: rgba(16,26,42,0.9); }
+    .dyno-card > i, .dyno-step-number { display: grid; place-items: center; width: 46px; height: 46px; margin-bottom: 16px; border-radius: 14px; color: #8ec5ff; background: rgba(90,140,255,0.12); border: 1px solid rgba(90,140,255,0.2); }
+    .dyno-card h3, .dyno-step h3 { margin: 0 0 10px; font-size: 1.2rem; }
+    .dyno-card p, .dyno-step p { color: var(--muted); margin: 0; }
+    .dyno-step-number { font-weight: 800; }
+    .dyno-pricing { max-width: 860px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .dyno-price-card { padding: 28px; border: 1px solid rgba(90,140,255,0.22); border-radius: 20px; background: rgba(16,26,42,0.92); }
+    .dyno-price-card.featured { background: linear-gradient(180deg, rgba(21,43,80,0.9), rgba(14,20,32,0.98)); border-color: rgba(90,140,255,0.42); }
+    .dyno-price-card h3 { margin: 0 0 6px; font-size: 1.35rem; }
+    .dyno-price { display: block; margin: 16px 0; font-family: 'Sora', sans-serif; font-size: 2.5rem; font-weight: 800; letter-spacing: -0.06em; }
+    .dyno-price small { color: var(--muted); font-family: 'Manrope', sans-serif; font-size: 0.95rem; font-weight: 600; letter-spacing: 0; }
+    .dyno-price-card p { color: var(--muted); }
+    .dyno-note { color: var(--muted); max-width: 780px; margin: 20px auto 0; text-align: center; font-size: 0.9rem; }
+    .dyno-cta { padding: 22px 0 72px; }
+    .dyno-cta-box { padding: clamp(26px, 5vw, 52px); border: 1px solid rgba(90,140,255,0.2); border-radius: 26px; background: linear-gradient(135deg, rgba(47,87,160,0.2), rgba(12,19,32,0.96)); text-align: center; }
+    .dyno-cta-box h2 { margin: 0 0 12px; font-size: clamp(2rem, 4vw, 2.8rem); }
+    .dyno-cta-box p { color: var(--muted); max-width: 680px; margin: 0 auto; }
+    .dyno-cta-box .dyno-hero-actions { justify-content: center; }
+    @media (max-width: 820px) {
+      .dyno-hero-grid, .dyno-cards, .dyno-steps { grid-template-columns: 1fr; }
+      .dyno-hero { padding-top: 48px; }
+      .dyno-hero-actions { flex-direction: column; }
+      .dyno-hero-actions .btn { width: 100%; }
+    }
+    @media (max-width: 560px) {
+      .dyno-pricing { grid-template-columns: 1fr; }
+      .dyno-visual { padding: 12px; }
+      .dyno-visual-caption { flex-direction: column; }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Portal Pro Dynograph Studio",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://www.webportalpro.co.uk/dynograph.html",
+      "description": "Browser-based tool for creating branded dynograph sheets with optional vehicle registration lookup and PDF export.",
+      "offers": [
+        { "@type": "Offer", "price": "3.99", "priceCurrency": "GBP", "name": "Clean dynograph credit" },
+        { "@type": "Offer", "price": "4.99", "priceCurrency": "GBP", "name": "Registration-linked dynograph credit" }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-shell">
+      <a href="index.html" class="logo" aria-label="Portal Pro home">
+        <img src="assets/logo.svg" alt="Portal Pro logo" class="logo-img" />
+        <span class="brand-text">WEB PORTAL PRO</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="website-design.html">Web Design</a></li>
+        <li><a href="vrm-lookup.html">VRM Lookup</a></li>
+        <li><a href="portal-design.html">Portal</a></li>
+        <li><a href="dynograph.html" class="active">Dynograph</a></li>
+        <li><a href="lead-generation.html">Lead Generation</a></li>
+        <li><a href="booking-system.html">Booking System</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="https://secure-file-portal-portal-pro.up.railway.app/register.html" class="btn btn-primary quote-btn" target="_blank" rel="noopener noreferrer">Create Account</a>
+      <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <header class="dyno-hero">
+    <div class="container dyno-hero-grid">
+      <div>
+        <span class="section-tag">Dynograph Studio</span>
+        <h1>Make every power upgrade easier to show.</h1>
+        <p class="dyno-hero-copy">Create professional, branded dynograph sheets for your customers. Enter stock and tuned power or torque, optionally look up a registration for a vehicle-specific preview, then export a polished graph to share.</p>
+        <div class="dyno-hero-actions">
+          <a href="https://secure-file-portal-portal-pro.up.railway.app/dyno-access.html" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer"><i class="fas fa-chart-line"></i> Open Dynograph Studio</a>
+          <a href="https://secure-file-portal-portal-pro.up.railway.app/register.html" class="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer"><i class="fas fa-user-plus"></i> Create an Account</a>
+        </div>
+      </div>
+      <figure class="dyno-visual">
+        <img src="assets/images/dynograph-preview.jpg" alt="Dynograph Studio preview showing a branded BMW 320d power and torque graph with stock and tuned curves" loading="lazy" />
+        <figcaption class="dyno-visual-caption"><strong>Real Dynograph Studio preview</strong><span>Example graph generated in the Studio</span></figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <section class="dyno-section">
+    <div class="container">
+      <div class="dyno-section-heading">
+        <span class="section-tag">Made for your workshop</span>
+        <h2>From tuning figures to a branded customer handout.</h2>
+        <p>Put your business identity on clear before-and-after power and torque comparisons, ready to present in person or send digitally.</p>
+      </div>
+      <div class="dyno-cards">
+        <article class="dyno-card">
+          <i class="fas fa-sliders" aria-hidden="true"></i>
+          <h3>Enter your tuning figures</h3>
+          <p>Choose an engine profile and power unit, then enter stock and tuned power and torque values for the graph.</p>
+        </article>
+        <article class="dyno-card">
+          <i class="fas fa-id-card" aria-hidden="true"></i>
+          <h3>Optionally look up a registration</h3>
+          <p>Use registration lookup to preview a vehicle-specific graph, or create a clean graph without a registration.</p>
+        </article>
+        <article class="dyno-card">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+          <h3>Make the graph yours</h3>
+          <p>Add your business name, logo, accent colour and watermark to create a recognisable customer-facing sheet.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="dyno-section alt">
+    <div class="container">
+      <div class="dyno-section-heading">
+        <span class="section-tag">Simple workflow</span>
+        <h2>Create and share a graph in three steps.</h2>
+      </div>
+      <div class="dyno-steps">
+        <article class="dyno-step">
+          <span class="dyno-step-number">1</span>
+          <h3>Add vehicle and figures</h3>
+          <p>Enter the engine profile and stock/tuned values, or use a registration to preview vehicle details.</p>
+        </article>
+        <article class="dyno-step">
+          <span class="dyno-step-number">2</span>
+          <h3>Apply your branding</h3>
+          <p>Set your business name, logo, watermark and accent colour for a consistent presentation.</p>
+        </article>
+        <article class="dyno-step">
+          <span class="dyno-step-number">3</span>
+          <h3>Export and share</h3>
+          <p>Print or save the finished graph as a PDF for your customer. CSV export is also available in the Studio.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="dyno-section" id="pricing">
+    <div class="container">
+      <div class="dyno-section-heading">
+        <span class="section-tag">Straightforward credits</span>
+        <h2>Pay per graph created.</h2>
+        <p>Choose a clean graph or a registration-linked graph when you create it in Dynograph Studio.</p>
+      </div>
+      <div class="dyno-pricing">
+        <article class="dyno-price-card">
+          <h3>Clean dynograph</h3>
+          <span class="dyno-price">£3.99 <small>/ graph credit</small></span>
+          <p>Create a graph using the vehicle and tuning figures you enter.</p>
+          <a href="https://secure-file-portal-portal-pro.up.railway.app/dyno-access.html" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Open Dynograph Studio</a>
+        </article>
+        <article class="dyno-price-card featured">
+          <h3>Registration-linked dynograph</h3>
+          <span class="dyno-price">£4.99 <small>/ graph credit</small></span>
+          <p>Look up a registration and preview a graph linked to the vehicle details.</p>
+          <a href="https://secure-file-portal-portal-pro.up.railway.app/dyno-access.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Create a graph with reg</a>
+        </article>
+      </div>
+      <p class="dyno-note">Credits are charged per graph created. Graphs are based on the figures entered and are illustrative estimates, not measured rolling-road results or guaranteed performance outcomes.</p>
+    </div>
+  </section>
+
+  <section class="dyno-cta">
+    <div class="container">
+      <div class="dyno-cta-box">
+        <h2>Ready to put your branding on the graph?</h2>
+        <p>Create an account to access the Studio, set up your business branding and create your first customer-ready dynograph.</p>
+        <div class="dyno-hero-actions">
+          <a href="https://secure-file-portal-portal-pro.up.railway.app/register.html" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer"><i class="fas fa-user-plus"></i> Create an Account</a>
+          <a href="https://secure-file-portal-portal-pro.up.railway.app/dyno-access.html" class="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-up-right-from-square"></i> Open Dynograph Studio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <img src="assets/logo.svg" alt="Portal Pro" class="logo-img" />
+          <span class="brand-text">Portal <span class="highlight">Pro</span></span>
+        </a>
+        <p>Branded dynograph tools for tuners and automotive businesses.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="website-design.html">Website Design</a></li>
+          <li><a href="vrm-lookup.html">VRM Lookup</a></li>
+          <li><a href="portal-design.html">ECU File Portal</a></li>
+          <li><a href="dynograph.html">Dynograph</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Get started</h4>
+        <ul>
+          <li><a href="https://secure-file-portal-portal-pro.up.railway.app/register.html" target="_blank" rel="noopener noreferrer">Create an Account</a></li>
+          <li><a href="https://secure-file-portal-portal-pro.up.railway.app/dyno-access.html" target="_blank" rel="noopener noreferrer">Open Dynograph Studio</a></li>
+          <li><a href="contact.html">Contact Portal Pro</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Portal Pro by Carnage Remaps. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="js/main.js?v=20261006-1"></script>
+</body>
+</html>
