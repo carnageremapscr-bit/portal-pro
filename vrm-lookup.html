@@ -18,7 +18,27 @@
     <link rel="stylesheet" href="css/style.css?v=20261006-1">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script type="application/ld+json">
+    <style>
+      .vrm-tools-section { padding: 0 0 64px; }
+      .vrm-tools-panel { max-width: 1100px; margin: 0 auto; padding: clamp(22px, 4vw, 36px); background: rgba(10, 16, 24, 0.82); border: 1px solid rgba(90, 140, 255, 0.2); border-radius: 20px; }
+      .vrm-tools-panel h2 { margin: 0 0 10px; }
+      .vrm-tools-panel > p { margin: 0; color: var(--muted); }
+      .vrm-tools-list { display: flex; flex-wrap: wrap; gap: 12px; list-style: none; margin: 22px 0 0; padding: 0; }
+      .vrm-tools-list li { display: inline-flex; align-items: center; gap: 10px; padding: 11px 16px; border: 1px solid transparent; border-radius: 16px; font-size: 1rem; font-weight: 800; line-height: 1.35; }
+      .vrm-tools-list i { flex: 0 0 auto; }
+      .vrm-tool-dyno { color: #ff3b2f; background: rgba(255, 59, 47, 0.16); border-color: rgba(255, 59, 47, 0.55) !important; }
+      .vrm-tool-acceleration { color: #e6f500; background: rgba(220, 230, 0, 0.14); border-color: rgba(220, 230, 0, 0.5) !important; }
+      .vrm-tool-speed { color: #a58cff; background: rgba(132, 104, 255, 0.15); border-color: rgba(132, 104, 255, 0.52) !important; }
+      .vrm-tool-technical { color: #84aaff; background: rgba(79, 126, 230, 0.16); border-color: rgba(100, 149, 255, 0.55) !important; }
+      .vrm-tool-report { color: #63e3bd; background: rgba(56, 190, 151, 0.14); border-color: rgba(56, 190, 151, 0.48) !important; }
+      .vrm-tool-ecu { color: #dce4f2; background: rgba(160, 170, 188, 0.12); border-color: rgba(160, 170, 188, 0.25) !important; }
+      @media (max-width: 520px) {
+        .vrm-tools-section { padding-bottom: 44px; }
+        .vrm-tools-list { gap: 9px; }
+        .vrm-tools-list li { padding: 10px 12px; font-size: 0.9rem; }
+      }
+    </style>
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -136,6 +156,24 @@
             </div>
         </div>
 
+    </section>
+
+    <section class="vrm-tools-section section-block" aria-labelledby="vrm-tools-heading">
+        <div class="container">
+            <div class="vrm-tools-panel">
+                <span class="section-tag">More than a reg check</span>
+                <h2 id="vrm-tools-heading">Extra tools for a more useful vehicle report</h2>
+                <p>Give customers and your team quick access to vehicle performance insights, technical information and shareable reports.</p>
+                <ul class="vrm-tools-list" aria-label="Vehicle lookup tools">
+                    <li class="vrm-tool-dyno"><i class="fas fa-chart-line" aria-hidden="true"></i> Potential Dynograph</li>
+                    <li class="vrm-tool-acceleration"><i class="fas fa-stopwatch" aria-hidden="true"></i> 0–60 Times</li>
+                    <li class="vrm-tool-speed"><i class="fas fa-gauge-high" aria-hidden="true"></i> Top Speed</li>
+                    <li class="vrm-tool-technical"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Technical Details</li>
+                    <li class="vrm-tool-report"><i class="fas fa-file-arrow-down" aria-hidden="true"></i> Create Customer Report</li>
+                    <li class="vrm-tool-ecu"><i class="fas fa-microchip" aria-hidden="true"></i> Possible ECU matches</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section id="pricing" class="features section-block alt-section">
@@ -289,5 +327,4 @@
     <script src="js/main.js?v=20261006-1"></script>
 </body>
 </html>
-
 
