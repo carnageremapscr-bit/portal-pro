@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VRM Lookup Service | Vehicle Registration Checker | Portal Pro</title>
-  <meta name="description" content="Fast and accurate VRM lookup service from Portal Pro. Verify UK vehicle details by registration number with MOT status, emissions data, keeper changes, and spec breakdown. Built for garages, tuners, and trade websites.">
+  <meta name="description" content="Turn UK vehicle lookups into better customer conversations with potential dynograph insights, performance estimates, technical details and possible ECU matches for garages and tuners.">
   <meta name="keywords" content="VRM lookup, vehicle registration lookup, reg check, car registration check, VRM checker, vehicle details by reg, DVLA data, MOT status lookup">
   <meta property="og:title" content="VRM Lookup Service | Vehicle Registration Checker | Portal Pro">
-  <meta property="og:description" content="Instant UK vehicle data by registration: MOT status, emissions class, keeper changes, insurance group, BHP, and more. Embed the widget or call the API.">
+  <meta property="og:description" content="Help customers explore potential power gains, performance estimates, technical vehicle data and possible ECU matches from a UK registration lookup.">
   <meta property="og:url" content="https://www.webportalpro.co.uk/vrm-lookup.html">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.webportalpro.co.uk/assets/logo.svg">
@@ -26,6 +26,20 @@
       .vrm-tools-list { display: flex; flex-wrap: wrap; gap: 12px; list-style: none; margin: 22px 0 0; padding: 0; }
       .vrm-tools-list li { display: inline-flex; align-items: center; gap: 10px; padding: 11px 16px; border: 1px solid transparent; border-radius: 16px; font-size: 1rem; font-weight: 800; line-height: 1.35; }
       .vrm-tools-list i { flex: 0 0 auto; }
+      .vrm-updates { margin-top: 34px; }
+      .vrm-updates h3 { margin: 0 0 18px; font-size: clamp(1.35rem, 2.6vw, 1.8rem); }
+      .vrm-updates-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+      .vrm-update-card { padding: 20px; border-radius: 16px; background: rgba(20, 31, 49, 0.78); border: 1px solid rgba(90, 140, 255, 0.16); }
+      .vrm-update-card i { display: inline-grid; place-items: center; width: 40px; height: 40px; margin-bottom: 12px; border-radius: 12px; color: #8ec5ff; background: rgba(90, 140, 255, 0.12); }
+      .vrm-update-card h4 { margin: 0 0 8px; font-size: 1.05rem; }
+      .vrm-update-card p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+      .vrm-updates-note { margin: 16px 0 0; color: var(--muted); font-size: 0.85rem; }
+      .vrm-updates-cta { margin-top: 22px; }
+      .vrm-addon-heading { margin: 32px 0 14px; font-size: 1.2rem; }
+      .vrm-addon-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+      .vrm-addon { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 15px; border: 1px solid rgba(90, 140, 255, 0.14); border-radius: 12px; background: rgba(9, 15, 25, 0.62); }
+      .vrm-addon span { color: var(--muted); }
+      .vrm-addon strong { white-space: nowrap; color: #edf3ff; font-size: 0.92rem; }
       .vrm-tool-dyno { color: #ff3b2f; background: rgba(255, 59, 47, 0.16); border-color: rgba(255, 59, 47, 0.55) !important; }
       .vrm-tool-acceleration { color: #e6f500; background: rgba(220, 230, 0, 0.14); border-color: rgba(220, 230, 0, 0.5) !important; }
       .vrm-tool-speed { color: #a58cff; background: rgba(132, 104, 255, 0.15); border-color: rgba(132, 104, 255, 0.52) !important; }
@@ -36,6 +50,7 @@
         .vrm-tools-section { padding-bottom: 44px; }
         .vrm-tools-list { gap: 9px; }
         .vrm-tools-list li { padding: 10px 12px; font-size: 0.9rem; }
+        .vrm-updates-grid, .vrm-addon-grid { grid-template-columns: 1fr; }
       }
     </style>
     <script type="application/ld+json">
@@ -44,7 +59,7 @@
       "@type": "Service",
       "name": "Portal Pro VRM Lookup",
       "url": "https://www.webportalpro.co.uk/vrm-lookup.html",
-      "description": "Instant UK vehicle registration lookups with MOT, emissions, insurance group, and powertrain data.",
+      "description": "UK vehicle registration lookups with technical details, potential performance insights, customer reports, and possible ECU matches.",
       "provider": {
         "@type": "Organization",
         "name": "Portal Pro",
@@ -81,7 +96,7 @@
                 <li><a href="website-design.html">Web Design</a></li>
                 <li><a href="vrm-lookup.html" class="active">VRM Lookup</a></li>
                 <li><a href="portal-design.html">Portal</a></li>
-                <li><a href="ecu-editor.html">ECU Editor</a></li>
+                <li><a href="https://secure-file-portal-portal-pro.up.railway.app/dyno-access.html">Dynograph</a></li>
                 <li><a href="booking-system.html">Booking System</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -172,6 +187,39 @@
                     <li class="vrm-tool-report"><i class="fas fa-file-arrow-down" aria-hidden="true"></i> Create Customer Report</li>
                     <li class="vrm-tool-ecu"><i class="fas fa-microchip" aria-hidden="true"></i> Possible ECU matches</li>
                 </ul>
+                <div class="vrm-updates">
+                    <h3>New ways to win and manage more enquiries</h3>
+                    <div class="vrm-updates-grid">
+                        <article class="vrm-update-card">
+                            <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                            <h4>Capture quote requests on your website</h4>
+                            <p>Add a branded enquiry form to your own website. It can collect customer contact details, registration, vehicle information and the service they’re interested in, then help you track incoming leads and export them to CSV.</p>
+                        </article>
+                        <article class="vrm-update-card">
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
+                            <h4>Create branded dynograph sheets</h4>
+                            <p>Build a clean graph or look up a registration to preview a vehicle-specific graph. Add stock and tuned power or torque figures, apply your logo, colours and watermark, then print or save a professional customer-ready PDF. Dynograph Studio credits are £3.99 for a clean graph or £4.99 for a registration-linked graph.</p>
+                        </article>
+                        <article class="vrm-update-card">
+                            <i class="fas fa-microchip" aria-hidden="true"></i>
+                            <h4>See possible ECU matches</h4>
+                            <p>Enable the possible ECU matches add-on to surface likely vehicle ECU options alongside lookup details, giving tuners useful context before they follow up on a remap enquiry.</p>
+                        </article>
+                    </div>
+                    <p class="vrm-addon-heading"><strong>Optional VRM lookup add-ons</strong> <span style="color:var(--muted);font-size:0.9rem;">(monthly)</span></p>
+                    <div class="vrm-addon-grid" aria-label="Optional VRM lookup add-on prices">
+                        <div class="vrm-addon"><span>Potential Dynograph</span><strong>£5.00 / month</strong></div>
+                        <div class="vrm-addon"><span>0–60 Times</span><strong>£3.00 / month</strong></div>
+                        <div class="vrm-addon"><span>Top Speed</span><strong>£3.00 / month</strong></div>
+                        <div class="vrm-addon"><span>Technical Details</span><strong>£3.00 / month</strong></div>
+                        <div class="vrm-addon"><span>Create Customer Report</span><strong>£5.00 / month</strong></div>
+                        <div class="vrm-addon"><span>Possible ECU matches</span><strong>£5.00 / month</strong></div>
+                    </div>
+                    <p class="vrm-updates-note">Dynograph figures are indicative and not a substitute for a measured rolling-road test. ECU matches are suggestions and should be confirmed against the vehicle before work is carried out.</p>
+                    <div class="vrm-updates-cta">
+                        <a href="#contact" class="btn btn-primary">Ask about lead generation and VRM add-ons <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -327,4 +375,3 @@
     <script src="js/main.js?v=20261006-1"></script>
 </body>
 </html>
-
