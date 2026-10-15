@@ -499,57 +499,58 @@
         "name": "Portal Pro Services",
         "itemListElement": [
             {
-                "@type": "Service",
-                "name": "Professional Website Design",
-                "description": "Conversion-focused website design for automotive businesses from �30/month including hosting, SSL, and support",
-                "provider": {
-                    "@type": "Organization",
-                    "name": "Portal Pro"
-                },
-                "serviceType": "Website Design",
-                "areaServed": "GB",
-                "offers": {
-                    "@type": "Offer",
-                    "price": "30",
-                    "priceCurrency": "GBP",
-                    "priceSpecification": {
-                        "@type": "UnitPriceSpecification",
-                        "price": "30",
-                        "priceCurrency": "GBP",
-                        "unitText": "MONTH"
-                    }
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@type": "Service",
+                    "name": "Automotive Website Design",
+                    "description": "Website design and ongoing support for garages, tuners and automotive businesses.",
+                    "url": "https://www.webportalpro.co.uk/website-design.html",
+                    "provider": {"@type": "Organization", "name": "Portal Pro"}
                 }
             },
             {
-                "@type": "SoftwareApplication",
-                "name": "ECU File Portal Software",
-                "description": "Complete portal software for ECU tuning and remapping businesses with file management, invoicing, and client access",
-                "applicationCategory": "BusinessApplication",
-                "operatingSystem": "Web",
-                "url": "https://www.webportalpro.co.uk/portal-design.html",
-                "image": "https://www.webportalpro.co.uk/image-1775398844789.png",
-                "offers": {
-                    "@type": "Offer",
-                    "price": "0",
-                    "priceCurrency": "GBP",
-                    "description": "Custom pricing based on requirements"
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@type": "Service",
+                    "name": "Vehicle Registration Lookup",
+                    "description": "Vehicle registration lookup tools and enquiry features for automotive businesses.",
+                    "url": "https://www.webportalpro.co.uk/vrm-lookup.html",
+                    "provider": {"@type": "Organization", "name": "Portal Pro"}
                 }
             },
             {
-                "@type": "Product",
-                "name": "Vehicle Registration Lookup Widget",
-                "description": "VRM vehicle lookup widget with lead capture for automotive websites",
-                "category": "Software Widget",
-                "url": "https://www.webportalpro.co.uk/widget-design.html",
-                "image": "https://www.webportalpro.co.uk/image-1768058514421.png",
-                "brand": {"@type": "Brand", "name": "Portal Pro"},
-                "offers": {
-                    "@type": "Offer",
-                    "url": "https://www.webportalpro.co.uk/widget-design.html#pricing",
-                    "price": "9.99",
-                    "priceCurrency": "GBP",
-                    "description": "Monthly subscription",
-                    "availability": "https://schema.org/InStock"
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@type": "Service",
+                    "name": "ECU File Portal Software",
+                    "description": "Custom file-management portal software for ECU tuning and remapping businesses.",
+                    "url": "https://www.webportalpro.co.uk/portal-design.html",
+                    "provider": {"@type": "Organization", "name": "Portal Pro"}
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                    "@type": "Service",
+                    "name": "Dynograph Studio",
+                    "description": "Browser-based creation of branded vehicle dynograph sheets.",
+                    "url": "https://www.webportalpro.co.uk/dynograph.html",
+                    "provider": {"@type": "Organization", "name": "Portal Pro"}
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 5,
+                "item": {
+                    "@type": "Service",
+                    "name": "Lead Generation",
+                    "description": "Branded quote-request forms and lead management for automotive businesses.",
+                    "url": "https://www.webportalpro.co.uk/lead-generation.html",
+                    "provider": {"@type": "Organization", "name": "Portal Pro"}
                 }
             }
         ]
@@ -570,36 +571,5 @@
     }
     </script>
     
-    <!-- JSON-LD FAQPage -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [{
-            "@type": "Question",
-            "name": "What is Portal Pro?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Portal Pro provides three main services: professional website design from �30/month, ECU file portal software for automotive tuning businesses, and vehicle lookup widgets with lead capture functionality."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "What is an ECU file portal?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "An ECU file portal is a secure online platform where clients can upload ECU files for remapping, view invoices, track file status, and download tuned files. It automates the entire workflow for tuning businesses including file management, billing, and client communication."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "How much does website design cost?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Website design starts at �30 per month with free setup. This includes hosting, SSL certificate, ongoing support, updates, and maintenance."
-            }
-        }]
-    }
-    </script>
 </body>
 </html>
